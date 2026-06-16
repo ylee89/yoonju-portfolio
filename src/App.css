@@ -243,6 +243,13 @@ main {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
 }
 
+.work-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
 .work-category {
   font-size: 0.8rem;
   font-weight: 600;
@@ -251,15 +258,39 @@ main {
   letter-spacing: 0.06em;
 }
 
+.work-timeline {
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 0.15rem 0.6rem;
+  background: var(--cream);
+  border-radius: 999px;
+}
+
 .work-info h3 {
   font-size: 1.5rem;
   margin: 0.4rem 0 0.6rem;
 }
 
 .work-info p {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1rem;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.work-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.2rem;
+}
+
+.work-tool {
+  font-size: 0.75rem;
+  padding: 0.28rem 0.65rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
 }
 
 .work-cta {
@@ -344,6 +375,41 @@ main {
 .stat span {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.interests {
+  margin-top: 1.8rem;
+}
+
+.interests h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 0.7rem;
+}
+
+.interests ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.interests li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.interests li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--ink);
 }
 
 .capabilities {

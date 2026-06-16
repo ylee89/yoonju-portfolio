@@ -6,7 +6,9 @@ import {
   works,
   about,
   capabilities,
+  interests,
   stats,
+  contact,
 } from './content'
 
 function Navbar() {
@@ -95,10 +97,10 @@ function Works() {
   return (
     <section id="works" className="section">
       <div className="section-head">
-        <h2>My selected works</h2>
+        <h2>Selected works</h2>
         <p>
-          제가 공들여 작업한 프로젝트들입니다. 어떤 문제를 어떻게 풀어냈는지
-          살펴보세요.
+          A few projects I’ve poured care into — explore how I framed each
+          problem and shaped the experience.
         </p>
       </div>
       <div className="work-list">
@@ -111,9 +113,23 @@ function Works() {
             rel="noreferrer"
           >
             <div className="work-info">
-              <span className="work-category">{work.category}</span>
+              <div className="work-meta">
+                <span className="work-category">{work.category}</span>
+                {work.timeline && (
+                  <span className="work-timeline">{work.timeline}</span>
+                )}
+              </div>
               <h3>{work.title}</h3>
               <p>{work.description}</p>
+              {work.tools && (
+                <div className="work-tools">
+                  {work.tools.map((tool) => (
+                    <span key={tool} className="work-tool">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              )}
               <span className="work-cta">View Project →</span>
             </div>
             <div className={`work-thumb tint-${work.tint}`}>
@@ -148,11 +164,21 @@ function About() {
               ))}
             </div>
           )}
+          {interests.length > 0 && (
+            <div className="interests">
+              <h3>Off the clock</h3>
+              <ul>
+                {interests.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
 
       <div className="capabilities">
-        <h3>My capabilities</h3>
+        <h3>Tools &amp; skills</h3>
         <div className="cap-tags">
           {capabilities.map((cap) => (
             <span key={cap} className="cap-tag">
@@ -172,16 +198,17 @@ function Contact() {
         💬
       </span>
       <h2 className="contact-title">
-        Let’s talk about
-        <br />
-        your project.
+        {contact.heading.split('\n').map((line, i) => (
+          <span key={i}>
+            {line}
+            <br />
+          </span>
+        ))}
       </h2>
-      <p className="contact-sub">
-        함께 만들고 싶은 아이디어가 있으신가요? 편하게 연락 주세요.
-      </p>
+      <p className="contact-sub">{contact.sub}</p>
       <div className="contact-cta">
         <a href={`mailto:${profile.email}`} className="btn btn-light">
-          Get in Touch
+          {contact.cta}
         </a>
         <span className="handwritten">and make it real together</span>
       </div>

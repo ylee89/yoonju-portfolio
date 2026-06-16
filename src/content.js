@@ -1,21 +1,21 @@
 // ─────────────────────────────────────────────────────────────
-// 여기 내용만 수정하면 사이트 전체가 업데이트됩니다.
-// (이미지/프로젝트 링크는 실제 값으로 바꿔주세요)
+// Edit only this file to update the whole site.
+// Content sourced from https://yoonjulee.framer.website/
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
   name: 'Yoonju',
   fullName: 'Yoonju Lee',
-  role: 'a product designer',
+  role: 'a UX/UI designer',
   emoji: '👋',
   intro:
-    '사용자의 문제를 깊이 들여다보고, 명확하고 의미 있는 경험으로 풀어내는 일을 합니다. 본인의 소개 문장을 자유롭게 채워보세요.',
+    'A passionate designer, crafting thoughtful digital experiences rooted in empathy and clarity.',
   email: 'lovingjoo@gmail.com',
-  location: 'Seoul, Korea',
+  location: 'Vancouver, Canada',
   available: true,
 }
 
-// 상단 네비게이션
+// Top navigation
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Works', href: '#works' },
@@ -23,73 +23,98 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
-// 소셜 링크 (사용하지 않을 항목은 지우세요)
+// Social links
 export const socials = [
   { label: 'Email', href: 'mailto:lovingjoo@gmail.com', short: '✉' },
-  { label: 'LinkedIn', href: '#', short: 'in' },
-  { label: 'Instagram', href: '#', short: 'ig' },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/yoon-ju-lee/',
+    short: 'in',
+  },
 ]
 
-// 선택된 작업물 — 각 항목이 큰 카드 한 줄로 표시됩니다.
+// Selected works — each item renders as one large card.
 export const works = [
   {
-    title: 'Project One',
-    category: 'UX · UI Design',
+    title: 'Loopin',
+    category: 'Mobile App · Health & Wellness',
     description:
-      '프로젝트에 대한 한두 문장 설명을 적어주세요. 어떤 문제를 어떻게 풀었는지 간결하게.',
-    link: '#',
+      'A mobile app that helps parents of neurodivergent children stay emotionally connected, reduce daily stress, and build healthy routines through mood check-ins, calming tools, and playful bonding activities.',
+    tools: ['Figma', 'Illustrator', 'After Effects'],
+    timeline: '13 weeks',
+    link: 'https://yoonjulee.framer.website/work1',
     tint: 'pink',
   },
   {
-    title: 'Project Two',
-    category: 'Product Design',
+    title: 'Receiptly',
+    category: 'Web & Mobile · Financial Tracking',
     description:
-      '프로젝트에 대한 한두 문장 설명을 적어주세요. 어떤 문제를 어떻게 풀었는지 간결하게.',
-    link: '#',
+      'An AI-powered platform that automatically captures and categorizes receipts, generates investor-ready reports, and integrates quickly with the tools small businesses already use.',
+    tools: ['Figma', 'Illustrator', 'Jira'],
+    timeline: '13 weeks',
+    link: 'https://yoonjulee.framer.website/work2',
     tint: 'blue',
   },
   {
-    title: 'Project Three',
-    category: 'Branding · Web',
+    title: 'Upzy',
+    category: 'Web & Mobile · Sustainable Lifestyle',
     description:
-      '프로젝트에 대한 한두 문장 설명을 적어주세요. 어떤 문제를 어떻게 풀었는지 간결하게.',
-    link: '#',
+      'A location-based web app that connects users with local artisans to upcycle, tailor, or donate clothes — making wardrobe updates easy, creative, and sustainable while supporting local talent.',
+    tools: ['Figma', 'Illustrator', 'Miro'],
+    timeline: '13 weeks',
+    link: 'https://yoonjulee.framer.website/work3',
     tint: 'purple',
   },
   {
-    title: 'Project Four',
-    category: 'Mobile App',
+    title: 'The Visit Magazine',
+    category: 'Editorial · Print Design',
     description:
-      '프로젝트에 대한 한두 문장 설명을 적어주세요. 어떤 문제를 어떻게 풀었는지 간결하게.',
-    link: '#',
+      'A magazine designed in InDesign that showcases the stunning natural beauty of Tofino and Canada’s landscapes through travel guidance, scenic imagery, and outdoor exploration.',
+    tools: ['InDesign', 'Photoshop', 'Illustrator'],
+    timeline: '6 weeks',
+    link: 'https://yoonjulee.framer.website/work4',
     tint: 'green',
   },
 ]
 
-// About 섹션 본문
+// About section
 export const about = {
   heading: 'Hey! That’s me.',
   body: [
-    '안녕하세요, Yoonju입니다. 저는 ___ 분야에서 ___년 동안 일하며 사용자 중심의 디자인을 만들어 왔습니다.',
-    '복잡한 문제를 단순하고 아름다운 경험으로 바꾸는 데 관심이 많습니다. 이 영역에 본인의 이야기를 자유롭게 채워보세요.',
+    'Hello! I’m Yoonju Lee, a UI/UX designer with a diploma in Web and Mobile App Design and Development from Langara College, where I built strong skills in wireframing, prototyping, and visual design.',
+    'Before design, I studied psychology and social welfare and spent five years working as a professional negotiator. That background shapes how I create intuitive, people-first experiences.',
+    'I’m drawn to minimal and modern design — clean, intentional, and user-focused. My love for travel and camping constantly inspires me, helping me see the world from new perspectives.',
   ],
 }
 
-// 역량 태그
+// Tools & skills
 export const capabilities = [
-  'Product Design',
-  'UX/UI Design',
-  'Design System',
+  'Figma',
+  'Photoshop',
+  'Illustrator',
+  'InDesign',
+  'After Effects',
+  'Premiere Pro',
+  'HTML & CSS',
+  'Wireframing',
   'Prototyping',
   'User Research',
-  'Branding',
-  'Web Design',
-  'Interaction',
 ]
 
-// 숫자로 보여주는 성과 (필요 없으면 빈 배열 [])
-export const stats = [
-  { value: '5+', label: 'Years experience' },
-  { value: '30+', label: 'Projects done' },
-  { value: '12', label: 'Happy clients' },
+// A few things that inspire me off the clock
+export const interests = [
+  'Dale Chihuly glass sculptures',
+  'Sunset photography at Long Beach, Pacific Rim',
+  'Camping at Garibaldi Lake',
+  'Travel & photography, inspired by Jeju Island',
 ]
+
+// Numbers worth showing (use an empty array [] to hide)
+export const stats = []
+
+// Contact section
+export const contact = {
+  heading: 'Let’s build something\nmeaningful together.',
+  sub: 'Something caught your eye? I’d love to connect.',
+  cta: 'Send me a message',
+}
