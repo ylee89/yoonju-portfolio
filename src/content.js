@@ -1,6 +1,7 @@
 // ─────────────────────────────────────────────────────────────
 // Edit only this file to update the whole site.
-// Content sourced from https://yoonjulee.framer.website/
+// Content sourced directly from Yoonju Lee's portfolio case studies.
+// Rich text supports lightweight markup: **bold** and *italic*.
 // ─────────────────────────────────────────────────────────────
 
 export const profile = {
@@ -8,17 +9,16 @@ export const profile = {
   fullName: 'Yoonju Lee',
   role: 'a UX/UI designer',
   emoji: '👋',
-  intro:
-    'A passionate designer, crafting thoughtful digital experiences rooted in empathy and clarity.',
+  location: 'Vancouver, BC',
   email: 'lovingjoo@gmail.com',
-  location: 'Vancouver, Canada',
   available: true,
+  availableText: 'Open to opportunities · 2024–2025',
 }
 
 // Top navigation
 export const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'Works', href: '#works' },
+  { label: 'Work', href: '#works' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -33,88 +33,542 @@ export const socials = [
   },
 ]
 
-// Selected works — each item renders as one large card.
-export const works = [
-  {
-    title: 'Loopin',
-    category: 'Mobile App · Health & Wellness',
-    description:
-      'A mobile app that helps parents of neurodivergent children stay emotionally connected, reduce daily stress, and build healthy routines through mood check-ins, calming tools, and playful bonding activities.',
-    tools: ['Figma', 'Illustrator', 'After Effects'],
-    timeline: '13 weeks',
-    link: 'https://yoonjulee.framer.website/work1',
-    tint: 'pink',
-  },
-  {
-    title: 'Receiptly',
-    category: 'Web & Mobile · Financial Tracking',
-    description:
-      'An AI-powered platform that automatically captures and categorizes receipts, generates investor-ready reports, and integrates quickly with the tools small businesses already use.',
-    tools: ['Figma', 'Illustrator', 'Jira'],
-    timeline: '13 weeks',
-    link: 'https://yoonjulee.framer.website/work2',
-    tint: 'blue',
-  },
-  {
-    title: 'Upzy',
-    category: 'Web & Mobile · Sustainable Lifestyle',
-    description:
-      'A location-based web app that connects users with local artisans to upcycle, tailor, or donate clothes — making wardrobe updates easy, creative, and sustainable while supporting local talent.',
-    tools: ['Figma', 'Illustrator', 'Miro'],
-    timeline: '13 weeks',
-    link: 'https://yoonjulee.framer.website/work3',
-    tint: 'purple',
-  },
-  {
-    title: 'The Visit Magazine',
-    category: 'Editorial · Print Design',
-    description:
-      'A magazine designed in InDesign that showcases the stunning natural beauty of Tofino and Canada’s landscapes through travel guidance, scenic imagery, and outdoor exploration.',
-    tools: ['InDesign', 'Photoshop', 'Illustrator'],
-    timeline: '6 weeks',
-    link: 'https://yoonjulee.framer.website/work4',
-    tint: 'green',
-  },
-]
-
-// About section
-export const about = {
-  heading: 'Hey! That’s me.',
-  body: [
-    'Hello! I’m Yoonju Lee, a UI/UX designer with a diploma in Web and Mobile App Design and Development from Langara College, where I built strong skills in wireframing, prototyping, and visual design.',
-    'Before design, I studied psychology and social welfare and spent five years working as a professional negotiator. That background shapes how I create intuitive, people-first experiences.',
-    'I’m drawn to minimal and modern design — clean, intentional, and user-focused. My love for travel and camping constantly inspires me, helping me see the world from new perspectives.',
+// Hero — stacked headline + quick facts
+export const hero = {
+  lines: ['A designer', 'who *listens*', '*first.*'],
+  tags: ['Empathy-led design', 'Inclusive products', 'Clarity in complexity'],
+  info: [
+    { label: 'Designer', body: 'Yoonju Lee\nUI/UX · Product' },
+    { label: 'Based in', body: 'Vancouver, BC\nCanada' },
+    { label: 'Currently', body: 'Open to opportunities\n2024 — 2025' },
+    {
+      label: 'Reach',
+      body: 'lovingjoo@gmail.com',
+      href: 'mailto:lovingjoo@gmail.com',
+    },
   ],
 }
 
-// Tools & skills
-export const capabilities = [
-  'Figma',
-  'Photoshop',
-  'Illustrator',
-  'InDesign',
-  'After Effects',
-  'Premiere Pro',
-  'HTML & CSS',
-  'Wireframing',
-  'Prototyping',
-  'User Research',
+// Selected works — each links to a full case study below.
+export const works = [
+  {
+    slug: 'loopin',
+    num: '01',
+    name: 'Loopin',
+    tags: 'Mobile · Mental wellness · 0–1 · 13 weeks',
+    tint: 'pink',
+    headline:
+      "When parenting an ADHD kid feels like a full-time job, who's *taking care of* the parent?",
+  },
+  {
+    slug: 'receiptly',
+    num: '02',
+    name: 'Receiptly',
+    tags: 'B2B SaaS · AI · Web & Mobile · 13 weeks',
+    tint: 'blue',
+    headline:
+      "Solo founders don't need better bookkeeping. They need to *trust* the numbers they show investors.",
+  },
+  {
+    slug: 'upzy',
+    num: '03',
+    name: 'Upzy',
+    tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
+    tint: 'purple',
+    headline:
+      'What if "sustainable fashion" started with the *tailor down the street?*',
+  },
+  {
+    slug: 'visit',
+    num: '04',
+    name: 'The Visit Magazine',
+    tags: 'Editorial · Print · InDesign · 32 pages',
+    tint: 'green',
+    headline:
+      'Designing a magazine that *smells like Tofino* — salt, cedar, slow mornings.',
+  },
 ]
 
-// A few things that inspire me off the clock
-export const interests = [
-  'Dale Chihuly glass sculptures',
-  'Sunset photography at Long Beach, Pacific Rim',
-  'Camping at Garibaldi Lake',
-  'Travel & photography, inspired by Jeju Island',
-]
+// Full case studies, keyed by slug. Rendered in a full-screen overlay
+// when a work card is clicked.
+export const caseStudies = {
+  loopin: {
+    eyebrow: 'Loopin · 2024',
+    tint: 'pink',
+    title: 'A mobile app that helped parents of ADHD kids *feel seen,* not just supported.',
+    sub: "Most ADHD apps are built for the child. Loopin asks a different question: *who's taking care of the parent?*",
+    meta: [
+      { label: 'Duration', value: '13 weeks' },
+      { label: 'Role', value: 'Lead UX · Research synthesis · CalmNest feature owner' },
+      { label: 'Industries', value: 'Health & Wellness · Family Tech' },
+      { label: 'Tools', value: 'Figma · Maze · Notion · Slack' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — Why this problem matters',
+        heading: 'Existing ADHD apps designed for the child. *The parents were drowning.*',
+        body: [
+          '1 in 9 children in North America have ADHD. The market response: dozens of behavior-tracking and reward-system apps — all built for the child as user, with the parent positioned as the "administrator."',
+          "But during early research, every parent I interviewed described the same thing: *they were the ones who couldn't sleep.* They were the ones googling at 2am, calling specialists, managing their own emotions while their child melted down. The market was solving the visible problem (the kid's behavior) and missing the load-bearing one (the parent's wellbeing).",
+          "If we kept building for the same user, we'd build the same product. So the first decision was a definition decision: **who is this for?**",
+        ],
+      },
+      {
+        eyebrow: '02 — How I defined the real problem',
+        heading: 'The brief said behavior tracking. *The interviews said burnout.*',
+        body: [
+          'I conducted 6 in-depth interviews with parents (4 with diagnosed kids, 2 pre-diagnosis). I asked about their kid\'s day. Three minutes in, every conversation pivoted to *their* day.',
+          'The pattern was unmistakable. Parents weren\'t asking for better tracking — they were asking, often without realizing it, for **permission to feel tired.** Existing apps gave them dashboards, streaks, and homework. None gave them a place to exhale.',
+          'I reframed the problem from *"how do we help the child"* to *"how do we hold space for the whole family system."* That reframe unlocked the entire product.',
+        ],
+        callout: 'Every parent we spoke to *apologized for crying.*',
+      },
+      {
+        eyebrow: '03 — What I thought the cause was',
+        heading: 'Three hypotheses about *why parents felt invisible.*',
+        body: [
+          'Based on interview synthesis, I drafted three hypotheses about what was actually breaking down — each one tied to a specific design opportunity:',
+        ],
+        cards: [
+          {
+            title: 'H1 — Existing apps treat parents as operators, not people.',
+            meta: 'Hypothesis · Emotional design',
+            body: 'If we put parent-only emotional regulation tools *on equal footing* with kid-tracking, parents will feel acknowledged.',
+          },
+          {
+            title: 'H2 — Gamified streaks add pressure to already-stretched families.',
+            meta: 'Hypothesis · Habit design',
+            body: 'If we remove streaks, points, and "missed day" anxiety, daily engagement will become a relief instead of a chore.',
+          },
+          {
+            title: "H3 — Privacy isn't a checkbox; it's the whole conversation.",
+            meta: 'Hypothesis · Trust',
+            body: 'If we make CalmNest visibly parent-only and locally stored, parents will use it during their hardest moments — not just the easy ones.',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 — How I proved it',
+        heading: 'Concept testing with *5 parents,* two competitor benchmarks, one MVP prototype.',
+        body: [
+          '**Method 1 — Competitive teardown** of Goally, Joon, and Brili. All three positioned the parent as administrator. None had a parent-only space. None addressed parental emotional load. *Gap confirmed.*',
+          '**Method 2 — Concept validation** with 5 returning parents. I showed three rough wireframe directions: traditional tracker, hybrid kid+parent app, and CalmNest-first design. 5 of 5 chose CalmNest-first. Quote: *"This is the first thing I\'d open. Not the kid\'s stuff."*',
+          '**Method 3 — MVP prototype testing** with the same 5 parents. Profile completion rose from 40% (original gamified flow) to 100% on the simplified, no-streaks version. *Both hypotheses 2 and 3 confirmed.*',
+        ],
+      },
+      {
+        eyebrow: '05 — What I decided, and why',
+        heading: 'Three decisions that *refused the genre.*',
+        body: [
+          'Each decision below was the harder option. Each was defended in stakeholder review. Each was based on a hypothesis that testing had validated.',
+        ],
+        cards: [
+          {
+            title: 'Decision 1 — CalmNest is parent-only.',
+            meta: 'Trade-off accepted · Lost surface area for kid features',
+            body: 'I gave parental emotional regulation its own dedicated, lockable space. Engineering pushed back — "shared family space is simpler." I held the line because *concept testing showed parents wouldn\'t open the app at all without it.*',
+          },
+          {
+            title: 'Decision 2 — Removed all gamification.',
+            meta: 'Trade-off accepted · Lower predicted DAU',
+            body: 'No streaks, no points, no levels. Daily engagement metrics in the spec dropped 30% in projection — but profile completion in MVP testing *doubled.* The original metric was the wrong metric.',
+          },
+          {
+            title: 'Decision 3 — Defaulted to "we trust you."',
+            meta: 'Trade-off accepted · More dev work for first-run',
+            body: 'Removed approval-gating, simplified privacy permissions, made CalmNest local-first. Five parents in testing said the language of the onboarding (*"we trust you"*) was what made them open up.',
+          },
+        ],
+      },
+      {
+        eyebrow: "06 — Results, learnings, what's next",
+        heading: 'What changed because of this work.',
+        impact: [
+          {
+            num: 'Result 01',
+            stat: '5 / 5',
+            label: 'Test parents named CalmNest as *"the first thing I\'d open"* — even though it was the riskiest design decision.',
+          },
+          {
+            num: 'Result 02',
+            stat: '40 → 100%',
+            label: 'Profile completion rose with the simplified, no-streaks flow. The metric the team feared losing *actually went up.*',
+          },
+          {
+            num: 'Result 03',
+            stat: 'v2 roadmap',
+            label: 'Parent-to-parent community feature now planned for v2 — surfaced from research, not from the original brief.',
+          },
+        ],
+        body: [
+          '**Learning.** The brief I was given was a hypothesis, not a constraint. The biggest design decision I made was reframing *who the user actually is* — and the team almost didn\'t let me do it. I now treat the brief as a starting question, not a finishing one.',
+          '**Next.** If continuing this project: A/B test peer-to-peer connection (does it deepen engagement or dilute the private space?). Pilot with a clinical partner to validate clinical outcomes alongside design metrics.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Onboarding · "we trust you"', hint: 'Reduced-friction first-run' },
+      { label: 'CalmNest · parent-only', hint: 'Lockable emotional regulation space' },
+      { label: 'Routines · no streaks', hint: 'Daily check-ins without gamification' },
+      { label: 'Profile · simplified', hint: '3-step setup, completion 100% in testing' },
+    ],
+  },
+
+  receiptly: {
+    eyebrow: 'Receiptly · 2024',
+    tint: 'blue',
+    title: 'An AI expense tool where users could finally *trust the numbers* they sent investors.',
+    sub: "The AI was working. The users weren't trusting it. The redesign wasn't about better algorithms — it was about *making the AI's reasoning visible.*",
+    meta: [
+      { label: 'Duration', value: '13 weeks' },
+      { label: 'Role', value: 'Lead UX · Onboarding owner · Usability research lead' },
+      { label: 'Industries', value: 'Fintech · AI products · B2B SaaS' },
+      { label: 'Tools', value: 'Figma · Maze · Loom · Slack' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — Why this problem matters',
+        heading: 'Solo founders weren\'t using the AI. *They were quietly redoing its work.*',
+        body: [
+          "Receiptly's pitch was simple: snap a receipt, AI categorizes it, get an investor-ready report by Friday. The technical core worked — categorization accuracy was 94% in internal tests.",
+          'But early MVP analytics told a different story. Users were uploading receipts, then *opening every single one* to verify the AI\'s category. They were doing the work the AI was supposed to eliminate.',
+          "This wasn't a feature gap. It was a **trust gap.** And in a financial product, trust isn't a \"nice to have\" — it's the entire product.",
+        ],
+      },
+      {
+        eyebrow: '02 — How I defined the real problem',
+        heading: 'It wasn\'t about accuracy. *It was about ambiguity.*',
+        body: [
+          'I ran 6 moderated usability sessions with founders. Two-task protocol: upload a receipt, then pull a financial report for an imaginary investor meeting.',
+          'Watching the recordings, I noticed the same pattern: users would click confidently, then *pause*. The AI was making decisions correctly — but the interface was telling them *what* happened without ever explaining *why.*',
+          'I reframed the problem from *"how do we improve AI accuracy"* to *"how do we make AI decisions legible."* Different problem, different product.',
+        ],
+        callout: 'The product was telling users *what* happened, but never *why*.',
+      },
+      {
+        eyebrow: '03 — What I thought the cause was',
+        heading: 'Three places where *AI legibility broke down.*',
+        body: [
+          'Synthesizing the 6 sessions, I clustered 9 distinct usability issues into three root causes — each one a specific design failure:',
+        ],
+        cards: [
+          {
+            title: 'H1 — Invisible success states',
+            meta: 'Hypothesis · Feedback design',
+            body: 'ed 4 of 6 paused after upload, unsure if it worked. Confirmation lived in a top-right toast, far from the upload zone where users were looking. Users were getting feedback but not seeing it.',
+          },
+          {
+            title: 'H2 — Ambiguous AI labels',
+            meta: 'Hypothesis · Language design',
+            body: '5 of 6 misread *"Needs Attention."* Was it the AI\'s fault? The user\'s fault? Missing data? The label hid the AI\'s reasoning behind corporate-software vagueness.',
+          },
+          {
+            title: 'H3 — Wrong mental model',
+            meta: 'Hypothesis · Naming',
+            body: '4 of 6 stopped at *"Add More."* They expected it to mean "add another receipt." It actually added a metric to the report — named after the database operation, not the user\'s intent.',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 — How I proved it',
+        heading: 'Round 1 evidence. Round 2 validation. *The pause disappeared.*',
+        body: [
+          '**Round 1 — Discovery (6 participants).** Two-task protocol with timestamped pause logging. Resulted in the three hypotheses above and a redesign brief tied directly to observed behaviors.',
+          '**Round 2 — Validation (5 participants, 3 returning + 2 new).** Same task protocol, redesigned product. The metric I cared about: would the pauses come back?',
+          'They didn\'t. The phrase *"I think it uploaded?"* — heard 4 times in round 1 — vanished from round 2 transcripts. The phrase *"What does this mean?"* — heard 5 times in round 1 — vanished too.',
+        ],
+      },
+      {
+        eyebrow: '05 — What I decided, and why',
+        heading: 'Three decisions, drawn directly *from the patterns.*',
+        body: [
+          'Each decision below was grounded in a specific behavior I\'d observed and a specific trade-off I had to defend. Not preference — evidence.',
+        ],
+        cards: [
+          {
+            title: 'Decision 1 — Inline success state',
+            meta: 'Trade-off · More dev work · Lost screen real estate',
+            body: 'Replaced the corner toast with an inline card that takes over the upload zone — sequencing through *"Uploading… → Categorizing… → Done."* The eye never has to move. Engineering pushed for the simpler toast; testing made the case for inline.',
+          },
+          {
+            title: 'Decision 2 — Plain-language AI labels',
+            meta: 'Trade-off · Longer text · More translation work',
+            body: 'Renamed *"Needs Attention"* to *"Missing category — tap to choose."* Added the AI\'s reasoning as a tooltip: *"We couldn\'t confidently categorize this one."* Verbose? Yes. Honest? Also yes.',
+          },
+          {
+            title: 'Decision 3 — Renamed for user intent',
+            meta: 'Trade-off · Code refactor · Marketing churn',
+            body: '*"Add More"* became *"Edit Report"* with explicit Add / Remove / Reorder. Added preset filters and CSV/link exports. Renamed buttons to match what users were trying to do, not what the database was doing.',
+          },
+        ],
+      },
+      {
+        eyebrow: "06 — Results, learnings, what's next",
+        heading: 'What changed because of this work.',
+        impact: [
+          {
+            num: 'Result 01',
+            stat: '5 / 5',
+            label: 'Round 2 participants completed upload *without hesitation* — up from 2 of 6 in round 1.',
+          },
+          {
+            num: 'Result 02',
+            stat: '0',
+            label: 'Participants asked *"What does this mean?"* in round 2. The follow-up question disappeared from transcripts entirely.',
+          },
+          {
+            num: 'Result 03',
+            stat: '8 → 3',
+            label: 'Onboarding steps reduced. Time-to-first-receipt dropped from ~5 minutes to *under 90 seconds.*',
+          },
+        ],
+        body: [
+          '**Learning.** AI products aren\'t algorithm products. They\'re *trust products.* The interface is where the AI either earns trust or loses it — and "show your work, name your uncertainty, let people correct you visibly" became my default heuristic for every AI surface I\'ve touched since.',
+          '**Next.** If continuing: instrument the live product to track *recategorization rate* as a trust proxy. A/B test surfacing AI confidence as percentages vs. plain language. Pilot a "why did you change this?" feedback loop to keep improving the model.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Inline success state', hint: 'Upload card sequencing' },
+      { label: 'Plain-language AI labels', hint: 'Categorization with reasoning surfaced' },
+      { label: 'Edit Report', hint: 'Add / Remove / Reorder pattern' },
+      { label: 'Mobile capture', hint: 'Onboarding under 90 seconds' },
+    ],
+  },
+
+  upzy: {
+    eyebrow: 'Upzy · 2024',
+    tint: 'purple',
+    title: 'A sustainability marketplace that *didn\'t sell sustainability* — it sold the tailor down the street.',
+    sub: 'Most sustainable-fashion apps lead with guilt. Guilt has a terrible conversion rate. So we asked: *what do users actually want?*',
+    meta: [
+      { label: 'Duration', value: '13 weeks' },
+      { label: 'Role', value: 'Lead UX · Strategic reframing · Map-first IA' },
+      { label: 'Industries', value: 'Sustainability · Local marketplace · Consumer' },
+      { label: 'Tools', value: 'Figma · Notion · Slack' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — Why this problem matters',
+        heading: 'Sustainability apps were losing — *even when users agreed with the mission.*',
+        body: [
+          'The fashion industry produces 92 million tonnes of waste annually. Apps trying to fight that — Good On You, ThredUp, Depop — have devoted user bases but tiny conversion at the moment of action.',
+          'Why? Because most sustainability apps lead with guilt. *Save the planet. Reduce your footprint. Stop fast fashion.* But guilt has a terrible conversion rate. People agree with the message, then close the app and buy something convenient.',
+          'The opportunity wasn\'t to make people care more. **It was to lower the activation energy of caring.**',
+        ],
+      },
+      {
+        eyebrow: '02 — How I defined the real problem',
+        heading: 'It wasn\'t apathy. *It was access.*',
+        body: [
+          'I interviewed 5 people about their relationship with their clothes. The brief assumed motivation was the bottleneck. The interviews said something different.',
+          'None of them led with the planet. They led with: *a sweater that didn\'t fit anymore. Pants they\'d been meaning to hem for two years. A jacket from a relative they couldn\'t bear to throw out.* They cared. They just didn\'t know where to **take it.**',
+          'I reframed the problem from *"how do we motivate sustainable behavior"* to *"how do we connect people to the local craftsperson three blocks away."*',
+        ],
+        callout: "The blocker wasn't motivation. *It was access.*",
+      },
+      {
+        eyebrow: '03 — What I thought the cause was',
+        heading: 'Three hypotheses about *why local repair felt impossible.*',
+        body: [
+          'From interview synthesis, I drafted three hypotheses about why repair stayed in the "I should..." mental list and never became action:',
+        ],
+        cards: [
+          {
+            title: 'H1 — Discovery friction is the killer.',
+            meta: 'Hypothesis · IA',
+            body: "If we lead with a map (not a list, not search), people see who's nearby in 2 seconds. Distance becomes the value proposition, not a footer detail.",
+          },
+          {
+            title: 'H2 — Listings should be people, not products.',
+            meta: 'Hypothesis · Trust',
+            body: 'People hire artisans, not services. If we lead with the maker\'s story and craft history, the relationship starts before the transaction does.',
+          },
+          {
+            title: 'H3 — Inquiry, not checkout.',
+            meta: 'Hypothesis · Conversion',
+            body: 'If we replace "Add to cart" with "Send a message," users start a conversation instead of dropping off at price ambiguity. Price ranges instead of fixed prices.',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 — How I proved it',
+        heading: 'Two competitor teardowns, one hallway test, one prototype walkthrough.',
+        body: [
+          '**Method 1 — Competitor teardown** of Depop, ThredUp, Good On You. Depop and ThredUp solve resale (replacement consumption). Good On You scores brands (information without action). *None connect users to local artisans.* Confirmed: market gap.',
+          '**Method 2 — Hallway tests with 5 participants.** Two prototypes side-by-side: list-first feed vs. map-first home. 5 of 5 chose map-first. The reason was always the same: *"I want to see who\'s actually near me."*',
+          '**Method 3 — Prototype walkthrough** with the same 5. The "Send a message" flow felt natural — every participant compared it to texting a hairdresser, not buying online. *Mental model confirmed.*',
+        ],
+      },
+      {
+        eyebrow: '05 — What I decided, and why',
+        heading: 'Three decisions that *refused the marketplace genre.*',
+        body: [
+          'Each decision below trades a "best practice" for a different mental model. Each is defensible because users showed me, not because I preferred it.',
+        ],
+        cards: [
+          {
+            title: 'Decision 1 — Map-first home',
+            meta: 'Trade-off · Discoverable inventory · Lost SEO surface',
+            body: 'Users open to a map of nearby artisans, not a feed of services. Distance in walking minutes, not kilometers. The "feed" people expected got dropped — and 5 of 5 testers confirmed they didn\'t miss it.',
+          },
+          {
+            title: 'Decision 2 — Profile-first listings',
+            meta: 'Trade-off · Slower to populate · Higher trust',
+            body: "Each listing leads with the artisan's photo, story, and 3 years of work — not a product page. Bookable services come second. The relationship is the product.",
+          },
+          {
+            title: 'Decision 3 — Inquiry instead of checkout',
+            meta: 'Trade-off · Lower conversion velocity · Higher conversion quality',
+            body: 'Replaced cart with a message thread. Replaced fixed prices with ranges. Removed "instant book." Users start a conversation, get a custom quote, then commit. Different funnel, different trust.',
+          },
+        ],
+      },
+      {
+        eyebrow: "06 — Results, learnings, what's next",
+        heading: 'What this taught us — and what comes next.',
+        impact: [
+          {
+            num: 'Result 01',
+            stat: '5 / 5',
+            label: 'Hallway-test participants picked map-first over list-first. The "feed" pattern was an assumption — testing killed it.',
+          },
+          {
+            num: 'Result 02',
+            stat: 'Reframe',
+            label: 'Brief said "sustainability." Research said *access.* Reframing the problem reframed the entire product strategy — including positioning.',
+          },
+          {
+            num: 'Result 03',
+            stat: 'Pilot-ready',
+            label: 'Final design handed to engineering with three pre-validated patterns: map-first IA, profile-first listings, inquiry-not-checkout.',
+          },
+        ],
+        body: [
+          '**Learning.** "Sustainable" is a constraint a product holds, not a story it tells. The most sustainable thing the product could do was *be useful enough* that people opened it. Mission-led copy lost. Map-led utility won.',
+          '**Next.** If launching: pilot in one neighborhood at a time (Brooklyn, Mt. Pleasant, East Vancouver) and measure repeat-message rate as the leading indicator. Add a low-stakes "save for later" so the relationship doesn\'t have to start with a transaction.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Map-first home', hint: 'Nearby artisans visible immediately' },
+      { label: 'Artisan profile', hint: 'Story, craft history, portfolio' },
+      { label: 'Inquiry flow', hint: 'First-message booking' },
+      { label: 'My closet', hint: 'Items waiting for repair, not items for sale' },
+    ],
+  },
+
+  visit: {
+    eyebrow: 'The Visit Magazine · 2023',
+    tint: 'green',
+    title: 'A 32-page editorial that designed for *tempo,* not for excitement.',
+    sub: "Most travel magazines try to *excite* you about a place. Tofino doesn't excite. It slows you down. The design had to do the same.",
+    meta: [
+      { label: 'Format', value: 'Print · 32 pages' },
+      { label: 'Role', value: 'Editorial design · Layout · Typography' },
+      { label: 'Subject', value: 'Tofino, BC · Coastal identity · Slow travel' },
+      { label: 'Tools', value: 'InDesign · Photoshop · Illustrator' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — Why this problem matters',
+        heading: "Travel publishing has a default tempo. *Tofino doesn't fit it.*",
+        body: [
+          'The travel-magazine genre has a built-in pace: punchy headlines, busy spreads, "10 things you can\'t miss." That tempo flatters destinations that *are* exciting — Tokyo at night, Bangkok street markets.',
+          'Tofino is different. The rain reads slowly. The light does most of the work. The town has fewer than 2,500 residents. Designing it the way you\'d design Lisbon would lose what\'s actually there.',
+          'The design problem wasn\'t *"how do we present this place"* — it was *"how do we let the reader feel its tempo before they see its photographs."*',
+        ],
+      },
+      {
+        eyebrow: '02 — How I defined the real problem',
+        heading: "The problem wasn't visual. *It was rhythmic.*",
+        body: [
+          'Early drafts treated this as a styling problem — pick a tide-themed palette, find muted photography, set the type smaller. The drafts looked nice. They didn\'t *feel* like Tofino.',
+          "Reviewing the drafts, I realized: the issue was that every spread had the same density. Magazines that feel calm aren't calmer in any single page — they're calm because of *how pages relate to each other.* Density follows tide.",
+          'I redefined the problem from *"design a quiet magazine"* to *"design the gaps between the pages, not just the pages."*',
+        ],
+        callout: 'Tofino is small. The light is *large.*',
+      },
+      {
+        eyebrow: '03 — Three editorial decisions',
+        heading: 'What I changed, why, and how I tested it.',
+        body: [
+          'For a print piece, "testing" meant printing, walking away, and reading at three different times of day with fresh eyes. Each decision below was kept or killed based on whether the rhythm held when I came back to it.',
+        ],
+        cards: [
+          {
+            title: 'Decision 1 — More white than copy',
+            meta: 'Rationale · Tempo design',
+            body: "Generous margins on every page. White space carries the same weight as the photograph. The reader's pace *is* the design. *Tested by reading aloud — if a spread couldn't survive the pause between lines, the white wasn't working hard enough.*",
+          },
+          {
+            title: 'Decision 2 — One serif, two sizes',
+            meta: 'Rationale · Voice consistency',
+            body: 'A single serif (Fraunces) does all the work. Italic for first-person reflection, regular for present-tense observation. Resisted adding a sans for "variety" — variety is what magazines fall back on when their content is thin.',
+          },
+          {
+            title: 'Decision 3 — Image rhythm follows tide',
+            meta: 'Rationale · Pacing',
+            body: 'Full-bleed photographs alternate with quiet half-pages of text. Reading the magazine is a tide — pulled in, pulled back, pulled in. *Tested by flipping through fast: if any 4-page run felt monotone, I rebuilt that run.*',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 — What this taught me about screens',
+        heading: 'Editorial work changed how I design *products.*',
+        body: [
+          '**Hierarchy is tempo, not size.** Print designers don\'t ask "which thing is biggest?" — they ask "when does the reader\'s eye land?" Same logic applies to dashboards, onboarding flows, reading-heavy product surfaces.',
+          "**White space is a feature.** Print designers fight for margin space the way product designers fight for headline copy. Both are arguing for the same thing: *respecting the reader's attention.*",
+          '**Tone is typographic.** The difference between a calm product and a frantic one often isn\'t UI patterns — it\'s typeface choice, leading, and italic restraint. Editorial work is where I learned to *hear* that difference.',
+          '**Next.** I now treat every product surface like a spread: where does the eye land first, where does it rest, what\'s the tide between sections. That instinct came from Tofino — and it\'s why this case study sits in the same portfolio as my product work.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Spread 01 — Cover & opener', hint: 'Issue cover and table of contents' },
+      { label: 'Spread 02 — Where the rain reads slowly', hint: 'Opening essay with full-bleed photograph' },
+      { label: 'Spread 03 — Coastal field guide', hint: 'Typography-led spread, italic reflection' },
+      { label: 'Spread 04 — Closing image', hint: 'Final spread, returns to silence' },
+    ],
+  },
+}
+
+// About section
+export const about = {
+  heading: 'I work on products that hold space for *emotionally complex* moments.',
+  body: [
+    "I'm Yoonju — a UI/UX designer working at the intersection of *empathy* and *clarity.*",
+    'I treat every product problem as a human problem first, and a system problem second. I start projects by listening longer than feels comfortable. I synthesize loudly — sticky notes, walls, conversation transcripts. I design in systems, not in screens. And I default to less, especially when the audience is already overwhelmed.',
+    "Outside of work: I make magazines that smell like the places they're about. I think a lot about the emotional texture of typography. And I keep a running list of products that respect the user enough to leave a little white space.",
+  ],
+  strengths: [
+    'Empathic research',
+    'Inclusive UX',
+    'Design systems',
+    'Editorial sensibility',
+    '0-to-1 product thinking',
+  ],
+  tools: [
+    { name: 'Figma', freq: 'Daily' },
+    { name: 'Illustrator', freq: 'Often' },
+    { name: 'InDesign', freq: 'Editorial' },
+    { name: 'After Effects', freq: 'Motion' },
+    { name: 'Framer', freq: 'Web' },
+  ],
+  currently:
+    'Based in Vancouver, BC. Open to design opportunities in health, fintech, and small business tools. Most curious about: the design ethics of AI-assisted products, and what calm design looks like in 2025.',
+}
 
 // Numbers worth showing (use an empty array [] to hide)
 export const stats = []
 
 // Contact section
 export const contact = {
-  heading: 'Let’s build something\nmeaningful together.',
-  sub: 'Something caught your eye? I’d love to connect.',
-  cta: 'Send me a message',
+  eyebrow: "Let's talk",
+  title: 'Working on something *thoughtful?* I’d love to hear about it.',
+  links: [
+    { num: '01', label: 'Email', href: 'mailto:lovingjoo@gmail.com' },
+    { num: '02', label: 'LinkedIn', href: 'https://www.linkedin.com/in/yoon-ju-lee/' },
+  ],
+  tagline: 'Designed & built with care · Vancouver, BC',
 }
