@@ -33,21 +33,79 @@ export const socials = [
   },
 ]
 
-// Hero — stacked headline + quick facts
+// Hero — big greeting headline + floating sticker pills
 export const hero = {
-  lines: ['A designer', 'who *listens*', '*first.*'],
-  tags: ['Empathy-led design', 'Inclusive products', 'Clarity in complexity'],
-  info: [
-    { label: 'Designer', body: 'Yoonju Lee\nUI/UX · Product' },
-    { label: 'Based in', body: 'Vancouver, BC\nCanada' },
-    { label: 'Currently', body: 'Open to opportunities\n2024 — 2025' },
+  titleTop: "Hello! I'm Yoonju,",
+  titleBottom: 'a UX/UI designer.',
+  sub: 'I craft **thoughtful digital experiences** rooted in **empathy** and **clarity** — for people carrying a lot, in moments that matter.',
+  stickers: [
+    { label: 'Empathy-led Design', tint: 'blue', side: 'left' },
+    { label: 'Inclusive Products', tint: 'pink', side: 'right' },
+  ],
+}
+
+// Stacked card deck under the hero — quick links to main sections
+export const deck = [
+  {
+    title: 'My Portfolio',
+    body: 'Four case studies and the question at the center of each.',
+    href: '#works',
+    tint: 'mint',
+  },
+  {
+    title: 'About Me',
+    body: 'A closer look at my background, skills, and how I work.',
+    href: '#about',
+    tint: 'yellow',
+  },
+  {
+    title: 'Contact Me',
+    body: 'Let’s build something meaningful together.',
+    href: '#contact',
+    tint: 'pink',
+  },
+]
+
+// How I work — four process cards
+export const process = {
+  heading: 'Listening first,\nthen designing.',
+  sub: 'My process starts with people, not screens. I listen longer than feels comfortable, reframe the brief when the research disagrees with it, and validate every decision with real users before it ships.',
+  steps: [
     {
-      label: 'Reach',
-      body: 'lovingjoo@gmail.com',
-      href: 'mailto:lovingjoo@gmail.com',
+      num: '(01)',
+      title: 'Listening First',
+      body: 'I start with in-depth interviews and sit in the discomfort of long conversations. The real problem usually shows up three minutes after the scripted questions end.',
+      tint: 'rose',
+    },
+    {
+      num: '(02)',
+      title: 'Reframing the Problem',
+      body: 'The brief is a hypothesis, not a constraint. On Loopin the brief said behavior tracking — the interviews said burnout. Reframing who the user is unlocks the product.',
+      tint: 'mint',
+    },
+    {
+      num: '(03)',
+      title: 'Testing with Real People',
+      body: 'Concept tests, hallway tests, moderated usability rounds. I watch for the pause — the moment a user hesitates is where the design is quietly failing them.',
+      tint: 'pink',
+    },
+    {
+      num: '(04)',
+      title: 'Designing in Systems',
+      body: 'I design in systems, not screens — consistent components, honest language, and white space that respects an already-overwhelmed audience.',
+      tint: 'blue',
     },
   ],
 }
+
+// Numbers worth showing — playful stat pills
+export const statPills = [
+  { value: '4', label: 'end-to-end projects shipped', tint: 'pink' },
+  { value: '6+', label: 'user interviews per project', tint: 'blue' },
+  { value: '5/5', label: 'testers chose CalmNest first', tint: 'mint' },
+  { value: '8→3', label: 'onboarding steps after redesign', tint: 'yellow' },
+  { value: '32', label: 'pages of editorial design', tint: 'lime' },
+]
 
 // Selected works — each links to a full case study below.
 export const works = [
@@ -74,7 +132,7 @@ export const works = [
     num: '03',
     name: 'Upzy',
     tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
-    tint: 'purple',
+    tint: 'lavender',
     headline:
       'What if "sustainable fashion" started with the *tailor down the street?*',
   },
@@ -83,7 +141,7 @@ export const works = [
     num: '04',
     name: 'The Visit Magazine',
     tags: 'Editorial · Print · InDesign · 32 pages',
-    tint: 'green',
+    tint: 'mint',
     headline:
       'Designing a magazine that *smells like Tofino* — salt, cedar, slow mornings.',
   },
@@ -338,7 +396,7 @@ export const caseStudies = {
 
   upzy: {
     eyebrow: 'Upzy · 2024',
-    tint: 'purple',
+    tint: 'lavender',
     title: 'A sustainability marketplace that *didn\'t sell sustainability* — it sold the tailor down the street.',
     sub: 'Most sustainable-fashion apps lead with guilt. Guilt has a terrible conversion rate. So we asked: *what do users actually want?*',
     meta: [
@@ -460,7 +518,7 @@ export const caseStudies = {
 
   visit: {
     eyebrow: 'The Visit Magazine · 2023',
-    tint: 'green',
+    tint: 'mint',
     title: 'A 32-page editorial that designed for *tempo,* not for excitement.',
     sub: "Most travel magazines try to *excite* you about a place. Tofino doesn't excite. It slows you down. The design had to do the same.",
     meta: [
@@ -535,40 +593,43 @@ export const caseStudies = {
 
 // About section
 export const about = {
-  heading: 'I work on products that hold space for *emotionally complex* moments.',
+  heading: 'Hey! That’s me.',
   body: [
-    "I'm Yoonju — a UI/UX designer working at the intersection of *empathy* and *clarity.*",
-    'I treat every product problem as a human problem first, and a system problem second. I start projects by listening longer than feels comfortable. I synthesize loudly — sticky notes, walls, conversation transcripts. I design in systems, not in screens. And I default to less, especially when the audience is already overwhelmed.',
-    "Outside of work: I make magazines that smell like the places they're about. I think a lot about the emotional texture of typography. And I keep a running list of products that respect the user enough to leave a little white space.",
+    "I'm **Yoonju Lee**, a UI/UX designer based in **Vancouver, BC**, with a diploma in Web and Mobile App Design and Development from Langara College. I work at the intersection of **empathy** and **clarity**.",
+    'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences** — I treat every product problem as a human problem first, and a system problem second.',
+    "Outside of work: I make magazines that smell like the places they're about, I think a lot about the emotional texture of typography, and my love for travel and camping constantly gives me new perspectives.",
   ],
-  strengths: [
-    'Empathic research',
-    'Inclusive UX',
-    'Design systems',
-    'Editorial sensibility',
-    '0-to-1 product thinking',
+  // Self-assessed comfort level per tool — tweak freely.
+  skills: [
+    { name: 'Figma', level: 95 },
+    { name: 'Photoshop', level: 90 },
+    { name: 'InDesign', level: 88 },
+    { name: 'Illustrator', level: 80 },
+    { name: 'After Effects', level: 70 },
+    { name: 'HTML & CSS', level: 65 },
   ],
-  tools: [
-    { name: 'Figma', freq: 'Daily' },
-    { name: 'Illustrator', freq: 'Often' },
-    { name: 'InDesign', freq: 'Editorial' },
-    { name: 'After Effects', freq: 'Motion' },
-    { name: 'Framer', freq: 'Web' },
-  ],
-  currently:
-    'Based in Vancouver, BC. Open to design opportunities in health, fintech, and small business tools. Most curious about: the design ethics of AI-assisted products, and what calm design looks like in 2025.',
 }
 
-// Numbers worth showing (use an empty array [] to hide)
-export const stats = []
+// My capabilities — pill tags
+export const capabilities = [
+  'Mobile Design',
+  'UX & Product Design',
+  'User Research',
+  'Wireframing & Prototyping',
+  'Design Systems',
+  'Editorial & Print',
+  'Motion & Interaction',
+]
 
 // Contact section
 export const contact = {
-  eyebrow: "Let's talk",
-  title: 'Working on something *thoughtful?* I’d love to hear about it.',
+  title: "Let's build something\nmeaningful together.",
+  sub: 'Something caught your eye? I’d love to connect. We can turn that idea into a real product.',
+  cta: 'Get in Touch',
+  handwritten: 'and make it real together',
   links: [
-    { num: '01', label: 'Email', href: 'mailto:lovingjoo@gmail.com' },
-    { num: '02', label: 'LinkedIn', href: 'https://www.linkedin.com/in/yoon-ju-lee/' },
+    { label: 'Email', href: 'mailto:lovingjoo@gmail.com' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/yoon-ju-lee/' },
   ],
   tagline: 'Designed & built with care · Vancouver, BC',
 }

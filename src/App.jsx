@@ -5,10 +5,13 @@ import {
   navLinks,
   socials,
   hero,
+  deck,
   works,
   caseStudies,
+  process,
+  statPills,
   about,
-  stats,
+  capabilities,
   contact,
 } from './content'
 
@@ -66,7 +69,7 @@ function Navbar() {
 
 function AvailableBadge() {
   if (!profile.available) return null
-  const text = `• ${profile.availableText.toUpperCase()} `
+  const text = '• I AM AVAILABLE • FOR OPPORTUNITIES '
   return (
     <div className="badge" aria-hidden="true">
       <svg viewBox="0 0 100 100" className="badge-text">
@@ -77,10 +80,10 @@ function AvailableBadge() {
           />
         </defs>
         <text>
-          <textPath href="#circlePath">{text.repeat(2)}</textPath>
+          <textPath href="#circlePath">{text}</textPath>
         </text>
       </svg>
-      <span className="badge-icon">✦</span>
+      <span className="badge-icon">✉</span>
     </div>
   )
 }
@@ -88,61 +91,45 @@ function AvailableBadge() {
 function Hero() {
   return (
     <section id="home" className="hero">
-      <AvailableBadge />
-      <span className="doodle doodle-rainbow" aria-hidden="true">
-        🌈
-      </span>
-      <span className="doodle doodle-plane" aria-hidden="true">
-        ✈️
-      </span>
-
-      <div className="hero-stack">
-        {hero.lines.map((line, i) => (
-          <h1 className="hero-line" key={i}>
-            {rich(line, `hl${i}-`)}
-          </h1>
-        ))}
-      </div>
-
-      <div className="hero-tags">
-        {hero.tags.map((tag) => (
-          <span key={tag} className="hero-tag">
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="hero-actions">
-        <a href="#works" className="btn btn-primary">
-          View my work
-        </a>
-        <a href="#contact" className="btn btn-ghost">
-          Get in touch
-        </a>
-      </div>
-
-      <div className="hero-info">
-        {hero.info.map((block) => (
-          <div className="hero-info-block" key={block.label}>
-            <h6>{block.label}</h6>
-            <p>
-              {block.body.split('\n').map((line, i) =>
-                block.href ? (
-                  <a key={i} href={block.href}>
-                    {line}
-                  </a>
-                ) : (
-                  <span key={i}>
-                    {line}
-                    {i < block.body.split('\n').length - 1 && <br />}
-                  </span>
-                )
-              )}
-            </p>
-          </div>
-        ))}
-      </div>
+      {hero.stickers.map((sticker) => (
+        <span
+          key={sticker.label}
+          className={`hero-sticker sticker-${sticker.side} tint-${sticker.tint}`}
+          aria-hidden="true"
+        >
+          {sticker.label}
+        </span>
+      ))}
+      <h1 className="hero-title">
+        {hero.titleTop}
+        <span className="hero-face" aria-hidden="true">
+          {profile.emoji}
+        </span>
+        <br />
+        {hero.titleBottom}
+      </h1>
+      <p className="hero-sub">{rich(hero.sub, 'hs-')}</p>
     </section>
+  )
+}
+
+function Deck() {
+  return (
+    <div className="deck" aria-label="Quick links">
+      {deck.map((card, i) => (
+        <a
+          key={card.title}
+          href={card.href}
+          className={`deck-card deck-${i} tint-${card.tint}`}
+        >
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+          <span className="deck-arrow" aria-hidden="true">
+            →
+          </span>
+        </a>
+      ))}
+    </div>
   )
 }
 
@@ -150,10 +137,10 @@ function Works({ onOpen }) {
   return (
     <section id="works" className="section">
       <div className="section-head">
-        <h2>Selected works</h2>
+        <h2>My selected works</h2>
         <p>
-          Four projects, one question at the center of each — explore how I
-          framed the problem and shaped the experience.
+          Four projects, one question at the center of each — how I framed the
+          problem and shaped the experience.
         </p>
       </div>
       <div className="work-list">
@@ -165,12 +152,10 @@ function Works({ onOpen }) {
             type="button"
           >
             <div className="work-info">
-              <div className="work-meta">
-                <span className="work-num">{work.num}</span>
-                <span className="work-category">{work.tags}</span>
-              </div>
-              <h3>{rich(work.headline, `w-${work.slug}-`)}</h3>
-              <span className="work-cta">Read the case study →</span>
+              <h3>{work.name}</h3>
+              <span className="work-category">{work.tags}</span>
+              <p>{rich(work.headline, `w-${work.slug}-`)}</p>
+              <span className="btn btn-outline">View Case Study</span>
             </div>
             <div className={`work-thumb tint-${work.tint}`}>
               <span>{work.name}</span>
@@ -182,7 +167,170 @@ function Works({ onOpen }) {
   )
 }
 
+function Process() {
+  return (
+    <section className="section process">
+      <div className="process-grid">
+        <div className="process-intro">
+          <h2>
+            {process.heading.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </h2>
+          <p>{process.sub}</p>
+        </div>
+        <div className="process-cards">
+          {process.steps.map((step) => (
+            <div key={step.num} className={`process-card tint-${step.tint}`}>
+              <div className="process-card-top">
+                <span className="process-icon" aria-hidden="true" />
+                <span className="process-num">{step.num}</span>
+              </div>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Stats() {
+  if (statPills.length === 0) return null
+  return (
+    <section className="section stats">
+      <div className="section-head">
+        <h2>My numbers say it all</h2>
+        <p>
+          A few numbers from the case studies — the kind that come from
+          listening, testing, and iterating.
+        </p>
+      </div>
+      <div className="stat-pills">
+        {statPills.map((stat) => (
+          <div key={stat.label} className="stat-pill">
+            <strong className={`stat-value tint-text-${stat.tint}`}>
+              {stat.value}
+            </strong>
+            <span>{stat.label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function About() {
+  return (
+    <section id="about" className="section about">
+      <div className="about-grid">
+        <div className="about-visual">
+          <div className="about-photo" aria-hidden="true">
+            <span className="about-emoji">{profile.emoji}</span>
+          </div>
+          <AvailableBadge />
+        </div>
+        <div className="about-text">
+          <h2>{about.heading}</h2>
+          {about.body.map((para, i) => (
+            <p key={i}>{rich(para, `ab-${i}-`)}</p>
+          ))}
+          <div className="skills">
+            {about.skills.map((skill) => (
+              <div key={skill.name} className="skill">
+                <div className="skill-row">
+                  <span>{skill.name}</span>
+                  <span>{skill.level}%</span>
+                </div>
+                <div className="skill-track">
+                  <div
+                    className="skill-fill"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Capabilities() {
+  return (
+    <section className="section capabilities">
+      <div className="section-head">
+        <h2>My capabilities</h2>
+        <p>
+          The skills I bring to a team — shaped by product work, print work,
+          and five years of listening for a living.
+        </p>
+      </div>
+      <div className="cap-tags">
+        {capabilities.map((cap) => (
+          <span key={cap} className="cap-tag">
+            {cap}
+          </span>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function Contact() {
+  return (
+    <section id="contact" className="contact">
+      <div className="contact-inner">
+        <span className="chat-bubble" aria-hidden="true">
+          💬
+        </span>
+        <h2 className="contact-title">
+          {contact.title.split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </h2>
+        <p className="contact-sub">{contact.sub}</p>
+        <div className="contact-cta">
+          <a href={`mailto:${profile.email}`} className="btn btn-light">
+            {contact.cta}
+          </a>
+          <span className="handwritten">{contact.handwritten}</span>
+        </div>
+
+        <footer className="footer">
+          <span>
+            © {new Date().getFullYear()} {profile.fullName}. All rights
+            reserved.
+          </span>
+          <div className="footer-links">
+            {contact.links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <span>{contact.tagline}</span>
+        </footer>
+      </div>
+    </section>
+  )
+}
+
 function CaseSections({ study, slugPrefix }) {
+  const tints = ['blue', 'mint', 'pink', 'yellow', 'rose', 'lime']
   return study.sections.map((sec, i) => (
     <div className="case-sec" key={i}>
       <div className="case-sec-eyebrow">{sec.eyebrow}</div>
@@ -195,12 +343,14 @@ function CaseSections({ study, slugPrefix }) {
         </div>
       )}
       {sec.callout && (
-        <div className="case-callout">{rich(sec.callout, `${slugPrefix}c${i}-`)}</div>
+        <div className="case-callout">
+          {rich(sec.callout, `${slugPrefix}c${i}-`)}
+        </div>
       )}
       {sec.cards && (
         <div className="case-cards">
           {sec.cards.map((card, j) => (
-            <div className="case-card" key={j}>
+            <div className={`case-card tint-${tints[j % tints.length]}`} key={j}>
               <h4>{rich(card.title, `${slugPrefix}ct${i}-${j}-`)}</h4>
               <p className="case-card-meta">{card.meta}</p>
               <p>{rich(card.body, `${slugPrefix}cb${i}-${j}-`)}</p>
@@ -288,116 +438,31 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
         {nextSlug ? (
           <>
             <div className="case-next-eyebrow">
-              Next case study · {String(idx + 2).padStart(2, '0')} / {workOrder.length}
+              Next case study · {String(idx + 2).padStart(2, '0')} /{' '}
+              {workOrder.length}
             </div>
             <h2 className="case-next-title">
               {caseStudies[nextSlug].eyebrow.split(' ·')[0]}
             </h2>
             <button
-              className="case-next-link"
+              className="btn btn-light"
               onClick={() => onNavigate(nextSlug)}
               type="button"
             >
-              Continue reading →
+              Continue Reading →
             </button>
           </>
         ) : (
           <>
             <div className="case-next-eyebrow">That's the work — for now.</div>
             <h2 className="case-next-title">Want to talk? I'd love that.</h2>
-            <button className="case-next-link" onClick={onClose} type="button">
-              ← Back to all work
+            <button className="btn btn-light" onClick={onClose} type="button">
+              ← Back to All Work
             </button>
           </>
         )}
       </section>
     </div>
-  )
-}
-
-function About() {
-  return (
-    <section id="about" className="section section-tinted">
-      <div className="about-grid">
-        <div className="about-avatar" aria-hidden="true">
-          <div className="about-blob">{profile.emoji}</div>
-        </div>
-        <div className="about-text">
-          <h2>{rich(about.heading, 'ab-h-')}</h2>
-          {about.body.map((para, i) => (
-            <p key={i}>{rich(para, `ab-b${i}-`)}</p>
-          ))}
-          {stats.length > 0 && (
-            <div className="stats">
-              {stats.map((stat) => (
-                <div key={stat.label} className="stat">
-                  <strong>{stat.value}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="about-lists">
-        <div className="about-list">
-          <h3>Strengths</h3>
-          <ul>
-            {about.strengths.map((item, i) => (
-              <li key={item}>
-                <span>{item}</span>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="about-list">
-          <h3>Tools</h3>
-          <ul>
-            {about.tools.map((tool) => (
-              <li key={tool.name}>
-                <span>{tool.name}</span>
-                <span>{tool.freq}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="about-currently">
-          <h3>Currently</h3>
-          <p>{about.currently}</p>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Contact() {
-  return (
-    <section id="contact" className="contact">
-      <span className="contact-eyebrow">{contact.eyebrow}</span>
-      <h2 className="contact-title">{rich(contact.title, 'co-t-')}</h2>
-      <div className="contact-links">
-        {contact.links.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="contact-link"
-            target={link.href.startsWith('http') ? '_blank' : undefined}
-            rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-          >
-            <span>{link.num}</span> {link.label}
-          </a>
-        ))}
-      </div>
-
-      <footer className="footer">
-        <span>
-          © {new Date().getFullYear()} {profile.fullName}. All rights reserved.
-        </span>
-        <span>{contact.tagline}</span>
-      </footer>
-    </section>
   )
 }
 
@@ -431,10 +496,14 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Deck />
         <Works onOpen={setActiveCase} />
+        <Process />
+        <Stats />
         <About />
-        <Contact />
+        <Capabilities />
       </main>
+      <Contact />
       <CaseStudyOverlay
         slug={activeCase}
         onClose={() => setActiveCase(null)}
