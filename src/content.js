@@ -121,8 +121,8 @@ export const caseStudies = {
   galaxy: {
     eyebrow: 'Galaxy Auto Detailing · Website Redesign',
     tint: 'yellow',
-    title: 'A galaxy-themed site that *hid the cars* — redesigned for contrast, clarity, and trust.',
-    sub: "Galaxy Auto Detailing is a certified detailing shop in Richmond, BC. Its site set bright blue text over a starry space background — the theme explained the name, but not the business. I audited every page, then rebuilt the design system around the work itself.",
+    title: 'The galaxy theme explained the name, *not the business.*',
+    sub: "Galaxy Auto Detailing is a certified detailing shop in Richmond, BC. Its original site set bright blue text over a starry space background that looked striking but buried the cars, the services, and the trust signals. I audited every page, then rebuilt the design system around the work itself.",
     meta: [
       { label: 'Project', value: 'Website redesign · 7-page site' },
       { label: 'Role', value: 'UX Audit · UI Redesign · Information Architecture' },
@@ -162,7 +162,7 @@ export const caseStudies = {
             body: 'Testimonials were small green text on a starry background with no card structure. The address hid in tiny type at the bottom of the page, far from the contact form. The proof the business had earned was *unreadable.*',
           },
         ],
-        callout: 'The galaxy theme explained the name — *not the business.*',
+        callout: 'A striking theme still has to *sell the work.*',
       },
       {
         eyebrow: '03 — The new design system',
