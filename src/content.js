@@ -66,47 +66,6 @@ export const deck = [
   },
 ]
 
-// How I work — four process cards
-export const process = {
-  heading: 'Listening first,\nthen designing.',
-  sub: 'My process starts with people, not screens. I listen longer than feels comfortable, reframe the brief when the research disagrees with it, and validate every decision with real users before it ships.',
-  steps: [
-    {
-      num: '(01)',
-      title: 'Listening First',
-      body: 'I start with in-depth interviews and sit in the discomfort of long conversations. The real problem usually shows up three minutes after the scripted questions end.',
-      tint: 'rose',
-    },
-    {
-      num: '(02)',
-      title: 'Reframing the Problem',
-      body: 'The brief is a hypothesis, not a constraint. On Loopin the brief said behavior tracking — the interviews said burnout. Reframing who the user is unlocks the product.',
-      tint: 'mint',
-    },
-    {
-      num: '(03)',
-      title: 'Testing with Real People',
-      body: 'Concept tests, hallway tests, moderated usability rounds. I watch for the pause — the moment a user hesitates is where the design is quietly failing them.',
-      tint: 'pink',
-    },
-    {
-      num: '(04)',
-      title: 'Designing in Systems',
-      body: 'I design in systems, not screens — consistent components, honest language, and white space that respects an already-overwhelmed audience.',
-      tint: 'blue',
-    },
-  ],
-}
-
-// Numbers worth showing — playful stat pills
-export const statPills = [
-  { value: '4', label: 'end-to-end projects shipped', tint: 'pink' },
-  { value: '6+', label: 'user interviews per project', tint: 'blue' },
-  { value: '5/5', label: 'testers chose CalmNest first', tint: 'mint' },
-  { value: '8→3', label: 'onboarding steps after redesign', tint: 'yellow' },
-  { value: '32', label: 'pages of editorial design', tint: 'lime' },
-]
-
 // Selected works — each links to a full case study below.
 export const works = [
   {

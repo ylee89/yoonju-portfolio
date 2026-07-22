@@ -8,8 +8,6 @@ import {
   deck,
   works,
   caseStudies,
-  process,
-  statPills,
   about,
   capabilities,
   contact,
@@ -161,63 +159,6 @@ function Works({ onOpen }) {
               <span>{work.name}</span>
             </div>
           </button>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-function Process() {
-  return (
-    <section className="section process">
-      <div className="process-grid">
-        <div className="process-intro">
-          <h2>
-            {process.heading.split('\n').map((line, i) => (
-              <span key={i}>
-                {line}
-                <br />
-              </span>
-            ))}
-          </h2>
-          <p>{process.sub}</p>
-        </div>
-        <div className="process-cards">
-          {process.steps.map((step) => (
-            <div key={step.num} className={`process-card tint-${step.tint}`}>
-              <div className="process-card-top">
-                <span className="process-icon" aria-hidden="true" />
-                <span className="process-num">{step.num}</span>
-              </div>
-              <h3>{step.title}</h3>
-              <p>{step.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Stats() {
-  if (statPills.length === 0) return null
-  return (
-    <section className="section stats">
-      <div className="section-head">
-        <h2>My numbers say it all</h2>
-        <p>
-          A few numbers from the case studies — the kind that come from
-          listening, testing, and iterating.
-        </p>
-      </div>
-      <div className="stat-pills">
-        {statPills.map((stat) => (
-          <div key={stat.label} className="stat-pill">
-            <strong className={`stat-value tint-text-${stat.tint}`}>
-              {stat.value}
-            </strong>
-            <span>{stat.label}</span>
-          </div>
         ))}
       </div>
     </section>
@@ -498,8 +439,6 @@ function App() {
         <Hero />
         <Deck />
         <Works onOpen={setActiveCase} />
-        <Process />
-        <Stats />
         <About />
         <Capabilities />
       </main>
