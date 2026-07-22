@@ -208,18 +208,18 @@ export const caseStudies = {
         impact: [
           {
             num: 'Result 01',
-            stat: '1 → 2',
-            label: 'Prominent CTAs. One buried nav button became two clear red actions — *booking and gift certificates* — repeated on every key page.',
+            stat: 'Two clear CTAs',
+            label: 'The one buried navigation button became two clear red actions for *booking and gift certificates,* and they now repeat on every key page so visitors always know how to act.',
           },
           {
             num: 'Result 02',
             stat: '7 pages',
-            label: 'Restructured under a single sitemap and design system, so every service, project, and post has a findable home.',
+            label: 'Every page was restructured under a single sitemap and design system, so each service, project, and post now has a findable home.',
           },
           {
             num: 'Result 03',
             stat: 'One system',
-            label: 'Colors, type, buttons, and card layouts unified — red means action, gray bands mean a new section, tags explain the work.',
+            label: 'Colors, type, buttons, and card layouts are unified into one language. Red always means action, gray bands mark a new section, and tags explain the work behind each result.',
           },
         ],
         body: [
