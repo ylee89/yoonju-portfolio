@@ -365,6 +365,17 @@ function CaseSections({ study, slugPrefix }) {
           {rich(sec.callout, `${slugPrefix}c${i}-`)}
         </div>
       )}
+      {sec.palette && (
+        <div className="case-palette">
+          {sec.palette.map((c) => (
+            <div className="swatch" key={c.hex}>
+              <span className="swatch-chip" style={{ background: c.hex }} />
+              <strong>{c.name}</strong>
+              <span className="swatch-hex">{c.hex}</span>
+            </div>
+          ))}
+        </div>
+      )}
       {sec.cards && (
         <div className="case-cards">
           {sec.cards.map((card, j) => (

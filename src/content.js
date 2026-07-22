@@ -48,7 +48,7 @@ export const hero = {
 export const deck = [
   {
     title: 'My Portfolio',
-    body: 'Five case studies and the question at the center of each.',
+    body: 'Six case studies and the question at the center of each.',
     href: '#works',
     tint: 'mint',
   },
@@ -80,11 +80,12 @@ export const works = [
       'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
   {
-    // Reserved slot for the next case study. Fill in slug/name/image when ready.
-    placeholder: true,
-    name: 'New case study',
-    tags: 'In progress',
-    tint: 'lavender',
+    slug: 'pawhaus',
+    num: '02',
+    name: 'Pawhaus',
+    tags: 'Brand & Web · Pet Care · E-commerce',
+    tint: 'yellow',
+    headline: 'A pet-shop brand and store that treats pets like *family.*',
   },
   {
     slug: 'loopin',
@@ -250,6 +251,90 @@ export const caseStudies = {
       { label: 'Services — card grid + deep dives', hint: 'Nine services, three bookable categories' },
       { label: 'Gallery — filterable projects', hint: 'Tagged project cards replace the photo dump' },
       { label: 'Blog — searchable tips', hint: 'Categories, dates, and pagination' },
+    ],
+  },
+
+  pawhaus: {
+    eyebrow: 'Pawhaus · Pet Shop Website',
+    tint: 'yellow',
+    title: 'A pet-shop brand as *warm and playful* as bringing a pet home.',
+    sub: 'Pawhaus (Paw + Haus, "the house of paws") is a pet-care e-commerce concept. I designed the brand and the landing page together, so the identity and the shopping experience feel like one friendly place that treats pets like family.',
+    meta: [
+      { label: 'Project', value: 'Brand identity · Landing page' },
+      { label: 'Role', value: 'Branding · UI / Web Design' },
+      { label: 'Industry', value: 'Pet Care · E-commerce' },
+      { label: 'Tools', value: 'Figma' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — The idea',
+        heading: 'Pawhaus is *Paw + Haus* — a home for pet people.',
+        body: [
+          'The name pairs "paw" with the German "haus" (house), so the whole brand leans into one promise: a warm, welcoming home for you and your pet. The tagline says it plainly — **"We make pet care easy and fun."**',
+          'Every choice after that serves the same feeling: friendly, rounded, and playful, but still trustworthy enough that people will hand over their card to care for a member of the family.',
+        ],
+      },
+      {
+        eyebrow: '02 — The palette',
+        heading: 'Warm cream, a *confident indigo,* and playful orange.',
+        body: [
+          'The colours balance play and trust. A soft cream sets a calm, warm ground, indigo carries the brand and the primary actions, and orange and gold bring the fun that pet brands live on.',
+        ],
+        palette: [
+          { hex: '#4A5AE9', name: 'Indigo' },
+          { hex: '#FF9500', name: 'Orange' },
+          { hex: '#EFC356', name: 'Gold' },
+          { hex: '#FFFAE5', name: 'Cream' },
+          { hex: '#FFFFFF', name: 'White' },
+        ],
+      },
+      {
+        eyebrow: '03 — Type & logo',
+        heading: 'A rounded display face, a *calm body face,* and a paw.',
+        body: [
+          '**Madimi One** sets the logo and headlines — its soft, rounded letters feel approachable and a little bouncy, exactly the tone a pet brand wants. **Poppins** handles body copy so product details and descriptions stay clean and easy to read.',
+          'The logo joins a solid paw print to the **Pawhaus** wordmark, and paw prints and bone shapes carry through the site as friendly background motifs.',
+        ],
+        cards: [
+          {
+            title: 'Madimi One',
+            meta: 'Display · Logo & titles',
+            body: 'Rounded, friendly, and a little playful. Used for the logo, section titles, and any moment that should feel warm.',
+          },
+          {
+            title: 'Poppins',
+            meta: 'Body · Product & UI text',
+            body: 'A clean geometric sans for descriptions, prices, and navigation, so the fun display face never gets in the way of shopping.',
+          },
+          {
+            title: 'Paw & bone motifs',
+            meta: 'Graphic language',
+            body: 'Soft paw prints and a bone shape repeat as background accents, tying every section back to the brand without shouting.',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 — The landing page',
+        heading: 'One scroll from *"hello" to ready-to-shop.*',
+        body: [
+          'The page moves a visitor from a warm first impression to a confident shopper. A cheerful hero ("We make pet care easy and fun") leads into **browse-by-category**, featured **products**, an **about + stats** block that builds trust (happy clients, brands, products, years in business), a **best-sellers** grid, and a **news & blog** row of pet-care tips.',
+          'Products lead with big, bright photos and clear prices, categories sit one tap away, and social proof — reviews and numbers — lands exactly where hesitation usually shows up.',
+        ],
+      },
+      {
+        eyebrow: '05 — What ties it together',
+        heading: 'A system, not just a *pretty page.*',
+        body: [
+          '**Learning.** A consumer brand lives or dies on consistency. Fixing the palette, the two typefaces, the rounded shapes, and the paw motif up front meant every new section already knew how to look, so the whole site reads as one happy place.',
+          '**Next.** Extend the system into the full shop and product pages, design the cart and checkout in the same warm language, and build a small component library so the brand holds together as the catalogue grows.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Brand & palette', hint: 'Colours, type, and paw motifs' },
+      { label: 'Hero', hint: '"We make pet care easy and fun"' },
+      { label: 'Browse by category', hint: 'Accessories, food, toys, clothing' },
+      { label: 'Best sellers & blog', hint: 'Products and pet-care tips' },
     ],
   },
 

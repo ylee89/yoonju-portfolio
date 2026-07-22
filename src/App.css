@@ -1008,6 +1008,39 @@ body.case-open {
   margin: 2.4rem 0;
 }
 
+.case-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  margin-top: 1.8rem;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.swatch-chip {
+  width: 104px;
+  height: 104px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.swatch strong {
+  font-size: 0.95rem;
+}
+
+.swatch-hex {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .case-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
