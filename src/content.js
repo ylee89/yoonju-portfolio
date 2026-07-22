@@ -686,6 +686,11 @@ export const about = {
       alt: 'Arms wide open on a rocky mountain summit',
       caption: 'up a mountain',
     },
+    {
+      src: '/images/about-4.jpg',
+      alt: 'Standing by a turquoise waterfall pool at Lake Louise',
+      caption: 'Lake Louise',
+    },
   ],
   // Tools I work in. `icon` maps to a brand mark in App.jsx.
   skills: [
