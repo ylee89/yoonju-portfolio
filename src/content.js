@@ -48,7 +48,7 @@ export const hero = {
 export const deck = [
   {
     title: 'My Portfolio',
-    body: 'Four case studies and the question at the center of each.',
+    body: 'Five case studies and the question at the center of each.',
     href: '#works',
     tint: 'mint',
   },
@@ -69,8 +69,17 @@ export const deck = [
 // Selected works — each links to a full case study below.
 export const works = [
   {
-    slug: 'loopin',
+    slug: 'galaxy',
     num: '01',
+    name: 'Galaxy Auto Detailing',
+    tags: 'Web Redesign · UX Audit · Small Business',
+    tint: 'yellow',
+    headline:
+      'What if a detailing site showed *the shine,* not the stars?',
+  },
+  {
+    slug: 'loopin',
+    num: '02',
     name: 'Loopin',
     tags: 'Mobile · Mental wellness · 0–1 · 13 weeks',
     tint: 'pink',
@@ -79,7 +88,7 @@ export const works = [
   },
   {
     slug: 'receiptly',
-    num: '02',
+    num: '03',
     name: 'Receiptly',
     tags: 'B2B SaaS · AI · Web & Mobile · 13 weeks',
     tint: 'blue',
@@ -88,7 +97,7 @@ export const works = [
   },
   {
     slug: 'upzy',
-    num: '03',
+    num: '04',
     name: 'Upzy',
     tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
     tint: 'lavender',
@@ -97,7 +106,7 @@ export const works = [
   },
   {
     slug: 'visit',
-    num: '04',
+    num: '05',
     name: 'The Visit Magazine',
     tags: 'Editorial · Print · InDesign · 32 pages',
     tint: 'mint',
@@ -109,6 +118,124 @@ export const works = [
 // Full case studies, keyed by slug. Rendered in a full-screen overlay
 // when a work card is clicked.
 export const caseStudies = {
+  galaxy: {
+    eyebrow: 'Galaxy Auto Detailing · Website Redesign',
+    tint: 'yellow',
+    title: 'A galaxy-themed site that *hid the cars* — redesigned for contrast, clarity, and trust.',
+    sub: "Galaxy Auto Detailing is a certified detailing shop in Richmond, BC. Its site set bright blue text over a starry space background — the theme explained the name, but not the business. I audited every page, then rebuilt the design system around the work itself.",
+    meta: [
+      { label: 'Project', value: 'Website redesign · 7-page site' },
+      { label: 'Role', value: 'UX Audit · UI Redesign · Information Architecture' },
+      { label: 'Industry', value: 'Automotive Services · Small Business' },
+      { label: 'Tools', value: 'Figma' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 — Why this problem matters',
+        heading: 'A detailing site has one job: *make people trust you with their car.*',
+        body: [
+          'The original site ran a galaxy/star background behind everything, with bright blue (#008CF8) headings on black and green highlight text. The space theme connected to the "Galaxy" name — but not to car detailing — and the low contrast made the content genuinely hard to read.',
+          'Every headline used the same bright blue font at similar sizes, so visitors couldn\'t tell **which services were available**, what was important, or where to click. The visual noise made the page feel heavy and unstructured — the kind of page people skip, not read.',
+          "For a small business that lives on bookings, that's not a styling problem. **It's a revenue problem.**",
+        ],
+      },
+      {
+        eyebrow: '02 — Auditing the old site',
+        heading: 'Section by section, the same three failures *kept repeating.*',
+        body: [
+          'I walked through every page — home, services, gallery, blog, contact — and logged the issues. They clustered into three patterns:',
+        ],
+        cards: [
+          {
+            title: 'Finding 1 — The one CTA was buried.',
+            meta: 'Audit · Conversion',
+            body: 'The "Buy Gift Certificates Online" button sat in the navigation with an outlined border that broke consistency instead of drawing attention. The hero slideshow floated car photos over galaxy noise — *the action never stood out.*',
+          },
+          {
+            title: 'Finding 2 — No visual hierarchy anywhere.',
+            meta: 'Audit · Readability',
+            body: 'Identical bright blue headlines, inconsistent image sizes, cramped card spacing, a clashing yellow banner, and promotions dumped into one grid with no categories. Visitors couldn\'t process what they were looking at.',
+          },
+          {
+            title: 'Finding 3 — Trust surfaces were failing.',
+            meta: 'Audit · Credibility',
+            body: 'Testimonials were small green text on a starry background with no card structure. The address hid in tiny type at the bottom of the page, far from the contact form. The proof the business had earned was *unreadable.*',
+          },
+        ],
+        callout: 'The galaxy theme explained the name — *not the business.*',
+      },
+      {
+        eyebrow: '03 — The new design system',
+        heading: 'High contrast, one accent, and red that *always means action.*',
+        body: [
+          'I replaced the starry canvas with a professional dark system: **deep black (#000000)** for clean backdrops, **charcoal gray (#242424)** section bands to create visual separation, and **white text** throughout for clear readability.',
+          '**Bright red (#FF0000)** is reserved exclusively for actions — "Book Online Service," "Buy Gift Certificates Online," "Book Now," "Submit." If it\'s red, you can click it, and it matters.',
+          'Typography moved to **Roboto** with an NT Wagner logotype — bold, larger headings to create hierarchy, regular body text for reading. The galaxy background became a clean, high-quality hero photo of a car actually being detailed.',
+        ],
+      },
+      {
+        eyebrow: '04 — Page-by-page decisions',
+        heading: 'Every page got a clear job *and a clear next step.*',
+        body: [
+          'The redesign covers the full 7-page sitemap — Home, About, Our Services, Gallery, Pricing, Blog, Contact — each rebuilt around what its visitor is trying to do:',
+        ],
+        cards: [
+          {
+            title: 'Landing — two CTAs, one story',
+            meta: 'Redesign · Home',
+            body: 'A real detailing hero photo with two prominent red CTAs. Services summarized in readable cards with "Learn More." A dedicated Before & After section with labeled tags, a Latest Projects strip, star-rated reviews with customer photos, and contact info placed beside the form.',
+          },
+          {
+            title: 'Services — from starfield to structure',
+            meta: 'Redesign · Services',
+            body: 'Nine services in a consistent card grid with matching photo ratios and clear labels, followed by deep-dive sections for Interior, Exterior, and Complete Care packages — each with its own "Book Now."',
+          },
+          {
+            title: 'Gallery — projects, not a photo dump',
+            meta: 'Redesign · Gallery',
+            body: 'The endless uncategorized image wall became filterable project cards — each with a title, description, and tags like Interior Detail, Deep Clean, Ceramic Coating — so customers can see *what work produced the result.*',
+          },
+          {
+            title: 'Blog — findable, skimmable, dated',
+            meta: 'Redesign · Blog',
+            body: 'The cluttered "News Blog" grid became a searchable card layout with categories, consistent thumbnails, dates, and pagination — car-care tips a visitor can actually browse.',
+          },
+        ],
+      },
+      {
+        eyebrow: "05 — Results, learnings, what's next",
+        heading: 'What changed because of this work.',
+        impact: [
+          {
+            num: 'Result 01',
+            stat: '1 → 2',
+            label: 'Prominent CTAs. One buried nav button became two clear red actions — *booking and gift certificates* — repeated on every key page.',
+          },
+          {
+            num: 'Result 02',
+            stat: '7 pages',
+            label: 'Restructured under a single sitemap and design system, so every service, project, and post has a findable home.',
+          },
+          {
+            num: 'Result 03',
+            stat: 'One system',
+            label: 'Colors, type, buttons, and card layouts unified — red means action, gray bands mean a new section, tags explain the work.',
+          },
+        ],
+        body: [
+          "**Learning.** A theme is not a brand. The galaxy visuals were the site's most distinctive feature and also its biggest liability — distinctiveness only helps when it points at what the business actually sells. Contrast, hierarchy, and honest labels do more for trust than any decoration.",
+          '**Next.** If shipped: measure clicks on the two CTAs against the old single button, track gallery filter usage to learn which services customers browse most, and A/B test the hero copy.',
+        ],
+      },
+    ],
+    gallery: [
+      { label: 'Landing — hero & CTAs', hint: 'Real work in the hero, red actions above the fold' },
+      { label: 'Services — card grid + deep dives', hint: 'Nine services, three bookable categories' },
+      { label: 'Gallery — filterable projects', hint: 'Tagged project cards replace the photo dump' },
+      { label: 'Blog — searchable tips', hint: 'Categories, dates, and pagination' },
+    ],
+  },
+
   loopin: {
     eyebrow: 'Loopin · 2024',
     tint: 'pink',

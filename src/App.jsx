@@ -137,7 +137,7 @@ function Works({ onOpen }) {
       <div className="section-head">
         <h2>My selected works</h2>
         <p>
-          Four projects, one question at the center of each — how I framed the
+          Five projects, one question at the center of each — how I framed the
           problem and shaped the experience.
         </p>
       </div>
