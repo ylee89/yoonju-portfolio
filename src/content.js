@@ -85,6 +85,8 @@ export const works = [
     name: 'Pawhaus',
     tags: 'Brand & Web · Pet Care · E-commerce',
     tint: 'yellow',
+    image: '/images/work-pawhaus.jpg',
+    imageFit: 'cover',
     headline: 'A pet-shop brand and store that treats pets like *family.*',
   },
   {
@@ -258,9 +260,9 @@ export const caseStudies = {
     eyebrow: 'Pawhaus · Pet Shop Website',
     tint: 'yellow',
     title: 'A pet-shop brand as *warm and playful* as bringing a pet home.',
-    sub: 'Pawhaus (Paw + Haus, "the house of paws") is a pet-care e-commerce concept. I designed the brand and the landing page together, so the identity and the shopping experience feel like one friendly place that treats pets like family.',
+    sub: 'Pawhaus (Paw + Haus, "the house of paws") is a pet-care e-commerce concept I designed solo for a school brief. I built the brand and the landing page together, so the identity and the shopping experience feel like one friendly place that treats pets like family.',
     meta: [
-      { label: 'Project', value: 'Brand identity · Landing page' },
+      { label: 'Project', value: 'School project · Solo' },
       { label: 'Role', value: 'Branding · UI / Web Design' },
       { label: 'Industry', value: 'Pet Care · E-commerce' },
       { label: 'Tools', value: 'Figma' },
