@@ -71,7 +71,7 @@ export const works = [
   {
     slug: 'galaxy',
     num: '01',
-    name: 'Galaxy Site',
+    name: 'Galaxy Auto Detailing',
     tags: 'Web Redesign · UX Audit · Small Business',
     tint: 'yellow',
     image: '/images/work-galaxy.jpg',
