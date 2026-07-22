@@ -243,7 +243,7 @@ export const caseStudies = {
     sub: 'Loopin helps parents of neurodivergent kids strengthen their bond through fun daily routines and activities. The struggle runs both ways, so the app cares for two people at once: the child who needs to be understood, and the parent who needs support.',
     meta: [
       { label: 'Duration', value: '13 weeks' },
-      { label: 'Role', value: 'Lead UX · Research synthesis · Feature design' },
+      { label: 'Role', value: 'UX/UI Design · CalmNest feature owner' },
       { label: 'Industries', value: 'Health & Wellness · Family Tech' },
       { label: 'Tools', value: 'Figma · Illustrator · After Effects' },
     ],
@@ -262,7 +262,7 @@ export const caseStudies = {
         heading: 'Two people, *two kinds of overwhelm,* one frayed connection.',
         body: [
           'Research surfaced two truths that lived side by side. The **child** felt misunderstood, overwhelmed, and like they were constantly struggling. The **parent** felt overwhelmed too, but also disconnected and unsupported in the everyday.',
-          'The problem was never only the child\'s behavior or only the parent\'s stress. It was the **bond between them** wearing thin under both. So I reframed the brief from "manage the child" to "help the child and the parent reconnect."',
+          'The problem was never only the child\'s behavior or only the parent\'s stress. It was the **bond between them** wearing thin under both. So we reframed the brief from "manage the child" to "help the child and the parent reconnect."',
         ],
         callout: '"Connection, not perfection, is what truly changes a child\'s world."',
       },
@@ -291,15 +291,24 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '04 — How I validated it',
+        eyebrow: '04 — My contribution',
+        heading: 'I owned the *CalmNest* feature end to end.',
+        body: [
+          'On our team, the part I designed from research through final UI was **CalmNest**, the parent-facing side of Loopin. It answers the question the child-facing features cannot: who is looking after the parent?',
+          'I shaped it as a calm, low-pressure check-in instead of another task. A **weekly mood tracker** lets parents log how they feel each day with a simple emoji slider, so they can notice their own patterns the way Moodies surfaces the child\'s. A **voice journal** lets them offload a hard moment out loud when typing is too much.',
+          'Around those, I laid out a small **resource library** of audio books, quick tips, saved items, and resources, all framed by the line that set the tone for the whole feature: *"Connection, not perfection, is what truly changes a child\'s world."*',
+        ],
+      },
+      {
+        eyebrow: '05 — How I validated it',
         heading: 'Testing with parents confirmed the *two-sided* bet.',
         body: [
-          'I ran concept and prototype sessions with parents, comparing a traditional child-only tracker against the two-sided Loopin approach.',
+          'We ran concept and prototype sessions with parents, comparing a traditional child-only tracker against the two-sided Loopin approach.',
           'Parents consistently chose the version that made room for them too. Giving the child a voice through Moodies and the parent a moment through CalmNest was what made the app feel like it understood their actual life, not just their child\'s symptoms.',
         ],
       },
       {
-        eyebrow: "05 — Results, learnings, what's next",
+        eyebrow: "06 — Results, learnings, what's next",
         heading: 'What changed because of this work.',
         impact: [
           {
@@ -319,16 +328,16 @@ export const caseStudies = {
           },
         ],
         body: [
-          '**Learning.** Designing for a vulnerable child and an exhausted parent at the same time meant every screen had to hold two emotional needs at once. The app only works when it refuses to pick a side.',
-          '**Next.** Pilot the shared routines with real families to see whether daily connection moments actually ease conflict, and validate Moodies with children directly, not only through their parents.',
+          '**Learning.** Designing CalmNest taught me to design for an exhausted parent without adding one more task to their day. Every interaction had to feel like relief, not homework, which reshaped how I approach emotional, low-pressure UX.',
+          '**Next.** Test the CalmNest voice journal with parents in their hardest moments, not only calm ones, and pilot the shared routines with real families to see whether daily connection moments actually ease conflict.',
         ],
       },
     ],
     gallery: [
-      { label: 'Moodies · emoji & voice check-in', hint: 'The child shares how they feel' },
-      { label: 'Shared mood history', hint: 'Parent and child see the pattern together' },
-      { label: 'CalmNest · parent self-care', hint: 'Mood slider and voice journal' },
-      { label: 'Daily routines', hint: 'Fun activities they do together' },
+      { label: 'CalmNest · parent mood tracker', hint: 'Weekly emoji mood slider' },
+      { label: 'CalmNest · voice journal', hint: 'Offload a hard moment out loud' },
+      { label: 'CalmNest · resource library', hint: 'Audio books, tips, saved, resources' },
+      { label: 'CalmNest · welcome', hint: '"Connection, not perfection"' },
     ],
   },
 
