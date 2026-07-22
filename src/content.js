@@ -673,8 +673,8 @@ export const about = {
   photos: [
     {
       src: '/images/about-1.jpg',
-      alt: 'Yoonju on a sunny day by the water in Vancouver',
-      caption: 'ocean days',
+      alt: 'Yoonju outdoors in a cap and sunglasses on a sunny day',
+      caption: 'trail selfie',
     },
     {
       src: '/images/about-2.jpg',
@@ -683,7 +683,7 @@ export const about = {
     },
     {
       src: '/images/about-3.jpg',
-      alt: 'Arms wide on a rocky mountain summit',
+      alt: 'Arms wide open on a rocky mountain summit',
       caption: 'up a mountain',
     },
   ],
