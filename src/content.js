@@ -75,7 +75,7 @@ export const works = [
     tags: 'Web Redesign · UX Audit · Small Business',
     tint: 'yellow',
     headline:
-      'What if a detailing site showed *the shine,* not the stars?',
+      'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
   {
     slug: 'loopin',
