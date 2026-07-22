@@ -137,37 +137,56 @@ function Works({ onOpen }) {
       <div className="section-head">
         <h2>My selected works</h2>
         <p>
-          Five projects, one question at the center of each — how I framed the
-          problem and shaped the experience.
+          A few projects I’ve shaped, each built around one question — how I
+          framed the problem and designed the experience.
         </p>
       </div>
-      <div className="work-list">
-        {works.map((work) => (
-          <button
-            key={work.slug}
-            className="work-card"
-            onClick={() => onOpen(work.slug)}
-            type="button"
-          >
-            <div className="work-info">
-              <h3>{work.name}</h3>
-              <span className="work-category">{work.tags}</span>
-              <p>{rich(work.headline, `w-${work.slug}-`)}</p>
-              <span className="btn btn-outline">View Case Study</span>
+      <div className="work-grid">
+        {works.map((work, i) =>
+          work.placeholder ? (
+            <div className="work-card work-card-soon" key={`ph-${i}`}>
+              <div className={`work-thumb tint-${work.tint}`}>
+                <span className="soon-badge">Coming soon</span>
+              </div>
+              <div className="work-body">
+                <h3>{work.name}</h3>
+                <span className="work-category">{work.tags}</span>
+              </div>
             </div>
-            <div
-              className={`work-thumb tint-${work.tint}${
-                work.image ? ` fit-${work.imageFit || 'cover'}` : ''
-              }`}
+          ) : (
+            <button
+              key={work.slug}
+              className="work-card"
+              onClick={() => onOpen(work.slug)}
+              type="button"
             >
-              {work.image ? (
-                <img src={work.image} alt={`${work.name} preview`} loading="lazy" />
-              ) : (
-                <span>{work.name}</span>
-              )}
-            </div>
-          </button>
-        ))}
+              <div
+                className={`work-thumb tint-${work.tint}${
+                  work.image ? ` fit-${work.imageFit || 'cover'}` : ''
+                }`}
+              >
+                {work.image ? (
+                  <img
+                    src={work.image}
+                    alt={`${work.name} preview`}
+                    loading="lazy"
+                  />
+                ) : (
+                  <span>{work.name}</span>
+                )}
+              </div>
+              <div className="work-body">
+                <div className="work-body-head">
+                  <h3>{work.name}</h3>
+                  <span className="work-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                </div>
+                <span className="work-category">{work.tags}</span>
+              </div>
+            </button>
+          )
+        )}
       </div>
     </section>
   )

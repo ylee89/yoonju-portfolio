@@ -80,6 +80,13 @@ export const works = [
       'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
   {
+    // Reserved slot for the next case study. Fill in slug/name/image when ready.
+    placeholder: true,
+    name: 'New case study',
+    tags: 'In progress',
+    tint: 'lavender',
+  },
+  {
     slug: 'loopin',
     num: '02',
     name: 'Loopin',
@@ -97,7 +104,7 @@ export const works = [
     tags: 'B2B SaaS · AI · Web & Mobile · 13 weeks',
     tint: 'blue',
     image: '/images/work-receiptly.jpg',
-    imageFit: 'contain',
+    imageFit: 'cover',
     headline:
       "Solo founders don't need better bookkeeping. They need to *trust* the numbers they show investors.",
   },
@@ -108,7 +115,7 @@ export const works = [
     tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
     tint: 'lavender',
     image: '/images/work-upzy.jpg',
-    imageFit: 'contain',
+    imageFit: 'cover',
     headline:
       'What if "sustainable fashion" started with the *tailor down the street?*',
   },
