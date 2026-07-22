@@ -685,14 +685,15 @@ export const about = {
     'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences** — I treat every product problem as a human problem first, and a system problem second.',
     "Outside of work: I make magazines that smell like the places they're about, I think a lot about the emotional texture of typography, and my love for travel and camping constantly gives me new perspectives.",
   ],
-  // Self-assessed comfort level per tool — tweak freely.
+  // Tools I work in. `icon` maps to a brand mark in App.jsx.
   skills: [
-    { name: 'Figma', level: 95 },
-    { name: 'Photoshop', level: 90 },
-    { name: 'InDesign', level: 88 },
-    { name: 'Illustrator', level: 80 },
-    { name: 'After Effects', level: 70 },
-    { name: 'HTML & CSS', level: 65 },
+    { name: 'Figma', icon: 'figma' },
+    { name: 'Photoshop', icon: 'photoshop' },
+    { name: 'Illustrator Basics', icon: 'illustrator' },
+    { name: 'InDesign', icon: 'indesign' },
+    { name: 'HTML & CSS Basics', icon: 'htmlcss' },
+    { name: 'After Effects Basics', icon: 'aftereffects' },
+    { name: 'Premiere Pro', icon: 'premiere' },
   ],
 }
 

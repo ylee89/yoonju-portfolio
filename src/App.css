@@ -560,33 +560,55 @@ main {
   margin: 0 0 1.1rem;
 }
 
-.skills {
-  margin-top: 2.2rem;
+.about-skills {
+  margin-top: 4rem;
+}
+
+.about-skills-head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-skills-head h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin: 0;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.about-skills-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+}
+
+.skill-pills {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.3rem 2.5rem;
+  gap: 1.1rem;
 }
 
-.skill-row {
+.skill-pill {
   display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  font-size: 0.98rem;
-  margin-bottom: 0.5rem;
-}
-
-.skill-track {
-  height: 7px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--white);
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.9rem 1.6rem;
   background: var(--ink);
+  color: #fff;
   border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.skill-pill-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 
 /* ───────────── Capabilities ───────────── */
@@ -1035,7 +1057,7 @@ body.case-open {
     height: 96px;
   }
 
-  .skills {
+  .skill-pills {
     grid-template-columns: 1fr;
   }
 

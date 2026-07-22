@@ -165,6 +165,52 @@ function Works({ onOpen }) {
   )
 }
 
+// Adobe-style brand tile: rounded square, brand background, two letters.
+function adobeIcon(bg, fg, letters) {
+  return (
+    <svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+      <rect x="2" y="2" width="36" height="36" rx="8" fill={bg} />
+      <text
+        x="20"
+        y="21"
+        fill={fg}
+        fontSize="15"
+        fontWeight="700"
+        textAnchor="middle"
+        dominantBaseline="central"
+        fontFamily="Inter, sans-serif"
+      >
+        {letters}
+      </text>
+    </svg>
+  )
+}
+
+const skillIcons = {
+  figma: (
+    <svg viewBox="0 0 38 57" width="20" height="30" aria-hidden="true">
+      <path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0Z" />
+      <path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0Z" />
+      <path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19Z" />
+      <path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5Z" />
+      <path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5Z" />
+    </svg>
+  ),
+  photoshop: adobeIcon('#001e36', '#31a8ff', 'Ps'),
+  illustrator: adobeIcon('#330000', '#ff9a00', 'Ai'),
+  indesign: adobeIcon('#49021f', '#ff3366', 'Id'),
+  htmlcss: (
+    <svg viewBox="0 0 512 512" width="28" height="28" aria-hidden="true">
+      <path fill="#e34f26" d="M71 460 30 0h452l-41 460-185 52z" />
+      <path fill="#ef652a" d="m256 472 149-41 35-394H256z" />
+      <path fill="#ebebeb" d="M256 208h-75l-5-58h80V94H114l14 171h128zm0 147-63-17-4-45h-57l8 89 116 32z" />
+      <path fill="#fff" d="M256 208v57h70l-7 74-63 17v59l116-32 16-175zm0-114v56h137l4-56z" />
+    </svg>
+  ),
+  aftereffects: adobeIcon('#00005b', '#9999ff', 'Ae'),
+  premiere: adobeIcon('#2a0a4e', '#ea77ff', 'Pr'),
+}
+
 function About() {
   return (
     <section id="about" className="section about">
@@ -180,22 +226,21 @@ function About() {
           {about.body.map((para, i) => (
             <p key={i}>{rich(para, `ab-${i}-`)}</p>
           ))}
-          <div className="skills">
-            {about.skills.map((skill) => (
-              <div key={skill.name} className="skill">
-                <div className="skill-row">
-                  <span>{skill.name}</span>
-                  <span>{skill.level}%</span>
-                </div>
-                <div className="skill-track">
-                  <div
-                    className="skill-fill"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+        </div>
+      </div>
+
+      <div className="about-skills">
+        <div className="about-skills-head">
+          <h3>My skills</h3>
+          <span className="about-skills-rule" aria-hidden="true" />
+        </div>
+        <div className="skill-pills">
+          {about.skills.map((skill) => (
+            <div key={skill.name} className="skill-pill">
+              <span className="skill-pill-icon">{skillIcons[skill.icon]}</span>
+              <span>{skill.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
