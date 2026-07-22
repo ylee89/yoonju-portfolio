@@ -144,7 +144,7 @@ export const caseStudies = {
     title: 'The galaxy theme explained the name, *not the business.*',
     sub: "Galaxy Auto Detailing is a certified detailing shop in Richmond, BC. Its original site set bright blue text over a starry space background that looked striking but buried the cars, the services, and the trust signals. I audited every page, then rebuilt the design system around the work itself.",
     meta: [
-      { label: 'Project', value: 'Website redesign · 7-page site' },
+      { label: 'Project', value: 'Website redesign · 4 pages' },
       { label: 'Role', value: 'UX Audit · UI Redesign · Information Architecture' },
       { label: 'Industry', value: 'Automotive Services · Small Business' },
       { label: 'Tools', value: 'Figma' },
@@ -197,7 +197,7 @@ export const caseStudies = {
         eyebrow: '04 — Page-by-page decisions',
         heading: 'Every page got a clear job *and a clear next step.*',
         body: [
-          'The redesign covers the full 7-page sitemap — Home, About, Our Services, Gallery, Pricing, Blog, Contact — each rebuilt around what its visitor is trying to do:',
+          'I focused the redesign on the four pages that carry the most weight — the landing page, services, gallery, and blog — each rebuilt around what its visitor is trying to do:',
         ],
         cards: [
           {
@@ -233,8 +233,8 @@ export const caseStudies = {
           },
           {
             num: 'Result 02',
-            stat: '7 pages',
-            label: 'Every page was restructured under a single sitemap and design system, so each service, project, and post now has a findable home.',
+            stat: '4 pages',
+            label: 'The landing, services, gallery, and blog pages were rebuilt under one design system, so each service, project, and post now has a findable home.',
           },
           {
             num: 'Result 03',
