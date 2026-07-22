@@ -666,7 +666,26 @@ export const about = {
   body: [
     "I'm **Yoonju Lee**, a UI/UX designer based in **Vancouver, BC**, with a diploma in Web and Mobile App Design and Development from Langara College. I work at the intersection of **empathy** and **clarity**.",
     'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences** — I treat every product problem as a human problem first, and a system problem second.',
-    "Outside of work: I make magazines that smell like the places they're about, I think a lot about the emotional texture of typography, and my love for travel and camping constantly gives me new perspectives.",
+    "Outside of work, I'm happiest on a trail. **Hiking, camping, and traveling** — from alpine lakes to mountain summits — keep giving me new perspectives, and they're where most of my design inspiration actually comes from.",
+  ],
+  // Photo collage next to the bio. Drop files into public/images/ and
+  // update src/alt/caption here.
+  photos: [
+    {
+      src: '/images/about-1.jpg',
+      alt: 'Yoonju on a sunny day by the water in Vancouver',
+      caption: 'ocean days',
+    },
+    {
+      src: '/images/about-2.jpg',
+      alt: 'Tree pose in front of an alpine lake and snowy mountains',
+      caption: 'alpine lakes',
+    },
+    {
+      src: '/images/about-3.jpg',
+      alt: 'Arms wide on a rocky mountain summit',
+      caption: 'up a mountain',
+    },
   ],
   // Tools I work in. `icon` maps to a brand mark in App.jsx.
   skills: [

@@ -216,8 +216,13 @@ function About() {
     <section id="about" className="section about">
       <div className="about-grid">
         <div className="about-visual">
-          <div className="about-photo" aria-hidden="true">
-            <span className="about-emoji">{profile.emoji}</span>
+          <div className="about-photos">
+            {about.photos.map((photo, i) => (
+              <figure className={`photo-card photo-${i}`} key={photo.src}>
+                <img src={photo.src} alt={photo.alt} loading="lazy" />
+                <figcaption>{photo.caption}</figcaption>
+              </figure>
+            ))}
           </div>
           <AvailableBadge />
         </div>
