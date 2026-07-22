@@ -596,8 +596,9 @@ main {
   align-items: center;
   gap: 1.1rem;
   padding: 0.9rem 1.6rem;
-  background: var(--ink);
-  color: #fff;
+  background: var(--white);
+  color: var(--ink);
+  border: 1px solid var(--border);
   border-radius: 999px;
   font-weight: 600;
   font-size: 1.1rem;
