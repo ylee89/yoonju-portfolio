@@ -155,8 +155,16 @@ function Works({ onOpen }) {
               <p>{rich(work.headline, `w-${work.slug}-`)}</p>
               <span className="btn btn-outline">View Case Study</span>
             </div>
-            <div className={`work-thumb tint-${work.tint}`}>
-              <span>{work.name}</span>
+            <div
+              className={`work-thumb tint-${work.tint}${
+                work.image ? ` fit-${work.imageFit || 'cover'}` : ''
+              }`}
+            >
+              {work.image ? (
+                <img src={work.image} alt={`${work.name} preview`} loading="lazy" />
+              ) : (
+                <span>{work.name}</span>
+              )}
             </div>
           </button>
         ))}

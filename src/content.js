@@ -74,6 +74,8 @@ export const works = [
     name: 'Website Redesign',
     tags: 'Web Redesign · UX Audit · Small Business',
     tint: 'yellow',
+    image: '/images/work-galaxy.jpg',
+    imageFit: 'cover',
     headline:
       'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
@@ -83,6 +85,8 @@ export const works = [
     name: 'Loopin',
     tags: 'Mobile · Mental wellness · 0–1 · 13 weeks',
     tint: 'pink',
+    image: '/images/work-loopin.jpg',
+    imageFit: 'contain',
     headline:
       'An app that helps ADHD kids and their parents feel *connected,* not just managed.',
   },
@@ -92,6 +96,8 @@ export const works = [
     name: 'Receiptly',
     tags: 'B2B SaaS · AI · Web & Mobile · 13 weeks',
     tint: 'blue',
+    image: '/images/work-receiptly.jpg',
+    imageFit: 'contain',
     headline:
       "Solo founders don't need better bookkeeping. They need to *trust* the numbers they show investors.",
   },
@@ -101,6 +107,8 @@ export const works = [
     name: 'Upzy',
     tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
     tint: 'lavender',
+    image: '/images/work-upzy.jpg',
+    imageFit: 'contain',
     headline:
       'What if "sustainable fashion" started with the *tailor down the street?*',
   },
@@ -110,6 +118,8 @@ export const works = [
     name: 'The Visit Magazine',
     tags: 'Editorial · Print · InDesign · 32 pages',
     tint: 'mint',
+    image: '/images/work-visit.jpg',
+    imageFit: 'contain',
     headline:
       'Designing a magazine that *smells like Tofino* — salt, cedar, slow mornings.',
   },
