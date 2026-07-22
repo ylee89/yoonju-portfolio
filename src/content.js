@@ -331,17 +331,17 @@ export const caseStudies = {
           {
             num: 'Result 01',
             stat: '5 / 5',
-            label: 'Test parents named CalmNest as *"the first thing I\'d open"* — even though it was the riskiest design decision.',
+            label: 'Every test parent named CalmNest as *"the first thing I\'d open,"* even though it was the riskiest design decision on the project.',
           },
           {
             num: 'Result 02',
             stat: '40 → 100%',
-            label: 'Profile completion rose with the simplified, no-streaks flow. The metric the team feared losing *actually went up.*',
+            label: 'Profile completion rose with the simplified, no-streaks flow, so the one metric the team feared losing *actually went up.*',
           },
           {
             num: 'Result 03',
             stat: 'v2 roadmap',
-            label: 'Parent-to-parent community feature now planned for v2 — surfaced from research, not from the original brief.',
+            label: 'A parent-to-parent community feature is now planned for v2, surfaced from the research rather than from the original brief.',
           },
         ],
         body: [
@@ -453,17 +453,17 @@ export const caseStudies = {
           {
             num: 'Result 01',
             stat: '5 / 5',
-            label: 'Round 2 participants completed upload *without hesitation* — up from 2 of 6 in round 1.',
+            label: 'Round 2 participants completed the upload *without hesitation,* up from just 2 of 6 in round 1.',
           },
           {
             num: 'Result 02',
             stat: '0',
-            label: 'Participants asked *"What does this mean?"* in round 2. The follow-up question disappeared from transcripts entirely.',
+            label: 'Not one participant asked *"What does this mean?"* in round 2, so the follow-up question disappeared from the transcripts entirely.',
           },
           {
             num: 'Result 03',
             stat: '8 → 3',
-            label: 'Onboarding steps reduced. Time-to-first-receipt dropped from ~5 minutes to *under 90 seconds.*',
+            label: 'Onboarding steps dropped from eight to three, and time-to-first-receipt fell from about five minutes to *under 90 seconds.*',
           },
         ],
         body: [
@@ -575,17 +575,17 @@ export const caseStudies = {
           {
             num: 'Result 01',
             stat: '5 / 5',
-            label: 'Hallway-test participants picked map-first over list-first. The "feed" pattern was an assumption — testing killed it.',
+            label: 'All five hallway-test participants picked map-first over list-first, so the "feed" pattern turned out to be an assumption that testing quietly killed.',
           },
           {
             num: 'Result 02',
             stat: 'Reframe',
-            label: 'Brief said "sustainability." Research said *access.* Reframing the problem reframed the entire product strategy — including positioning.',
+            label: 'The brief said "sustainability" but the research said *access,* and reframing the problem reframed the entire product strategy, including its positioning.',
           },
           {
             num: 'Result 03',
             stat: 'Pilot-ready',
-            label: 'Final design handed to engineering with three pre-validated patterns: map-first IA, profile-first listings, inquiry-not-checkout.',
+            label: 'The final design went to engineering with three pre-validated patterns: map-first IA, profile-first listings, and inquiry instead of checkout.',
           },
         ],
         body: [
