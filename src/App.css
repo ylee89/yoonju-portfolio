@@ -1253,6 +1253,21 @@ body.case-open {
   border-radius: 4px;
 }
 
+/* Single full-page mockup, centered browser frame with a scrollable viewport. */
+.case-showcase {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.showcase-mockup {
+  width: min(620px, 100%);
+}
+
+.showcase-viewport {
+  height: 560px;
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

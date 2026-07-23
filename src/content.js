@@ -354,12 +354,12 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'Brand & palette', hint: 'Colours, type, and paw motifs' },
-      { label: 'Hero', hint: '"We make pet care easy and fun"' },
-      { label: 'Browse by category', hint: 'Accessories, food, toys, clothing' },
-      { label: 'Best sellers & blog', hint: 'Products and pet-care tips' },
-    ],
+    // Single full-page mockup shown in a browser frame the visitor scrolls.
+    showcase: {
+      label: 'Pawhaus landing page',
+      url: 'pawhaus.com',
+      src: '/images/pawhaus-home.jpg',
+    },
   },
 
   loopin: {

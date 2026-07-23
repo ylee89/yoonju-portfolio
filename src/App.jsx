@@ -431,6 +431,26 @@ function ScreenPane({ variant, src, url, label, viewportRef }) {
   )
 }
 
+// A single full-page mockup in a browser frame, scrolled inside a fixed
+// viewport. Used for from-scratch projects that have no before/after.
+function ShowcasePane({ showcase }) {
+  return (
+    <figure className="screen-mockup showcase-mockup">
+      <div className="mockup-bar">
+        <span className="mockup-dots" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+        <span className="mockup-url">{showcase.url}</span>
+      </div>
+      <div className="mockup-viewport showcase-viewport">
+        <img src={showcase.src} alt={showcase.label} loading="lazy" />
+      </div>
+    </figure>
+  )
+}
+
 // A page shown as two side-by-side panes: original site vs redesign.
 // The two viewports scroll together by ratio so the same part of each page
 // (hero, services, CTA) stays aligned while the visitor scrolls manually.
@@ -545,6 +565,19 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
               {study.screens.map((screen) => (
                 <ComparePair key={screen.label} screen={screen} />
               ))}
+            </div>
+          </div>
+        )}
+
+        {study.showcase && (
+          <div className="case-sec case-sec-wide">
+            <h3 className="case-sec-h">The landing page</h3>
+            <p className="case-sec-note">
+              The full homepage, top to bottom. Scroll inside the frame to move
+              from the hero down to the news and blog.
+            </p>
+            <div className="case-showcase">
+              <ShowcasePane showcase={study.showcase} />
             </div>
           </div>
         )}
