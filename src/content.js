@@ -903,6 +903,18 @@ export const caseStudies = {
         },
       ],
     },
+    // Floating phone showcase for the mobile app, in the motion-led style.
+    mobileShowcase: {
+      title: 'Mobile · Upzy in your pocket',
+      note: 'The same map-first idea, sized for the sidewalk where you actually find a maker.',
+      word: 'Upzy',
+      bezel: true,
+      phones: [
+        { src: '/images/upzy-mobile-1.jpg', alt: 'Mobile map home with nearby makers and an Add Post button' },
+        { src: '/images/upzy-mobile-2.jpg', alt: 'Shop detail on mobile with services, hours, and contact' },
+        { src: '/images/upzy-mobile-3.jpg', alt: 'A maker profile on mobile with their portfolio of projects' },
+      ],
+    },
   },
 
   visit: {

@@ -522,15 +522,24 @@ function MobileShowcase({ showcase }) {
       <span className="showcase-word" aria-hidden="true">
         {showcase.word}
       </span>
-      {showcase.phones.map((phone, i) => (
-        <img
-          key={i}
-          className={`showcase-phone showcase-phone-${i}`}
-          src={phone.src}
-          alt={phone.alt}
-          loading="lazy"
-        />
-      ))}
+      {showcase.phones.map((phone, i) =>
+        showcase.bezel ? (
+          <span
+            key={i}
+            className={`showcase-phone showcase-phone-${i} device`}
+          >
+            <img src={phone.src} alt={phone.alt} loading="lazy" />
+          </span>
+        ) : (
+          <img
+            key={i}
+            className={`showcase-phone showcase-phone-${i}`}
+            src={phone.src}
+            alt={phone.alt}
+            loading="lazy"
+          />
+        )
+      )}
     </div>
   )
 }

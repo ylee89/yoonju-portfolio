@@ -1432,6 +1432,20 @@ body.case-open {
   }
 }
 
+/* Device bezel for bare screen exports (no baked-in phone frame). */
+.device {
+  padding: 5px;
+  background: #14140f;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
+}
+
+.device img {
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .showcase-phone {
     animation: none;
