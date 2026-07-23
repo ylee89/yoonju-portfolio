@@ -1309,10 +1309,15 @@ body.case-open {
   margin-top: 2.6rem;
 }
 
+/* Eyebrow-style group label, so it reads as a category divider rather than
+   competing with the title-case caption labels under each screen. */
 .web-group-title {
-  font-size: 1.12rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 0 0 1.1rem;
 }
 
 .case-web {
@@ -1337,12 +1342,12 @@ body.case-open {
 
 .web-cap strong {
   display: block;
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 .web-cap span {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
 }
