@@ -248,11 +248,21 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'Landing — hero & CTAs', hint: 'Real work in the hero, red actions above the fold' },
-      { label: 'Services — card grid + deep dives', hint: 'Nine services, three bookable categories' },
-      { label: 'Gallery — filterable projects', hint: 'Tagged project cards replace the photo dump' },
-      { label: 'Blog — searchable tips', hint: 'Categories, dates, and pagination' },
+    // Scrolling browser mockups with a before/after toggle. Add `gallery`
+    // entries for gallery + blog pages once those exports are ready.
+    screens: [
+      {
+        label: 'Landing page',
+        url: 'galaxyautodetailing.com',
+        before: '/images/gx-landing-before.jpg',
+        after: '/images/gx-landing-after.jpg',
+      },
+      {
+        label: 'Services',
+        url: 'galaxyautodetailing.com/services',
+        before: '/images/gx-service-before.jpg',
+        after: '/images/gx-service-after.jpg',
+      },
     ],
   },
 

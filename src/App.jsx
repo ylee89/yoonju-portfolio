@@ -404,6 +404,53 @@ function CaseSections({ study, slugPrefix }) {
   ))
 }
 
+// Browser-chrome mockup with a before/after toggle. On hover the full-page
+// screenshot scrolls from top to bottom inside the fixed-height viewport.
+function ScreenMockup({ screen }) {
+  const [view, setView] = useState('after')
+  const src = view === 'after' ? screen.after : screen.before
+  return (
+    <figure className="screen-mockup">
+      <div className="mockup-bar">
+        <span className="mockup-dots" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </span>
+        <span className="mockup-url">{screen.url}</span>
+        <span className="mockup-toggle" role="group" aria-label={`${screen.label} before or after`}>
+          <button
+            type="button"
+            className={view === 'before' ? 'on' : ''}
+            onClick={() => setView('before')}
+          >
+            Before
+          </button>
+          <button
+            type="button"
+            className={view === 'after' ? 'on' : ''}
+            onClick={() => setView('after')}
+          >
+            After
+          </button>
+        </span>
+      </div>
+      <div className="mockup-viewport">
+        <img
+          className="mockup-page"
+          src={src}
+          alt={`${screen.label} — ${view === 'after' ? 'redesign' : 'original site'}`}
+          loading="lazy"
+        />
+      </div>
+      <figcaption>
+        {screen.label}
+        <span>hover to scroll</span>
+      </figcaption>
+    </figure>
+  )
+}
+
 function CaseStudyOverlay({ slug, onClose, onNavigate }) {
   const overlayRef = useRef(null)
 
@@ -447,6 +494,20 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
         </div>
 
         <CaseSections study={study} slugPrefix={`${slug}-`} />
+
+        {study.screens && (
+          <div className="case-sec">
+            <h3 className="case-sec-h">Before &amp; after</h3>
+            <p className="case-sec-note">
+              Toggle each screen and hover to scroll the full page.
+            </p>
+            <div className="case-screens">
+              {study.screens.map((screen) => (
+                <ScreenMockup key={screen.label} screen={screen} />
+              ))}
+            </div>
+          </div>
+        )}
 
         {study.gallery && (
           <div className="case-sec">

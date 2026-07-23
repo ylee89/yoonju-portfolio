@@ -1130,6 +1130,137 @@ body.case-open {
   opacity: 0.9;
 }
 
+.case-sec-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: -0.8rem 0 1.6rem;
+}
+
+/* ── Scrolling browser mockups (before / after) ── */
+.case-screens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-top: 1.6rem;
+}
+
+.screen-mockup {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.mockup-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.mockup-dots {
+  display: inline-flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.mockup-dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d6d6de;
+}
+
+.mockup-url {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mockup-toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.mockup-toggle button {
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border: none;
+  background: var(--white);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.mockup-toggle button.on {
+  background: var(--ink);
+  color: #fff;
+}
+
+.mockup-viewport {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: var(--bg-soft, #f0ede6);
+}
+
+.mockup-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  transition: transform 6.5s ease;
+}
+
+.screen-mockup:hover .mockup-page {
+  transform: translateY(calc(-100% + 300px));
+}
+
+.screen-mockup figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-top: 1px solid var(--border);
+}
+
+.screen-mockup figcaption span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mockup-page,
+  .screen-mockup:hover .mockup-page {
+    transition: none;
+    transform: none;
+  }
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1234,7 +1365,8 @@ body.case-open {
 
   .case-cards,
   .case-impact,
-  .case-gallery {
+  .case-gallery,
+  .case-screens {
     grid-template-columns: 1fr;
   }
 }
