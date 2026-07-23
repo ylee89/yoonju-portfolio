@@ -12,7 +12,7 @@ export const profile = {
   location: 'Vancouver, BC',
   email: 'lovingjoo@gmail.com',
   available: true,
-  availableText: 'Open to opportunities · 2024–2025',
+  availableText: 'Open to opportunities · 2024 to 2025',
 }
 
 // Top navigation
@@ -37,7 +37,7 @@ export const socials = [
 export const hero = {
   titleTop: "Hello! I'm Yoonju,",
   titleBottom: 'a UX/UI designer.',
-  sub: 'I craft **thoughtful digital experiences** rooted in **empathy** and **clarity** — for people carrying a lot, in moments that matter.',
+  sub: 'I craft **thoughtful digital experiences** rooted in **empathy** and **clarity**. I design for people who are carrying a lot, in the moments that matter most.',
   stickers: [
     { label: 'Empathy-led Design', tint: 'blue', side: 'left' },
     { label: 'Inclusive Products', tint: 'pink', side: 'right' },
@@ -93,7 +93,7 @@ export const works = [
     slug: 'loopin',
     num: '02',
     name: 'Loopin',
-    tags: 'Mobile · Mental wellness · 0–1 · 13 weeks',
+    tags: 'Mobile · Mental wellness · 0 to 1 · 13 weeks',
     tint: 'pink',
     image: '/images/work-loopin.jpg',
     imageFit: 'contain',
@@ -131,7 +131,7 @@ export const works = [
     image: '/images/work-visit.jpg',
     imageFit: 'contain',
     headline:
-      'Designing a magazine that *smells like Tofino* — salt, cedar, slow mornings.',
+      'Designing a magazine that *smells like Tofino,* all salt, cedar, and slow mornings.',
   },
 ]
 
@@ -151,33 +151,33 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — Why this problem matters',
+        eyebrow: '01 · Why this problem matters',
         heading: 'A detailing site has one job: *make people trust you with their car.*',
         body: [
-          'The original site ran a galaxy/star background behind everything, with bright blue (#008CF8) headings on black and green highlight text. The space theme connected to the "Galaxy" name — but not to car detailing — and the low contrast made the content genuinely hard to read.',
-          'Every headline used the same bright blue font at similar sizes, so visitors couldn\'t tell **which services were available**, what was important, or where to click. The visual noise made the page feel heavy and unstructured — the kind of page people skip, not read.',
+          'The original site ran a galaxy/star background behind everything, with bright blue (#008CF8) headings on black and green highlight text. The space theme connected to the "Galaxy" name, but it had nothing to do with car detailing, and the low contrast made the content genuinely hard to read.',
+          'Every headline used the same bright blue font at similar sizes, so visitors couldn\'t tell **which services were available**, what was important, or where to click. The visual noise made the page feel heavy and unstructured. It was the kind of page people skip instead of read.',
           "For a small business that lives on bookings, that's not a styling problem. **It's a revenue problem.**",
         ],
       },
       {
-        eyebrow: '02 — Auditing the old site',
+        eyebrow: '02 · Auditing the old site',
         heading: 'Section by section, the same three failures *kept repeating.*',
         body: [
-          'I walked through every page — home, services, gallery, blog, contact — and logged the issues. They clustered into three patterns:',
+          'I walked through every page, from home and services to the gallery, blog, and contact, and logged the issues. They clustered into three patterns:',
         ],
         cards: [
           {
-            title: 'Finding 1 — The one CTA was buried.',
+            title: 'Finding 1: The one CTA was buried.',
             meta: 'Audit · Conversion',
-            body: 'The "Buy Gift Certificates Online" button sat in the navigation with an outlined border that broke consistency instead of drawing attention. The hero slideshow floated car photos over galaxy noise — *the action never stood out.*',
+            body: 'The "Buy Gift Certificates Online" button sat in the navigation with an outlined border that broke consistency instead of drawing attention. The hero slideshow floated car photos over galaxy noise, so *the action never stood out.*',
           },
           {
-            title: 'Finding 2 — No visual hierarchy anywhere.',
+            title: 'Finding 2: No visual hierarchy anywhere.',
             meta: 'Audit · Readability',
             body: 'Identical bright blue headlines, inconsistent image sizes, cramped card spacing, a clashing yellow banner, and promotions dumped into one grid with no categories. Visitors couldn\'t process what they were looking at.',
           },
           {
-            title: 'Finding 3 — Trust surfaces were failing.',
+            title: 'Finding 3: Trust surfaces were failing.',
             meta: 'Audit · Credibility',
             body: 'Testimonials were small green text on a starry background with no card structure. The address hid in tiny type at the bottom of the page, far from the contact form. The proof the business had earned was *unreadable.*',
           },
@@ -185,45 +185,45 @@ export const caseStudies = {
         callout: 'A striking theme still has to *sell the work.*',
       },
       {
-        eyebrow: '03 — The new design system',
+        eyebrow: '03 · The new design system',
         heading: 'High contrast, one accent, and red that *always means action.*',
         body: [
           'I replaced the starry canvas with a professional dark system: **deep black (#000000)** for clean backdrops, **charcoal gray (#242424)** section bands to create visual separation, and **white text** throughout for clear readability.',
-          '**Bright red (#FF0000)** is reserved exclusively for actions — "Book Online Service," "Buy Gift Certificates Online," "Book Now," "Submit." If it\'s red, you can click it, and it matters.',
-          'Typography moved to **Roboto** with an NT Wagner logotype — bold, larger headings to create hierarchy, regular body text for reading. The galaxy background became a clean, high-quality hero photo of a car actually being detailed.',
+          '**Bright red (#FF0000)** is reserved exclusively for actions like "Book Online Service," "Buy Gift Certificates Online," "Book Now," and "Submit." If it\'s red, you can click it, and it matters.',
+          'Typography moved to **Roboto** with an NT Wagner logotype. Bold, larger headings create hierarchy, and regular body text keeps reading easy. The galaxy background became a clean, high-quality hero photo of a car actually being detailed.',
         ],
       },
       {
-        eyebrow: '04 — Page-by-page decisions',
+        eyebrow: '04 · Page-by-page decisions',
         heading: 'Every page got a clear job *and a clear next step.*',
         body: [
-          'I focused the redesign on the four pages that carry the most weight — the landing page, services, gallery, and blog — each rebuilt around what its visitor is trying to do:',
+          'I focused the redesign on the four pages that carry the most weight. The landing page, services, gallery, and blog were each rebuilt around what its visitor is trying to do:',
         ],
         cards: [
           {
-            title: 'Landing — two CTAs, one story',
+            title: 'Landing: two CTAs, one story',
             meta: 'Redesign · Home',
             body: 'A real detailing hero photo with two prominent red CTAs. Services summarized in readable cards with "Learn More." A dedicated Before & After section with labeled tags, a Latest Projects strip, star-rated reviews with customer photos, and contact info placed beside the form.',
           },
           {
-            title: 'Services — from starfield to structure',
+            title: 'Services: from starfield to structure',
             meta: 'Redesign · Services',
-            body: 'Nine services in a consistent card grid with matching photo ratios and clear labels, followed by deep-dive sections for Interior, Exterior, and Complete Care packages — each with its own "Book Now."',
+            body: 'Nine services in a consistent card grid with matching photo ratios and clear labels, followed by deep-dive sections for Interior, Exterior, and Complete Care packages, each with its own "Book Now."',
           },
           {
-            title: 'Gallery — projects, not a photo dump',
+            title: 'Gallery: projects, not a photo dump',
             meta: 'Redesign · Gallery',
-            body: 'The endless uncategorized image wall became filterable project cards — each with a title, description, and tags like Interior Detail, Deep Clean, Ceramic Coating — so customers can see *what work produced the result.*',
+            body: 'The endless uncategorized image wall became filterable project cards. Each one has a title, a description, and tags like Interior Detail, Deep Clean, and Ceramic Coating, so customers can see *what work produced the result.*',
           },
           {
-            title: 'Blog — findable, skimmable, dated',
+            title: 'Blog: findable, skimmable, dated',
             meta: 'Redesign · Blog',
-            body: 'The cluttered "News Blog" grid became a searchable card layout with categories, consistent thumbnails, dates, and pagination — car-care tips a visitor can actually browse.',
+            body: 'The cluttered "News Blog" grid became a searchable card layout with categories, consistent thumbnails, dates, and pagination, so the car-care tips are something a visitor can actually browse.',
           },
         ],
       },
       {
-        eyebrow: "05 — Results, learnings, what's next",
+        eyebrow: "05 · Results, learnings, what's next",
         heading: 'What changed because of this work.',
         impact: [
           {
@@ -243,7 +243,7 @@ export const caseStudies = {
           },
         ],
         body: [
-          "**Learning.** A theme is not a brand. The galaxy visuals were the site's most distinctive feature and also its biggest liability — distinctiveness only helps when it points at what the business actually sells. Contrast, hierarchy, and honest labels do more for trust than any decoration.",
+          "**Learning.** A theme is not a brand. The galaxy visuals were the site's most distinctive feature and also its biggest liability, because distinctiveness only helps when it points at what the business actually sells. Contrast, hierarchy, and honest labels do more for trust than any decoration.",
           '**Next.** If shipped: measure clicks on the two CTAs against the old single button, track gallery filter usage to learn which services customers browse most, and A/B test the hero copy.',
         ],
       },
@@ -291,15 +291,15 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — The idea',
-        heading: 'Pawhaus is *Paw + Haus* — a home for pet people.',
+        eyebrow: '01 · The idea',
+        heading: 'Pawhaus is *Paw + Haus,* a home for pet people.',
         body: [
-          'The name pairs "paw" with the German "haus" (house), so the whole brand leans into one promise: a warm, welcoming home for you and your pet. The tagline says it plainly — **"We make pet care easy and fun."**',
+          'The name pairs "paw" with the German "haus" (house), so the whole brand leans into one promise: a warm, welcoming home for you and your pet. The tagline says it plainly: **"We make pet care easy and fun."**',
           'Every choice after that serves the same feeling: friendly, rounded, and playful, but still trustworthy enough that people will hand over their card to care for a member of the family.',
         ],
       },
       {
-        eyebrow: '02 — The palette',
+        eyebrow: '02 · The palette',
         heading: 'Warm cream, a *confident indigo,* and playful orange.',
         body: [
           'The colours balance play and trust. A soft cream sets a calm, warm ground, indigo carries the brand and the primary actions, and orange and gold bring the fun that pet brands live on.',
@@ -313,10 +313,10 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '03 — Type & logo',
+        eyebrow: '03 · Type & logo',
         heading: 'A rounded display face, a *calm body face,* and a paw.',
         body: [
-          '**Madimi One** sets the logo and headlines — its soft, rounded letters feel approachable and a little bouncy, exactly the tone a pet brand wants. **Poppins** handles body copy so product details and descriptions stay clean and easy to read.',
+          '**Madimi One** sets the logo and headlines. Its soft, rounded letters feel approachable and a little bouncy, exactly the tone a pet brand wants. **Poppins** handles body copy so product details and descriptions stay clean and easy to read.',
           'The logo joins a solid paw print to the **Pawhaus** wordmark, and paw prints and bone shapes carry through the site as friendly background motifs.',
         ],
         cards: [
@@ -338,15 +338,15 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '04 — The landing page',
+        eyebrow: '04 · The landing page',
         heading: 'One scroll from *"hello" to ready-to-shop.*',
         body: [
           'The page moves a visitor from a warm first impression to a confident shopper. A cheerful hero ("We make pet care easy and fun") leads into **browse-by-category**, featured **products**, an **about + stats** block that builds trust (happy clients, brands, products, years in business), a **best-sellers** grid, and a **news & blog** row of pet-care tips.',
-          'Products lead with big, bright photos and clear prices, categories sit one tap away, and social proof — reviews and numbers — lands exactly where hesitation usually shows up.',
+          'Products lead with big, bright photos and clear prices, categories sit one tap away, and social proof like reviews and numbers lands exactly where hesitation usually shows up.',
         ],
       },
       {
-        eyebrow: '05 — What ties it together',
+        eyebrow: '05 · What ties it together',
         heading: 'A system, not just a *pretty page.*',
         body: [
           '**Learning.** A consumer brand lives or dies on consistency. Fixing the palette, the two typefaces, the rounded shapes, and the paw motif up front meant every new section already knew how to look, so the whole site reads as one happy place.',
@@ -375,7 +375,7 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — Why this problem matters',
+        eyebrow: '01 · Why this problem matters',
         heading: "ADHD is a *family* experience, not just a child's diagnosis.",
         body: [
           'About **500,000 children in Canada** have ADHD, and roughly **70% of their parents** describe themselves as overwhelmed. The diagnosis sits with the child, but the daily weight is carried by the whole household.',
@@ -384,7 +384,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '02 — Defining the real problem',
+        eyebrow: '02 · Defining the real problem',
         heading: 'Two people, *two kinds of overwhelm,* one frayed connection.',
         body: [
           'Research surfaced two truths that lived side by side. The **child** felt misunderstood, overwhelmed, and like they were constantly struggling. The **parent** felt overwhelmed too, but also disconnected and unsupported in the everyday.',
@@ -393,31 +393,31 @@ export const caseStudies = {
         callout: '"Connection, not perfection, is what truly changes a child\'s world."',
       },
       {
-        eyebrow: '03 — The solution',
+        eyebrow: '03 · The solution',
         heading: 'Two features for *two people,* joined by one goal.',
         body: [
           'Loopin gives each side of the relationship its own space, then brings them back together through shared routines and a mood history they can both see.',
         ],
         cards: [
           {
-            title: 'Moodies — a voice for the child',
+            title: 'Moodies: a voice for the child',
             meta: 'Feature · Child-facing',
             body: 'The child shares how they feel through playful emoji or a quick voice note. It turns a hard-to-explain feeling into something the parent can actually see and understand.',
           },
           {
-            title: 'CalmNest — a moment for the parent',
+            title: 'CalmNest: a moment for the parent',
             meta: 'Feature · Parent-facing',
             body: 'A private self-care check-in where the parent logs their own mood with a slider or voice journal, and de-stresses before showing up for their child. Support for the supporter.',
           },
           {
-            title: 'Shared routines — the bond itself',
+            title: 'Shared routines: the bond itself',
             meta: 'Feature · Together',
             body: 'Fun daily routines and activities the two do together, plus a mood history they share, so connection becomes a small everyday habit rather than one big repair.',
           },
         ],
       },
       {
-        eyebrow: '04 — My contribution',
+        eyebrow: '04 · My contribution',
         heading: 'I owned the *CalmNest* feature end to end.',
         body: [
           'On our team, the part I designed from research through final UI was **CalmNest**, the parent-facing side of Loopin. It answers the question the child-facing features cannot: who is looking after the parent?',
@@ -426,7 +426,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '05 — How I validated it',
+        eyebrow: '05 · How I validated it',
         heading: 'Testing with parents confirmed the *two-sided* bet.',
         body: [
           'We ran concept and prototype sessions with parents, comparing a traditional child-only tracker against the two-sided Loopin approach.',
@@ -434,7 +434,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: "06 — Results, learnings, what's next",
+        eyebrow: "06 · Results, learnings, what's next",
         heading: 'What changed because of this work.',
         impact: [
           {
@@ -471,7 +471,7 @@ export const caseStudies = {
     eyebrow: 'Receiptly · 2024',
     tint: 'blue',
     title: 'An AI expense tool where users could finally *trust the numbers* they sent investors.',
-    sub: "The AI was working. The users weren't trusting it. The redesign wasn't about better algorithms — it was about *making the AI's reasoning visible.*",
+    sub: "The AI was working. The users weren't trusting it. The redesign wasn't about better algorithms. It was about *making the AI's reasoning visible.*",
     meta: [
       { label: 'Duration', value: '13 weeks' },
       { label: 'Role', value: 'Lead UX · Onboarding owner · Usability research lead' },
@@ -480,83 +480,83 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — Why this problem matters',
+        eyebrow: '01 · Why this problem matters',
         heading: 'Solo founders weren\'t using the AI. *They were quietly redoing its work.*',
         body: [
-          "Receiptly's pitch was simple: snap a receipt, AI categorizes it, get an investor-ready report by Friday. The technical core worked — categorization accuracy was 94% in internal tests.",
+          "Receiptly's pitch was simple: snap a receipt, let the AI categorize it, and get an investor-ready report by Friday. The technical core worked, with categorization accuracy at 94% in internal tests.",
           'But early MVP analytics told a different story. Users were uploading receipts, then *opening every single one* to verify the AI\'s category. They were doing the work the AI was supposed to eliminate.',
-          "This wasn't a feature gap. It was a **trust gap.** And in a financial product, trust isn't a \"nice to have\" — it's the entire product.",
+          "This wasn't a feature gap. It was a **trust gap.** And in a financial product, trust isn't a \"nice to have.\" It's the entire product.",
         ],
       },
       {
-        eyebrow: '02 — How I defined the real problem',
+        eyebrow: '02 · How I defined the real problem',
         heading: 'It wasn\'t about accuracy. *It was about ambiguity.*',
         body: [
-          'I ran 6 moderated usability sessions with founders. Two-task protocol: upload a receipt, then pull a financial report for an imaginary investor meeting.',
-          'Watching the recordings, I noticed the same pattern: users would click confidently, then *pause*. The AI was making decisions correctly — but the interface was telling them *what* happened without ever explaining *why.*',
+          'I ran 6 moderated usability sessions with founders. The protocol had two tasks: upload a receipt, then pull a financial report for an imaginary investor meeting.',
+          'Watching the recordings, I noticed the same pattern: users would click confidently, then *pause*. The AI was making decisions correctly, but the interface kept telling them *what* happened without ever explaining *why.*',
           'I reframed the problem from *"how do we improve AI accuracy"* to *"how do we make AI decisions legible."* Different problem, different product.',
         ],
         callout: 'The product was telling users *what* happened, but never *why*.',
       },
       {
-        eyebrow: '03 — What I thought the cause was',
+        eyebrow: '03 · What I thought the cause was',
         heading: 'Three places where *AI legibility broke down.*',
         body: [
-          'Synthesizing the 6 sessions, I clustered 9 distinct usability issues into three root causes — each one a specific design failure:',
+          'Synthesizing the 6 sessions, I clustered 9 distinct usability issues into three root causes, and each one was a specific design failure:',
         ],
         cards: [
           {
-            title: 'H1 — Invisible success states',
+            title: 'H1: Invisible success states',
             meta: 'Hypothesis · Feedback design',
-            body: 'ed 4 of 6 paused after upload, unsure if it worked. Confirmation lived in a top-right toast, far from the upload zone where users were looking. Users were getting feedback but not seeing it.',
+            body: '4 of 6 paused after upload, unsure if it worked. Confirmation lived in a top-right toast, far from the upload zone where users were looking. Users were getting feedback but not seeing it.',
           },
           {
-            title: 'H2 — Ambiguous AI labels',
+            title: 'H2: Ambiguous AI labels',
             meta: 'Hypothesis · Language design',
             body: '5 of 6 misread *"Needs Attention."* Was it the AI\'s fault? The user\'s fault? Missing data? The label hid the AI\'s reasoning behind corporate-software vagueness.',
           },
           {
-            title: 'H3 — Wrong mental model',
+            title: 'H3: Wrong mental model',
             meta: 'Hypothesis · Naming',
-            body: '4 of 6 stopped at *"Add More."* They expected it to mean "add another receipt." It actually added a metric to the report — named after the database operation, not the user\'s intent.',
+            body: '4 of 6 stopped at *"Add More."* They expected it to mean "add another receipt." It actually added a metric to the report, and it was named after the database operation, not the user\'s intent.',
           },
         ],
       },
       {
-        eyebrow: '04 — How I proved it',
+        eyebrow: '04 · How I proved it',
         heading: 'Round 1 evidence. Round 2 validation. *The pause disappeared.*',
         body: [
-          '**Round 1 — Discovery (6 participants).** Two-task protocol with timestamped pause logging. Resulted in the three hypotheses above and a redesign brief tied directly to observed behaviors.',
-          '**Round 2 — Validation (5 participants, 3 returning + 2 new).** Same task protocol, redesigned product. The metric I cared about: would the pauses come back?',
-          'They didn\'t. The phrase *"I think it uploaded?"* — heard 4 times in round 1 — vanished from round 2 transcripts. The phrase *"What does this mean?"* — heard 5 times in round 1 — vanished too.',
+          '**Round 1, Discovery (6 participants).** A two-task protocol with timestamped pause logging produced the three hypotheses above and a redesign brief tied directly to observed behaviors.',
+          '**Round 2, Validation (5 participants, 3 returning and 2 new).** Same task protocol, redesigned product. The metric I cared about was simple: would the pauses come back?',
+          'They didn\'t. The phrase *"I think it uploaded?"* had come up 4 times in round 1, and it vanished from the round 2 transcripts. The phrase *"What does this mean?"* had come up 5 times in round 1, and it vanished too.',
         ],
       },
       {
-        eyebrow: '05 — What I decided, and why',
+        eyebrow: '05 · What I decided, and why',
         heading: 'Three decisions, drawn directly *from the patterns.*',
         body: [
-          'Each decision below was grounded in a specific behavior I\'d observed and a specific trade-off I had to defend. Not preference — evidence.',
+          'Each decision below was grounded in a specific behavior I\'d observed and a specific trade-off I had to defend. It came from evidence, not preference.',
         ],
         cards: [
           {
-            title: 'Decision 1 — Inline success state',
+            title: 'Decision 1: Inline success state',
             meta: 'Trade-off · More dev work · Lost screen real estate',
-            body: 'Replaced the corner toast with an inline card that takes over the upload zone — sequencing through *"Uploading… → Categorizing… → Done."* The eye never has to move. Engineering pushed for the simpler toast; testing made the case for inline.',
+            body: 'Replaced the corner toast with an inline card that takes over the upload zone and sequences through *"Uploading… → Categorizing… → Done."* The eye never has to move. Engineering pushed for the simpler toast, but testing made the case for inline.',
           },
           {
-            title: 'Decision 2 — Plain-language AI labels',
+            title: 'Decision 2: Plain-language AI labels',
             meta: 'Trade-off · Longer text · More translation work',
-            body: 'Renamed *"Needs Attention"* to *"Missing category — tap to choose."* Added the AI\'s reasoning as a tooltip: *"We couldn\'t confidently categorize this one."* Verbose? Yes. Honest? Also yes.',
+            body: 'Renamed *"Needs Attention"* to *"Missing category, tap to choose."* Added the AI\'s reasoning as a tooltip: *"We couldn\'t confidently categorize this one."* Verbose? Yes. Honest? Also yes.',
           },
           {
-            title: 'Decision 3 — Renamed for user intent',
+            title: 'Decision 3: Renamed for user intent',
             meta: 'Trade-off · Code refactor · Marketing churn',
             body: '*"Add More"* became *"Edit Report"* with explicit Add / Remove / Reorder. Added preset filters and CSV/link exports. Renamed buttons to match what users were trying to do, not what the database was doing.',
           },
         ],
       },
       {
-        eyebrow: "06 — Results, learnings, what's next",
+        eyebrow: "06 · Results, learnings, what's next",
         heading: 'What changed because of this work.',
         impact: [
           {
@@ -576,7 +576,7 @@ export const caseStudies = {
           },
         ],
         body: [
-          '**Learning.** AI products aren\'t algorithm products. They\'re *trust products.* The interface is where the AI either earns trust or loses it — and "show your work, name your uncertainty, let people correct you visibly" became my default heuristic for every AI surface I\'ve touched since.',
+          '**Learning.** AI products aren\'t algorithm products. They\'re *trust products.* The interface is where the AI either earns trust or loses it, and "show your work, name your uncertainty, let people correct you visibly" became my default heuristic for every AI surface I\'ve touched since.',
           '**Next.** If continuing: instrument the live product to track *recategorization rate* as a trust proxy. A/B test surfacing AI confidence as percentages vs. plain language. Pilot a "why did you change this?" feedback loop to keep improving the model.',
         ],
       },
@@ -592,7 +592,7 @@ export const caseStudies = {
   upzy: {
     eyebrow: 'Upzy · 2024',
     tint: 'lavender',
-    title: 'A sustainability marketplace that *didn\'t sell sustainability* — it sold the tailor down the street.',
+    title: 'A sustainability marketplace that *didn\'t sell sustainability.* It sold the tailor down the street.',
     sub: 'Most sustainable-fashion apps lead with guilt. Guilt has a terrible conversion rate. So we asked: *what do users actually want?*',
     meta: [
       { label: 'Duration', value: '13 weeks' },
@@ -602,16 +602,16 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — Why this problem matters',
-        heading: 'Sustainability apps were losing — *even when users agreed with the mission.*',
+        eyebrow: '01 · Why this problem matters',
+        heading: 'Sustainability apps were losing, *even when users agreed with the mission.*',
         body: [
-          'The fashion industry produces 92 million tonnes of waste annually. Apps trying to fight that — Good On You, ThredUp, Depop — have devoted user bases but tiny conversion at the moment of action.',
+          'The fashion industry produces 92 million tonnes of waste annually. Apps trying to fight that, like Good On You, ThredUp, and Depop, have devoted user bases but tiny conversion at the moment of action.',
           'Why? Because most sustainability apps lead with guilt. *Save the planet. Reduce your footprint. Stop fast fashion.* But guilt has a terrible conversion rate. People agree with the message, then close the app and buy something convenient.',
           'The opportunity wasn\'t to make people care more. **It was to lower the activation energy of caring.**',
         ],
       },
       {
-        eyebrow: '02 — How I defined the real problem',
+        eyebrow: '02 · How I defined the real problem',
         heading: 'It wasn\'t apathy. *It was access.*',
         body: [
           'I interviewed 5 people about their relationship with their clothes. The brief assumed motivation was the bottleneck. The interviews said something different.',
@@ -621,65 +621,65 @@ export const caseStudies = {
         callout: "The blocker wasn't motivation. *It was access.*",
       },
       {
-        eyebrow: '03 — What I thought the cause was',
+        eyebrow: '03 · What I thought the cause was',
         heading: 'Three hypotheses about *why local repair felt impossible.*',
         body: [
           'From interview synthesis, I drafted three hypotheses about why repair stayed in the "I should..." mental list and never became action:',
         ],
         cards: [
           {
-            title: 'H1 — Discovery friction is the killer.',
+            title: 'H1: Discovery friction is the killer.',
             meta: 'Hypothesis · IA',
             body: "If we lead with a map (not a list, not search), people see who's nearby in 2 seconds. Distance becomes the value proposition, not a footer detail.",
           },
           {
-            title: 'H2 — Listings should be people, not products.',
+            title: 'H2: Listings should be people, not products.',
             meta: 'Hypothesis · Trust',
             body: 'People hire artisans, not services. If we lead with the maker\'s story and craft history, the relationship starts before the transaction does.',
           },
           {
-            title: 'H3 — Inquiry, not checkout.',
+            title: 'H3: Inquiry, not checkout.',
             meta: 'Hypothesis · Conversion',
             body: 'If we replace "Add to cart" with "Send a message," users start a conversation instead of dropping off at price ambiguity. Price ranges instead of fixed prices.',
           },
         ],
       },
       {
-        eyebrow: '04 — How I proved it',
+        eyebrow: '04 · How I proved it',
         heading: 'Two competitor teardowns, one hallway test, one prototype walkthrough.',
         body: [
-          '**Method 1 — Competitor teardown** of Depop, ThredUp, Good On You. Depop and ThredUp solve resale (replacement consumption). Good On You scores brands (information without action). *None connect users to local artisans.* Confirmed: market gap.',
-          '**Method 2 — Hallway tests with 5 participants.** Two prototypes side-by-side: list-first feed vs. map-first home. 5 of 5 chose map-first. The reason was always the same: *"I want to see who\'s actually near me."*',
-          '**Method 3 — Prototype walkthrough** with the same 5. The "Send a message" flow felt natural — every participant compared it to texting a hairdresser, not buying online. *Mental model confirmed.*',
+          '**Method 1, competitor teardown** of Depop, ThredUp, and Good On You. Depop and ThredUp solve resale (replacement consumption). Good On You scores brands (information without action). *None connect users to local artisans.* That confirmed the market gap.',
+          '**Method 2, hallway tests with 5 participants.** I put two prototypes side by side: a list-first feed and a map-first home. 5 of 5 chose map-first. The reason was always the same: *"I want to see who\'s actually near me."*',
+          '**Method 3, prototype walkthrough** with the same 5. The "Send a message" flow felt natural, and every participant compared it to texting a hairdresser, not buying online. *Mental model confirmed.*',
         ],
       },
       {
-        eyebrow: '05 — What I decided, and why',
+        eyebrow: '05 · What I decided, and why',
         heading: 'Three decisions that *refused the marketplace genre.*',
         body: [
           'Each decision below trades a "best practice" for a different mental model. Each is defensible because users showed me, not because I preferred it.',
         ],
         cards: [
           {
-            title: 'Decision 1 — Map-first home',
+            title: 'Decision 1: Map-first home',
             meta: 'Trade-off · Discoverable inventory · Lost SEO surface',
-            body: 'Users open to a map of nearby artisans, not a feed of services. Distance in walking minutes, not kilometers. The "feed" people expected got dropped — and 5 of 5 testers confirmed they didn\'t miss it.',
+            body: 'Users open to a map of nearby artisans, not a feed of services. Distance in walking minutes, not kilometers. The "feed" people expected got dropped, and 5 of 5 testers confirmed they didn\'t miss it.',
           },
           {
-            title: 'Decision 2 — Profile-first listings',
+            title: 'Decision 2: Profile-first listings',
             meta: 'Trade-off · Slower to populate · Higher trust',
-            body: "Each listing leads with the artisan's photo, story, and 3 years of work — not a product page. Bookable services come second. The relationship is the product.",
+            body: "Each listing leads with the artisan's photo, story, and 3 years of work, not a product page. Bookable services come second. The relationship is the product.",
           },
           {
-            title: 'Decision 3 — Inquiry instead of checkout',
+            title: 'Decision 3: Inquiry instead of checkout',
             meta: 'Trade-off · Lower conversion velocity · Higher conversion quality',
             body: 'Replaced cart with a message thread. Replaced fixed prices with ranges. Removed "instant book." Users start a conversation, get a custom quote, then commit. Different funnel, different trust.',
           },
         ],
       },
       {
-        eyebrow: "06 — Results, learnings, what's next",
-        heading: 'What this taught us — and what comes next.',
+        eyebrow: "06 · Results, learnings, what's next",
+        heading: 'What this taught us, and what comes next.',
         impact: [
           {
             num: 'Result 01',
@@ -724,64 +724,64 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 — Why this problem matters',
+        eyebrow: '01 · Why this problem matters',
         heading: "Travel publishing has a default tempo. *Tofino doesn't fit it.*",
         body: [
-          'The travel-magazine genre has a built-in pace: punchy headlines, busy spreads, "10 things you can\'t miss." That tempo flatters destinations that *are* exciting — Tokyo at night, Bangkok street markets.',
+          'The travel-magazine genre has a built-in pace: punchy headlines, busy spreads, "10 things you can\'t miss." That tempo flatters destinations that *are* exciting, like Tokyo at night or Bangkok street markets.',
           'Tofino is different. The rain reads slowly. The light does most of the work. The town has fewer than 2,500 residents. Designing it the way you\'d design Lisbon would lose what\'s actually there.',
-          'The design problem wasn\'t *"how do we present this place"* — it was *"how do we let the reader feel its tempo before they see its photographs."*',
+          'The design problem wasn\'t *"how do we present this place."* It was *"how do we let the reader feel its tempo before they see its photographs."*',
         ],
       },
       {
-        eyebrow: '02 — How I defined the real problem',
+        eyebrow: '02 · How I defined the real problem',
         heading: "The problem wasn't visual. *It was rhythmic.*",
         body: [
-          'Early drafts treated this as a styling problem — pick a tide-themed palette, find muted photography, set the type smaller. The drafts looked nice. They didn\'t *feel* like Tofino.',
-          "Reviewing the drafts, I realized: the issue was that every spread had the same density. Magazines that feel calm aren't calmer in any single page — they're calm because of *how pages relate to each other.* Density follows tide.",
+          'Early drafts treated this as a styling problem: pick a tide-themed palette, find muted photography, set the type smaller. The drafts looked nice. They didn\'t *feel* like Tofino.',
+          "Reviewing the drafts, I realized the issue was that every spread had the same density. Magazines that feel calm aren't calmer on any single page. They're calm because of *how pages relate to each other.* Density follows tide.",
           'I redefined the problem from *"design a quiet magazine"* to *"design the gaps between the pages, not just the pages."*',
         ],
         callout: 'Tofino is small. The light is *large.*',
       },
       {
-        eyebrow: '03 — Three editorial decisions',
+        eyebrow: '03 · Three editorial decisions',
         heading: 'What I changed, why, and how I tested it.',
         body: [
           'For a print piece, "testing" meant printing, walking away, and reading at three different times of day with fresh eyes. Each decision below was kept or killed based on whether the rhythm held when I came back to it.',
         ],
         cards: [
           {
-            title: 'Decision 1 — More white than copy',
+            title: 'Decision 1: More white than copy',
             meta: 'Rationale · Tempo design',
-            body: "Generous margins on every page. White space carries the same weight as the photograph. The reader's pace *is* the design. *Tested by reading aloud — if a spread couldn't survive the pause between lines, the white wasn't working hard enough.*",
+            body: "Generous margins on every page. White space carries the same weight as the photograph. The reader's pace *is* the design. *I tested it by reading aloud, and if a spread couldn't survive the pause between lines, the white wasn't working hard enough.*",
           },
           {
-            title: 'Decision 2 — One serif, two sizes',
+            title: 'Decision 2: One serif, two sizes',
             meta: 'Rationale · Voice consistency',
-            body: 'A single serif (Fraunces) does all the work. Italic for first-person reflection, regular for present-tense observation. Resisted adding a sans for "variety" — variety is what magazines fall back on when their content is thin.',
+            body: 'A single serif (Fraunces) does all the work. Italic for first-person reflection, regular for present-tense observation. I resisted adding a sans for "variety," since variety is what magazines fall back on when their content is thin.',
           },
           {
-            title: 'Decision 3 — Image rhythm follows tide',
+            title: 'Decision 3: Image rhythm follows tide',
             meta: 'Rationale · Pacing',
-            body: 'Full-bleed photographs alternate with quiet half-pages of text. Reading the magazine is a tide — pulled in, pulled back, pulled in. *Tested by flipping through fast: if any 4-page run felt monotone, I rebuilt that run.*',
+            body: 'Full-bleed photographs alternate with quiet half-pages of text. Reading the magazine feels like a tide, pulled in, pulled back, pulled in. *I tested it by flipping through fast, and if any 4-page run felt monotone, I rebuilt that run.*',
           },
         ],
       },
       {
-        eyebrow: '04 — What this taught me about screens',
+        eyebrow: '04 · What this taught me about screens',
         heading: 'Editorial work changed how I design *products.*',
         body: [
-          '**Hierarchy is tempo, not size.** Print designers don\'t ask "which thing is biggest?" — they ask "when does the reader\'s eye land?" Same logic applies to dashboards, onboarding flows, reading-heavy product surfaces.',
+          '**Hierarchy is tempo, not size.** Print designers don\'t ask "which thing is biggest?" They ask "when does the reader\'s eye land?" The same logic applies to dashboards, onboarding flows, and reading-heavy product surfaces.',
           "**White space is a feature.** Print designers fight for margin space the way product designers fight for headline copy. Both are arguing for the same thing: *respecting the reader's attention.*",
-          '**Tone is typographic.** The difference between a calm product and a frantic one often isn\'t UI patterns — it\'s typeface choice, leading, and italic restraint. Editorial work is where I learned to *hear* that difference.',
-          '**Next.** I now treat every product surface like a spread: where does the eye land first, where does it rest, what\'s the tide between sections. That instinct came from Tofino — and it\'s why this case study sits in the same portfolio as my product work.',
+          '**Tone is typographic.** The difference between a calm product and a frantic one often isn\'t UI patterns. It\'s typeface choice, leading, and italic restraint. Editorial work is where I learned to *hear* that difference.',
+          '**Next.** I now treat every product surface like a spread: where does the eye land first, where does it rest, what\'s the tide between sections. That instinct came from Tofino, and it\'s why this case study sits in the same portfolio as my product work.',
         ],
       },
     ],
     gallery: [
-      { label: 'Spread 01 — Cover & opener', hint: 'Issue cover and table of contents' },
-      { label: 'Spread 02 — Where the rain reads slowly', hint: 'Opening essay with full-bleed photograph' },
-      { label: 'Spread 03 — Coastal field guide', hint: 'Typography-led spread, italic reflection' },
-      { label: 'Spread 04 — Closing image', hint: 'Final spread, returns to silence' },
+      { label: 'Spread 01 · Cover & opener', hint: 'Issue cover and table of contents' },
+      { label: 'Spread 02 · Where the rain reads slowly', hint: 'Opening essay with full-bleed photograph' },
+      { label: 'Spread 03 · Coastal field guide', hint: 'Typography-led spread, italic reflection' },
+      { label: 'Spread 04 · Closing image', hint: 'Final spread, returns to silence' },
     ],
   },
 }
@@ -791,8 +791,8 @@ export const about = {
   heading: 'Hey! That’s me.',
   body: [
     "I'm **Yoonju Lee**, a UI/UX designer based in **Vancouver, BC**, with a diploma in Web and Mobile App Design and Development from Langara College. I work at the intersection of **empathy** and **clarity**.",
-    'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences** — I treat every product problem as a human problem first, and a system problem second.',
-    "Outside of work, I'm happiest on a trail. **Hiking, camping, and traveling** — from alpine lakes to mountain summits — keep giving me new perspectives, and they're where most of my design inspiration actually comes from.",
+    'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences**. I treat every product problem as a human problem first, and a system problem second.',
+    "Outside of work, I'm happiest on a trail. **Hiking, camping, and traveling**, from alpine lakes to mountain summits, keep giving me new perspectives, and they're where most of my design inspiration actually comes from.",
   ],
   // Photo collage next to the bio. Drop files into public/images/ and
   // update src/alt/caption here.
