@@ -404,11 +404,9 @@ function CaseSections({ study, slugPrefix }) {
   ))
 }
 
-// Browser-chrome mockup with a before/after toggle. On hover the full-page
-// screenshot scrolls from top to bottom inside the fixed-height viewport.
-function ScreenMockup({ screen }) {
-  const [view, setView] = useState('after')
-  const src = view === 'after' ? screen.after : screen.before
+// One browser-chrome pane. The full-page screenshot sits inside a fixed-height
+// viewport the visitor scrolls manually with the mouse wheel.
+function ScreenPane({ variant, src, url, label }) {
   return (
     <figure className="screen-mockup">
       <div className="mockup-bar">
@@ -417,37 +415,42 @@ function ScreenMockup({ screen }) {
           <i />
           <i />
         </span>
-        <span className="mockup-url">{screen.url}</span>
-        <span className="mockup-toggle" role="group" aria-label={`${screen.label} before or after`}>
-          <button
-            type="button"
-            className={view === 'before' ? 'on' : ''}
-            onClick={() => setView('before')}
-          >
-            Before
-          </button>
-          <button
-            type="button"
-            className={view === 'after' ? 'on' : ''}
-            onClick={() => setView('after')}
-          >
-            After
-          </button>
+        <span className="mockup-url">{url}</span>
+        <span className={`mockup-tag tag-${variant}`}>
+          {variant === 'before' ? 'Before' : 'After'}
         </span>
       </div>
       <div className="mockup-viewport">
         <img
-          className="mockup-page"
           src={src}
-          alt={`${screen.label} — ${view === 'after' ? 'redesign' : 'original site'}`}
+          alt={`${label} — ${variant === 'after' ? 'redesign' : 'original site'}`}
           loading="lazy"
         />
       </div>
-      <figcaption>
-        {screen.label}
-        <span>hover to scroll</span>
-      </figcaption>
     </figure>
+  )
+}
+
+// A page shown as two side-by-side panes: original site vs redesign.
+function ComparePair({ screen }) {
+  return (
+    <div className="compare">
+      <div className="compare-label">{screen.label}</div>
+      <div className="compare-pair">
+        <ScreenPane
+          variant="before"
+          src={screen.before}
+          url={screen.url}
+          label={screen.label}
+        />
+        <ScreenPane
+          variant="after"
+          src={screen.after}
+          url={screen.url}
+          label={screen.label}
+        />
+      </div>
+    </div>
   )
 }
 
@@ -496,14 +499,15 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
         <CaseSections study={study} slugPrefix={`${slug}-`} />
 
         {study.screens && (
-          <div className="case-sec">
+          <div className="case-sec case-sec-wide">
             <h3 className="case-sec-h">Before &amp; after</h3>
             <p className="case-sec-note">
-              Toggle each screen and hover to scroll the full page.
+              Original site on the left, redesign on the right — scroll each
+              screen to explore the full page.
             </p>
-            <div className="case-screens">
+            <div className="case-compare">
               {study.screens.map((screen) => (
-                <ScreenMockup key={screen.label} screen={screen} />
+                <ComparePair key={screen.label} screen={screen} />
               ))}
             </div>
           </div>
