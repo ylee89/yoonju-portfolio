@@ -406,7 +406,7 @@ function CaseSections({ study, slugPrefix }) {
 
 // One browser-chrome pane. The full-page screenshot sits inside a fixed-height
 // viewport the visitor scrolls manually with the mouse wheel.
-function ScreenPane({ variant, src, url, label }) {
+function ScreenPane({ variant, src, url, label, viewportRef }) {
   return (
     <figure className="screen-mockup">
       <div className="mockup-bar">
@@ -420,7 +420,7 @@ function ScreenPane({ variant, src, url, label }) {
           {variant === 'before' ? 'Before' : 'After'}
         </span>
       </div>
-      <div className="mockup-viewport">
+      <div className="mockup-viewport" ref={viewportRef}>
         <img
           src={src}
           alt={`${label} — ${variant === 'after' ? 'redesign' : 'original site'}`}
@@ -432,7 +432,41 @@ function ScreenPane({ variant, src, url, label }) {
 }
 
 // A page shown as two side-by-side panes: original site vs redesign.
+// The two viewports scroll together by ratio so the same part of each page
+// (hero, services, CTA) stays aligned while the visitor scrolls manually.
 function ComparePair({ screen }) {
+  const beforeRef = useRef(null)
+  const afterRef = useRef(null)
+
+  useEffect(() => {
+    const a = beforeRef.current
+    const b = afterRef.current
+    if (!a || !b) return
+
+    let syncing = false
+    const link = (src, dst) => () => {
+      if (syncing) return
+      const srcMax = src.scrollHeight - src.clientHeight
+      const dstMax = dst.scrollHeight - dst.clientHeight
+      if (srcMax <= 0 || dstMax <= 0) return
+      syncing = true
+      dst.scrollTop = (src.scrollTop / srcMax) * dstMax
+      // release on the next frame so the mirrored scroll doesn't echo back
+      requestAnimationFrame(() => {
+        syncing = false
+      })
+    }
+
+    const onBefore = link(a, b)
+    const onAfter = link(b, a)
+    a.addEventListener('scroll', onBefore, { passive: true })
+    b.addEventListener('scroll', onAfter, { passive: true })
+    return () => {
+      a.removeEventListener('scroll', onBefore)
+      b.removeEventListener('scroll', onAfter)
+    }
+  }, [screen])
+
   return (
     <div className="compare">
       <div className="compare-label">{screen.label}</div>
@@ -442,12 +476,14 @@ function ComparePair({ screen }) {
           src={screen.before}
           url={screen.url}
           label={screen.label}
+          viewportRef={beforeRef}
         />
         <ScreenPane
           variant="after"
           src={screen.after}
           url={screen.url}
           label={screen.label}
+          viewportRef={afterRef}
         />
       </div>
     </div>
@@ -502,8 +538,8 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           <div className="case-sec case-sec-wide">
             <h3 className="case-sec-h">Before &amp; after</h3>
             <p className="case-sec-note">
-              Original site on the left, redesign on the right — scroll each
-              screen to explore the full page.
+              Original site on the left, redesign on the right — scroll either
+              screen and both move together to keep the same section aligned.
             </p>
             <div className="case-compare">
               {study.screens.map((screen) => (
