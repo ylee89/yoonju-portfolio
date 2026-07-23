@@ -823,12 +823,74 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'Map-first home', hint: 'Nearby artisans visible immediately' },
-      { label: 'Artisan profile', hint: 'Story, craft history, portfolio' },
-      { label: 'Inquiry flow', hint: 'First-message booking' },
-      { label: 'My closet', hint: 'Items waiting for repair, not items for sale' },
-    ],
+    // Finished product screens, shown in a desktop browser frame and grouped
+    // by the flow: map-first discovery, browsing makers, and request to proposal.
+    webScreens: {
+      title: 'Mock up',
+      url: 'upzy.app',
+      groups: [
+        {
+          title: 'Discover · map-first',
+          shots: [
+            {
+              src: '/images/upzy-discover-home.jpg',
+              label: 'Open to a map of makers nearby',
+              hint: 'The home is a map, not a feed, so who is close by is the first thing you see.',
+            },
+            {
+              src: '/images/upzy-discover-detail.jpg',
+              label: 'Tap a shop for the full detail',
+              hint: 'A shop card carries its rating, services, hours, and directions without leaving the map.',
+            },
+            {
+              src: '/images/upzy-discover-list.jpg',
+              label: 'List and map, side by side',
+              hint: 'For people who prefer to scan, the list stays anchored to the same nearby results.',
+            },
+            {
+              src: '/images/upzy-discover-pin.jpg',
+              label: 'A quick look from any pin',
+              hint: 'Tapping a pin previews the shop in place, so browsing never breaks your sense of where.',
+            },
+          ],
+        },
+        {
+          title: 'Find your artist',
+          shots: [
+            {
+              src: '/images/upzy-browse-home.jpg',
+              label: 'Post a request, or scroll to browse',
+              hint: 'One bar to post a job, and below it a run of makers to browse when you would rather look first.',
+            },
+            {
+              src: '/images/upzy-browse-artists.jpg',
+              label: 'Makers lead with their work',
+              hint: 'Each listing is a person and their craft, filtered by Upcycle, Tailor, or Fashion, not a product grid.',
+            },
+          ],
+        },
+        {
+          title: 'Request · inquiry, not checkout',
+          shots: [
+            {
+              src: '/images/upzy-request-map.jpg',
+              label: 'Makers see nearby requests, with a price',
+              hint: 'On the maker side, open requests appear on the map with the budget attached, like a job close to home.',
+            },
+            {
+              src: '/images/upzy-request-detail.jpg',
+              label: 'A request is a story, not a cart',
+              hint: 'The garment, its history, condition, and a price range, so the conversation starts with context.',
+            },
+            {
+              src: '/images/upzy-proposal.jpg',
+              label: 'Reply with a proposal',
+              hint: 'The maker answers with a quote, a timeline, and related work, replacing "add to cart" with a real offer.',
+            },
+          ],
+        },
+      ],
+    },
   },
 
   visit: {
