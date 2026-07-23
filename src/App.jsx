@@ -451,6 +451,47 @@ function ShowcasePane({ showcase }) {
   )
 }
 
+// Floating-phone showcase: a soft gradient stage, a giant faded wordmark,
+// and phone mockups that drift gently. Phones fade in on first scroll into
+// view; the float loop is pure CSS and respects prefers-reduced-motion.
+function MobileShowcase({ showcase }) {
+  const stageRef = useRef(null)
+  const [seen, setSeen] = useState(false)
+
+  useEffect(() => {
+    const el = stageRef.current
+    if (!el) return
+    const ob = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setSeen(true)
+      },
+      { threshold: 0.25 }
+    )
+    ob.observe(el)
+    return () => ob.disconnect()
+  }, [])
+
+  return (
+    <div
+      ref={stageRef}
+      className={`showcase-stage${seen ? ' in-view' : ''}`}
+    >
+      <span className="showcase-word" aria-hidden="true">
+        {showcase.word}
+      </span>
+      {showcase.phones.map((phone, i) => (
+        <img
+          key={i}
+          className={`showcase-phone showcase-phone-${i}`}
+          src={phone.src}
+          alt={phone.alt}
+          loading="lazy"
+        />
+      ))}
+    </div>
+  )
+}
+
 // A page shown as two side-by-side panes: original site vs redesign.
 // The two viewports scroll together by ratio so the same part of each page
 // (hero, services, CTA) stays aligned while the visitor scrolls manually.
@@ -632,6 +673,16 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
               </div>
             </div>
           ))}
+
+        {study.mobileShowcase && (
+          <div className="case-sec">
+            <h3 className="case-sec-h">{study.mobileShowcase.title}</h3>
+            {study.mobileShowcase.note && (
+              <p className="case-sec-note">{study.mobileShowcase.note}</p>
+            )}
+            <MobileShowcase showcase={study.mobileShowcase} />
+          </div>
+        )}
 
         {study.gallery && (
           <div className="case-sec">

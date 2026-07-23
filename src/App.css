@@ -1339,6 +1339,94 @@ body.case-open {
   color: var(--muted);
 }
 
+/* ── Floating-phone showcase (motion-led case study stage) ── */
+.showcase-stage {
+  position: relative;
+  margin-top: 2rem;
+  height: clamp(430px, 58vw, 600px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 50% at 18% 16%, rgba(116, 128, 255, 0.18), transparent 62%),
+    radial-gradient(50% 42% at 82% 28%, rgba(255, 158, 202, 0.16), transparent 62%),
+    linear-gradient(180deg, #f6f6ff 0%, #fdf4f9 100%);
+}
+
+.showcase-word {
+  position: absolute;
+  left: 50%;
+  bottom: -1.5%;
+  transform: translateX(-50%);
+  font-size: clamp(4.2rem, 15vw, 9.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(68, 76, 231, 0.1);
+  user-select: none;
+  pointer-events: none;
+}
+
+.showcase-phone {
+  position: absolute;
+  width: min(240px, 38%);
+  filter: drop-shadow(0 26px 36px rgba(29, 29, 29, 0.2));
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  animation: showcase-float 7s ease-in-out infinite;
+}
+
+.in-view .showcase-phone {
+  opacity: 1;
+}
+
+/* Center phone leads; the two side phones tilt in behind it. */
+.showcase-phone-0 {
+  left: 50%;
+  top: 7%;
+  width: min(250px, 40%);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.showcase-phone-1 {
+  left: 10%;
+  top: 16%;
+  width: min(215px, 34%);
+  transform: rotate(-9deg);
+  transition-delay: 0.2s;
+  animation-delay: -2.4s;
+}
+
+.showcase-phone-2 {
+  right: 10%;
+  top: 26%;
+  width: min(215px, 34%);
+  transform: rotate(8deg);
+  transition-delay: 0.4s;
+  animation-delay: -4.8s;
+}
+
+/* The float loop moves `translate` only, so it never fights the rotation. */
+@keyframes showcase-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-phone {
+    animation: none;
+    transition: none;
+    opacity: 1;
+  }
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

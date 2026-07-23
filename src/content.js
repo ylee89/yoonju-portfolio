@@ -696,6 +696,18 @@ export const caseStudies = {
         },
       ],
     },
+    // Floating phone showcase with a giant faded wordmark, in the style of
+    // motion-led case study pages. Phones bob gently via CSS.
+    mobileShowcase: {
+      title: 'Mobile · Receiptly in your pocket',
+      note: 'The same trust-first design, sized for the moment a founder actually holds a receipt.',
+      word: 'Receiptly',
+      phones: [
+        { src: '/images/receiptly-mobile-1.webp', alt: 'Mobile dashboard with expense stats at a glance' },
+        { src: '/images/receiptly-mobile-2.webp', alt: 'Reports and insights on mobile, with the CAC chart' },
+        { src: '/images/receiptly-mobile-3.webp', alt: 'Receipt folders on mobile, with friendly empty states' },
+      ],
+    },
   },
 
   upzy: {
