@@ -584,7 +584,7 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
 
         {study.slideGroups &&
           study.slideGroups.map((group, g) => (
-            <div className="case-sec case-sec-wide" key={g}>
+            <div className="case-sec" key={g}>
               <h3 className="case-sec-h">{group.title}</h3>
               <div className="case-slides">
                 {group.shots.map((shot, i) => (

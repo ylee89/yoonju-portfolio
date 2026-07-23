@@ -1268,41 +1268,38 @@ body.case-open {
   height: 560px;
 }
 
-/* Finished-design slides, centered stack with a caption under each. */
+/* Finished-design slides, two-up grid matching the placeholder gallery. */
 .case-slides {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.6rem;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 .case-shot {
   margin: 0;
-  width: min(860px, 100%);
 }
 
 .case-shot img {
   width: 100%;
   display: block;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 14px;
   box-shadow: 0 10px 30px rgba(29, 29, 29, 0.07);
 }
 
 .case-shot figcaption {
-  margin-top: 1rem;
-  text-align: center;
+  margin-top: 0.8rem;
 }
 
 .case-shot figcaption strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
 }
 
 .case-shot figcaption span {
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
 }
@@ -1412,6 +1409,7 @@ body.case-open {
   .case-cards,
   .case-impact,
   .case-gallery,
+  .case-slides,
   .compare-pair {
     grid-template-columns: 1fr;
   }
