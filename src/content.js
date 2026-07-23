@@ -463,7 +463,7 @@ export const caseStudies = {
     // of Loopin; CalmNest is the parent-facing feature Yoonju owned end to end.
     slideGroups: [
       {
-        title: 'Moodies · onboarding and profiles',
+        title: 'Moodies',
         shots: [
           {
             src: '/images/loopin-moodies-1.jpg',
