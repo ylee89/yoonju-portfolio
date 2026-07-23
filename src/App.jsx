@@ -600,6 +600,38 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
             </div>
           ))}
 
+        {study.webScreens && (
+          <div className="case-sec">
+            <h3 className="case-sec-h">{study.webScreens.title}</h3>
+            <div className="case-web">
+              {study.webScreens.shots.map((shot, i) => (
+                <figure className="web-shot" key={i}>
+                  <div className="screen-mockup">
+                    <div className="mockup-bar">
+                      <span className="mockup-dots" aria-hidden="true">
+                        <i />
+                        <i />
+                        <i />
+                      </span>
+                      <span className="mockup-url">{study.webScreens.url}</span>
+                    </div>
+                    <img
+                      className="web-img"
+                      src={shot.src}
+                      alt={shot.label}
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="web-cap">
+                    <strong>{shot.label}</strong>
+                    <span>{shot.hint}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
         {study.gallery && (
           <div className="case-sec">
             <h3 className="case-sec-h">Selected screens</h3>

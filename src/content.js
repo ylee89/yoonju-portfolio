@@ -634,12 +634,28 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'Inline success state', hint: 'Upload card sequencing' },
-      { label: 'Plain-language AI labels', hint: 'Categorization with reasoning surfaced' },
-      { label: 'Edit Report', hint: 'Add / Remove / Reorder pattern' },
-      { label: 'Mobile capture', hint: 'Onboarding under 90 seconds' },
-    ],
+    // Finished OCR flow, shown in a desktop browser frame.
+    webScreens: {
+      title: 'OCR · receipt extraction',
+      url: 'app.receiptly.com',
+      shots: [
+        {
+          src: '/images/receiptly-ocr-1.jpg',
+          label: 'Upload and auto-categorize',
+          hint: 'Receipts land in a list where the AI proposes a category and flags the ones that need a second look.',
+        },
+        {
+          src: '/images/receiptly-ocr-2.jpg',
+          label: 'Extracted line items',
+          hint: 'Opening a receipt shows every item, price, total, and tax the AI pulled, with its reasoning surfaced.',
+        },
+        {
+          src: '/images/receiptly-ocr-3.jpg',
+          label: 'Saved and handed off',
+          hint: 'A clear confirmation that the receipts are in, so the user knows the AI is taking it from here.',
+        },
+      ],
+    },
   },
 
   upzy: {

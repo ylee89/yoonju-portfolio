@@ -1304,6 +1304,39 @@ body.case-open {
   color: var(--muted);
 }
 
+/* Desktop web screens in browser frames, single column at body width. */
+.case-web {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  margin-top: 1.6rem;
+}
+
+.web-shot {
+  margin: 0;
+}
+
+.web-img {
+  width: 100%;
+  display: block;
+}
+
+.web-cap {
+  margin-top: 0.9rem;
+}
+
+.web-cap strong {
+  display: block;
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.web-cap span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
