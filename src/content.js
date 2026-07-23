@@ -459,11 +459,24 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'CalmNest · parent mood tracker', hint: 'Weekly emoji mood slider' },
-      { label: 'CalmNest · voice journal', hint: 'Offload a hard moment out loud' },
-      { label: 'CalmNest · resource library', hint: 'Audio books, tips, saved, resources' },
-      { label: 'CalmNest · welcome', hint: '"Connection, not perfection"' },
+    // Finished CalmNest screens, the parent-facing feature Yoonju owned.
+    slidesTitle: 'CalmNest · the screens I designed',
+    slides: [
+      {
+        src: '/images/loopin-calmnest-1.jpg',
+        label: 'Mood tracker and daily check-in',
+        hint: 'A weekly emoji slider for the parent, beside a gentle voice check-in.',
+      },
+      {
+        src: '/images/loopin-calmnest-2.jpg',
+        label: 'Resource library, audio books',
+        hint: 'Calming reads and audio a parent can turn to in a hard moment.',
+      },
+      {
+        src: '/images/loopin-calmnest-3.jpg',
+        label: 'Tips, saved and sorted',
+        hint: 'Shared parenting tips like "The Power of Positive Reinforcement."',
+      },
     ],
   },
 

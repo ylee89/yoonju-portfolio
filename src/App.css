@@ -1268,6 +1268,45 @@ body.case-open {
   height: 560px;
 }
 
+/* Finished-design slides, centered stack with a caption under each. */
+.case-slides {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.6rem;
+  margin-top: 2rem;
+}
+
+.case-shot {
+  margin: 0;
+  width: min(860px, 100%);
+}
+
+.case-shot img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(29, 29, 29, 0.07);
+}
+
+.case-shot figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.case-shot figcaption strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.case-shot figcaption span {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

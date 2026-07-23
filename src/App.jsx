@@ -582,6 +582,23 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           </div>
         )}
 
+        {study.slides && (
+          <div className="case-sec case-sec-wide">
+            <h3 className="case-sec-h">{study.slidesTitle || 'Selected screens'}</h3>
+            <div className="case-slides">
+              {study.slides.map((shot, i) => (
+                <figure className="case-shot" key={i}>
+                  <img src={shot.src} alt={shot.label} loading="lazy" />
+                  <figcaption>
+                    <strong>{shot.label}</strong>
+                    <span>{shot.hint}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
         {study.gallery && (
           <div className="case-sec">
             <h3 className="case-sec-h">Selected screens</h3>
