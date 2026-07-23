@@ -478,7 +478,7 @@ export const caseStudies = {
         ],
       },
       {
-        title: 'CalmNest · the screens I designed',
+        title: 'CalmNest',
         shots: [
           {
             src: '/images/loopin-calmnest-1.jpg',
