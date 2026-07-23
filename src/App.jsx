@@ -641,38 +641,44 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
             </div>
           ))}
 
-        {study.webScreens &&
-          study.webScreens.groups.map((group, g) => (
-            <div className="case-sec" key={g}>
-              <h3 className="case-sec-h">{group.title}</h3>
-              <div className="case-web">
-                {group.shots.map((shot, i) => (
-                  <figure className="web-shot" key={i}>
-                    <div className="screen-mockup">
-                      <div className="mockup-bar">
-                        <span className="mockup-dots" aria-hidden="true">
-                          <i />
-                          <i />
-                          <i />
-                        </span>
-                        <span className="mockup-url">{study.webScreens.url}</span>
+        {study.webScreens && (
+          <div className="case-sec">
+            <h3 className="case-sec-h">{study.webScreens.title}</h3>
+            {study.webScreens.groups.map((group, g) => (
+              <div className="web-group" key={g}>
+                <h4 className="web-group-title">{group.title}</h4>
+                <div className="case-web">
+                  {group.shots.map((shot, i) => (
+                    <figure className="web-shot" key={i}>
+                      <div className="screen-mockup">
+                        <div className="mockup-bar">
+                          <span className="mockup-dots" aria-hidden="true">
+                            <i />
+                            <i />
+                            <i />
+                          </span>
+                          <span className="mockup-url">
+                            {study.webScreens.url}
+                          </span>
+                        </div>
+                        <img
+                          className="web-img"
+                          src={shot.src}
+                          alt={shot.label}
+                          loading="lazy"
+                        />
                       </div>
-                      <img
-                        className="web-img"
-                        src={shot.src}
-                        alt={shot.label}
-                        loading="lazy"
-                      />
-                    </div>
-                    <figcaption className="web-cap">
-                      <strong>{shot.label}</strong>
-                      <span>{shot.hint}</span>
-                    </figcaption>
-                  </figure>
-                ))}
+                      <figcaption className="web-cap">
+                        <strong>{shot.label}</strong>
+                        <span>{shot.hint}</span>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
 
         {study.mobileShowcase && (
           <div className="case-sec">

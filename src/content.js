@@ -637,6 +637,7 @@ export const caseStudies = {
     // Finished product screens, shown in a desktop browser frame and grouped
     // by area: the OCR upload flow, receipt management, and reporting.
     webScreens: {
+      title: 'Mock up',
       url: 'app.receiptly.com',
       groups: [
         {

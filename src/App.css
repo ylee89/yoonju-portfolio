@@ -1305,17 +1305,25 @@ body.case-open {
 }
 
 /* Desktop web screens in browser frames, single column at body width. */
+.web-group {
+  margin-top: 2.6rem;
+}
+
+.web-group-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  margin: 0 0 0.3rem;
+}
+
 .case-web {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.6rem;
-  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem 1.4rem;
+  margin-top: 1.2rem;
 }
 
 .web-shot {
   margin: 0;
-  width: min(680px, 100%);
 }
 
 .web-img {
@@ -1533,6 +1541,7 @@ body.case-open {
   .case-impact,
   .case-gallery,
   .case-slides,
+  .case-web,
   .compare-pair {
     grid-template-columns: 1fr;
   }
