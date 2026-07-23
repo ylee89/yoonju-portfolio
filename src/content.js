@@ -263,6 +263,18 @@ export const caseStudies = {
         before: '/images/gx-service-before.jpg',
         after: '/images/gx-service-after.jpg',
       },
+      {
+        label: 'Gallery',
+        url: 'galaxyautodetailing.com/gallery',
+        before: '/images/gx-gallery-before.jpg',
+        after: '/images/gx-gallery-after.jpg',
+      },
+      {
+        label: 'Blog',
+        url: 'galaxyautodetailing.com/blog',
+        before: '/images/gx-blog-before.jpg',
+        after: '/images/gx-blog-after.jpg',
+      },
     ],
   },
 
