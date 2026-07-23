@@ -634,25 +634,65 @@ export const caseStudies = {
         ],
       },
     ],
-    // Finished OCR flow, shown in a desktop browser frame.
+    // Finished product screens, shown in a desktop browser frame and grouped
+    // by area: the OCR upload flow, receipt management, and reporting.
     webScreens: {
-      title: 'OCR · receipt extraction',
       url: 'app.receiptly.com',
-      shots: [
+      groups: [
         {
-          src: '/images/receiptly-ocr-1.jpg',
-          label: 'Upload and auto-categorize',
-          hint: 'Receipts land in a list where the AI proposes a category and flags the ones that need a second look.',
+          title: 'Upload · OCR extraction',
+          shots: [
+            {
+              src: '/images/receiptly-dashboard.jpg',
+              label: 'Returning-user upload',
+              hint: 'A familiar dashboard where a returning user drops in receipts and the AI starts categorizing right away.',
+            },
+            {
+              src: '/images/receiptly-ocr-1.jpg',
+              label: 'Upload and auto-categorize',
+              hint: 'Receipts land in a list where the AI proposes a category and flags the ones that need a second look.',
+            },
+            {
+              src: '/images/receiptly-ocr-2.jpg',
+              label: 'Extracted line items',
+              hint: 'Opening a receipt shows every item, price, total, and tax the AI pulled, with its reasoning surfaced.',
+            },
+            {
+              src: '/images/receiptly-ocr-3.jpg',
+              label: 'Saved and handed off',
+              hint: 'A clear confirmation that the receipts are in, so the user knows the AI is taking it from here.',
+            },
+          ],
         },
         {
-          src: '/images/receiptly-ocr-2.jpg',
-          label: 'Extracted line items',
-          hint: 'Opening a receipt shows every item, price, total, and tax the AI pulled, with its reasoning surfaced.',
+          title: 'Manage · receipts and folders',
+          shots: [
+            {
+              src: '/images/receiptly-manage.jpg',
+              label: 'Receipt management',
+              hint: 'Every receipt in one searchable, filterable table with its assigned category and history.',
+            },
+            {
+              src: '/images/receiptly-folder.jpg',
+              label: 'Inside a folder',
+              hint: 'Receipts grouped into folders like House Groceries, so a busy founder can find things fast.',
+            },
+            {
+              src: '/images/receiptly-detail.jpg',
+              label: 'Receipt detail',
+              hint: 'The full breakdown of a single receipt, editable line by line before it counts toward a report.',
+            },
+          ],
         },
         {
-          src: '/images/receiptly-ocr-3.jpg',
-          label: 'Saved and handed off',
-          hint: 'A clear confirmation that the receipts are in, so the user knows the AI is taking it from here.',
+          title: 'Reports · the metrics that matter',
+          shots: [
+            {
+              src: '/images/receiptly-reports.jpg',
+              label: 'Add the right metrics',
+              hint: 'Founders pick investor-facing metrics like CAC, LTV to CAC, and churn to build their own report.',
+            },
+          ],
         },
       ],
     },
