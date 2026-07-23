@@ -451,6 +451,49 @@ function ShowcasePane({ showcase }) {
   )
 }
 
+// Feature comparison matrix. The owner column (first) is highlighted; each
+// cell is a check or a cross. Scrolls horizontally on narrow screens.
+function ComparisonTable({ data }) {
+  return (
+    <div className="compare-table-wrap">
+      <table className="compare-table">
+        <thead>
+          <tr>
+            <th className="ct-corner" scope="col">
+              <span className="sr-only">Feature</span>
+            </th>
+            {data.columns.map((col, i) => (
+              <th key={col} scope="col" className={i === 0 ? 'ct-own' : ''}>
+                {col}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {data.rows.map((row) => (
+            <tr key={row.feature}>
+              <th scope="row" className="ct-feature">
+                {row.feature}
+              </th>
+              {row.values.map((v, i) => (
+                <td key={i} className={i === 0 ? 'ct-own' : ''}>
+                  <span
+                    className={`ct-mark ${v ? 'ct-yes' : 'ct-no'}`}
+                    role="img"
+                    aria-label={v ? 'Yes' : 'No'}
+                  >
+                    {v ? '✓' : '✕'}
+                  </span>
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 // Floating-phone showcase: a soft gradient stage, a giant faded wordmark,
 // and phone mockups that drift gently. Phones fade in on first scroll into
 // view; the float loop is pure CSS and respects prefers-reduced-motion.
@@ -640,6 +683,16 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
               </div>
             </div>
           ))}
+
+        {study.comparison && (
+          <div className="case-sec case-sec-wide">
+            <h3 className="case-sec-h">{study.comparison.title}</h3>
+            {study.comparison.note && (
+              <p className="case-sec-note">{study.comparison.note}</p>
+            )}
+            <ComparisonTable data={study.comparison} />
+          </div>
+        )}
 
         {study.webScreens && (
           <div className="case-sec">

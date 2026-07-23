@@ -718,14 +718,14 @@ export const caseStudies = {
       { label: 'Duration', value: '13 weeks' },
       { label: 'Role', value: 'Lead UX · Strategic reframing · Map-first IA' },
       { label: 'Industries', value: 'Sustainability · Local marketplace · Consumer' },
-      { label: 'Tools', value: 'Figma · Notion · Slack' },
+      { label: 'Tools', value: 'Figma · Illustrator · Jira · Slack · Photoshop' },
     ],
     sections: [
       {
         eyebrow: '01 · Why this problem matters',
         heading: 'Sustainability apps were losing, *even when users agreed with the mission.*',
         body: [
-          'The fashion industry produces 92 million tonnes of waste annually. Apps trying to fight that, like Good On You, ThredUp, and Depop, have devoted user bases but tiny conversion at the moment of action.',
+          'The fashion industry throws off an enormous amount of textile waste every year, and a lot of it is clothing that could have been repaired, altered, or upcycled instead of tossed. The catch is that almost nobody knows where to take a garment to actually get that done.',
           'Why? Because most sustainability apps lead with guilt. *Save the planet. Reduce your footprint. Stop fast fashion.* But guilt has a terrible conversion rate. People agree with the message, then close the app and buy something convenient.',
           'The opportunity wasn\'t to make people care more. **It was to lower the activation energy of caring.**',
         ],
@@ -766,9 +766,9 @@ export const caseStudies = {
       },
       {
         eyebrow: '04 · How I proved it',
-        heading: 'Two competitor teardowns, one hallway test, one prototype walkthrough.',
+        heading: 'A competitor teardown, a hallway test, and a prototype walkthrough.',
         body: [
-          '**Method 1, competitor teardown** of Depop, ThredUp, and Good On You. Depop and ThredUp solve resale (replacement consumption). Good On You scores brands (information without action). *None connect users to local artisans.* That confirmed the market gap.',
+          '**Method 1, competitor teardown** of the tools people already reach for: Facebook, Etsy, and Nextdoor. Each covers one piece of the job and misses the rest. Facebook lets you post but has no way to discover local makers, Etsy is built to discover products but not to post a request, and Nextdoor is neighborhood chatter with neither. None give a maker a portfolio to stand on. *No single tool connects a person to a local artisan,* and the table below maps exactly where each one stops.',
           '**Method 2, hallway tests with 5 participants.** I put two prototypes side by side: a list-first feed and a map-first home. 5 of 5 chose map-first. The reason was always the same: *"I want to see who\'s actually near me."*',
           '**Method 3, prototype walkthrough** with the same 5. The "Send a message" flow felt natural, and every participant compared it to texting a hairdresser, not buying online. *Mental model confirmed.*',
         ],
@@ -823,6 +823,18 @@ export const caseStudies = {
         ],
       },
     ],
+    // Feature comparison against the tools people already use for this.
+    comparison: {
+      title: 'Standing out in the crowd',
+      note: 'People already try to do this on tools they have. None of them cover the whole job.',
+      columns: ['Upzy', 'Facebook', 'Etsy', 'Nextdoor'],
+      rows: [
+        { feature: 'Add Post', values: [true, true, false, false] },
+        { feature: 'Discover', values: [true, false, true, false] },
+        { feature: 'Portfolio Management', values: [true, false, false, false] },
+        { feature: 'Chat', values: [true, true, true, true] },
+      ],
+    },
     // Finished product screens, shown in a desktop browser frame and grouped
     // by the flow: map-first discovery, browsing makers, and request to proposal.
     webScreens: {

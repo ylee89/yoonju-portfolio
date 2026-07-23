@@ -1440,6 +1440,96 @@ body.case-open {
   }
 }
 
+/* ── Feature comparison matrix ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.compare-table-wrap {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: separate;
+  border-spacing: 0.5rem 0.5rem;
+}
+
+.compare-table th,
+.compare-table td {
+  text-align: center;
+  padding: 0.9rem 0.6rem;
+}
+
+.compare-table thead th {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.compare-table .ct-corner {
+  background: transparent;
+}
+
+.compare-table .ct-feature {
+  text-align: left;
+  font-size: 0.98rem;
+  font-weight: 800;
+  background: var(--tint-mint);
+  border-radius: 12px;
+  padding-left: 1.1rem;
+  white-space: nowrap;
+}
+
+.compare-table .ct-own {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.compare-table tbody td {
+  background: rgba(29, 29, 29, 0.03);
+  border-radius: 12px;
+}
+
+.compare-table tbody td.ct-own {
+  background: var(--ink);
+}
+
+.ct-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 800;
+  border: 2px solid currentColor;
+}
+
+.ct-yes {
+  color: #1f9d61;
+}
+
+.ct-own .ct-yes {
+  color: #7fe3b0;
+}
+
+.ct-no {
+  color: #e0574f;
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
