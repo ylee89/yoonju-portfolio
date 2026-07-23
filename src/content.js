@@ -497,6 +497,26 @@ export const caseStudies = {
           },
         ],
       },
+      {
+        title: 'Loopin moments',
+        shots: [
+          {
+            src: '/images/loopin-moment-1.jpg',
+            label: 'Routines home and detail',
+            hint: 'Scheduled loops and recommendations, with each routine opened into its steps.',
+          },
+          {
+            src: '/images/loopin-moment-2.jpg',
+            label: 'Steps and rewards',
+            hint: 'A loop walks the child through simple steps, then celebrates with a badge.',
+          },
+          {
+            src: '/images/loopin-moment-3.jpg',
+            label: 'Build your own routine',
+            hint: 'A parent adds each step with a timer and a video, audio, or photo cue.',
+          },
+        ],
+      },
     ],
   },
 
