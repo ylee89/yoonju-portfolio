@@ -144,10 +144,10 @@ export const caseStudies = {
     title: 'The galaxy theme explained the name, *not the business.*',
     sub: "Galaxy Auto Detailing is a certified detailing shop in Richmond, BC. Its original site set bright blue text over a starry space background that looked striking but buried the cars, the services, and the trust signals. I audited every page, then rebuilt the design system around the work itself.",
     meta: [
-      { label: 'Project', value: 'Website redesign · 4 pages' },
+      { label: 'Project', value: 'Website redesign · 4 pages · Solo' },
       { label: 'Role', value: 'UX Audit · UI Redesign · Information Architecture' },
       { label: 'Industry', value: 'Automotive Services · Small Business' },
-      { label: 'Tools', value: 'Figma' },
+      { label: 'Tools', value: 'Figma · Illustrator' },
     ],
     sections: [
       {
