@@ -529,7 +529,7 @@ export const caseStudies = {
       { label: 'Duration', value: '13 weeks' },
       { label: 'Role', value: 'Lead UX · Onboarding owner · Usability research lead' },
       { label: 'Industries', value: 'Fintech · AI products · B2B SaaS' },
-      { label: 'Tools', value: 'Figma · Maze · Loom · Slack' },
+      { label: 'Tools', value: 'Figma · Illustrator · Jira · Slack' },
     ],
     sections: [
       {
