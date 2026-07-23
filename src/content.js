@@ -459,23 +459,43 @@ export const caseStudies = {
         ],
       },
     ],
-    // Finished CalmNest screens, the parent-facing feature Yoonju owned.
-    slidesTitle: 'CalmNest · the screens I designed',
-    slides: [
+    // Finished screens, grouped by feature. Moodies is the child-facing side
+    // of Loopin; CalmNest is the parent-facing feature Yoonju owned end to end.
+    slideGroups: [
       {
-        src: '/images/loopin-calmnest-1.jpg',
-        label: 'Mood tracker and daily check-in',
-        hint: 'A weekly emoji slider for the parent, beside a gentle voice check-in.',
+        title: 'Moodies · onboarding and profiles',
+        shots: [
+          {
+            src: '/images/loopin-moodies-1.jpg',
+            label: 'Welcome and account',
+            hint: 'The Loopin splash screen and a simple sign-up for parents.',
+          },
+          {
+            src: '/images/loopin-moodies-2.jpg',
+            label: 'Avatar and child profiles',
+            hint: 'A child picks a playful avatar, and a parent adds each kid to the family.',
+          },
+        ],
       },
       {
-        src: '/images/loopin-calmnest-2.jpg',
-        label: 'Resource library, audio books',
-        hint: 'Calming reads and audio a parent can turn to in a hard moment.',
-      },
-      {
-        src: '/images/loopin-calmnest-3.jpg',
-        label: 'Tips, saved and sorted',
-        hint: 'Shared parenting tips like "The Power of Positive Reinforcement."',
+        title: 'CalmNest · the screens I designed',
+        shots: [
+          {
+            src: '/images/loopin-calmnest-1.jpg',
+            label: 'Mood tracker and daily check-in',
+            hint: 'A weekly emoji slider for the parent, beside a gentle voice check-in.',
+          },
+          {
+            src: '/images/loopin-calmnest-2.jpg',
+            label: 'Resource library, audio books',
+            hint: 'Calming reads and audio a parent can turn to in a hard moment.',
+          },
+          {
+            src: '/images/loopin-calmnest-3.jpg',
+            label: 'Tips, saved and sorted',
+            hint: 'Shared parenting tips like "The Power of Positive Reinforcement."',
+          },
+        ],
       },
     ],
   },
