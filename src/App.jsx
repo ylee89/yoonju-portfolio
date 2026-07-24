@@ -285,11 +285,18 @@ function About() {
           <div className="fun-facts-grid">
             {about.funFacts.map((fact) => (
               <div className="fun-fact" key={fact.title}>
-                <span className="fun-fact-emoji" aria-hidden="true">
-                  {fact.emoji}
-                </span>
-                <strong>{fact.title}</strong>
-                <p>{fact.body}</p>
+                {fact.src && (
+                  <div className="fun-fact-photo">
+                    <img src={fact.src} alt={fact.title} loading="lazy" />
+                    <span className="fun-fact-emoji" aria-hidden="true">
+                      {fact.emoji}
+                    </span>
+                  </div>
+                )}
+                <div className="fun-fact-body">
+                  <strong>{fact.title}</strong>
+                  <p>{fact.body}</p>
+                </div>
               </div>
             ))}
           </div>

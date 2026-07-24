@@ -789,33 +789,61 @@ main {
 /* ───────────── Fun facts ───────────── */
 .fun-facts-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1rem;
 }
 
 .fun-fact {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.5rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 18px;
+  overflow: hidden;
+}
+
+.fun-fact-photo {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
+.fun-fact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .fun-fact-emoji {
-  font-size: 1.9rem;
+  position: absolute;
+  left: 0.6rem;
+  bottom: -0.9rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.05rem;
   line-height: 1;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+
+.fun-fact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.3rem 1.1rem 1.2rem;
 }
 
 .fun-fact strong {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 800;
 }
 
 .fun-fact p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.5;
   color: var(--muted);

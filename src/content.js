@@ -1057,21 +1057,31 @@ export const about = {
   funFacts: [
     {
       emoji: '🎨',
+      src: '/images/funfact-chihuly.jpg',
       title: 'A moment of wonder',
-      body: "I could stand in front of Dale Chihuly's glass sculptures in Seattle for hours, endlessly inspired by the unexpected.",
+      body: "I could stand under Dale Chihuly's Glasshouse in Seattle for hours, endlessly inspired by the unexpected.",
+    },
+    {
+      emoji: '✨',
+      src: '/images/funfact-venetians.jpg',
+      title: 'Venetians',
+      body: "Chihuly's Venetian series, all impossible color and gesture, is the kind of art that makes me want to make things.",
     },
     {
       emoji: '🌅',
+      src: '/images/funfact-sunset.jpg',
       title: 'My favorite time of day',
       body: 'Sunset at Long Beach in Pacific Rim National Park Reserve, where the light does all the work.',
     },
     {
       emoji: '🏕️',
+      src: '/images/funfact-camping.jpg',
       title: 'Nature is my escape',
       body: 'Camping is how I reset, and Garibaldi Lake is one of the places I keep going back to.',
     },
     {
       emoji: '📷',
+      src: '/images/funfact-jeju.jpg',
       title: 'Things I love',
       body: 'Traveling and photography, a habit I picked up while living on Jeju Island.',
     },
