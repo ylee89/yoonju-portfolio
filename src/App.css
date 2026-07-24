@@ -761,6 +761,218 @@ main {
 }
 
 /* ───────────── Contact ───────────── */
+/* ── Get in touch (contact card + form) ── */
+.getintouch {
+  max-width: 1080px;
+  margin: 4rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.gt-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.6rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.6rem;
+}
+
+.gt-info h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  font-weight: 800;
+}
+
+.gt-info-sub {
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0.6rem 0 1.8rem;
+  max-width: 32ch;
+}
+
+.gt-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.gt-details li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.gt-details strong {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.gt-details a,
+.gt-details li > span:last-child {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.gt-details a:hover {
+  text-decoration: underline;
+}
+
+.gt-seal {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: var(--tint-yellow);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.gt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.gt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.gt-field span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.gt-field input,
+.gt-field textarea {
+  border: none;
+  border-bottom: 1.5px solid var(--border);
+  background: transparent;
+  padding: 0.5rem 0;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  outline: none;
+  border-radius: 0;
+  resize: vertical;
+}
+
+.gt-field input::placeholder,
+.gt-field textarea::placeholder {
+  color: rgba(29, 29, 29, 0.4);
+}
+
+.gt-field input:focus,
+.gt-field textarea:focus {
+  border-bottom-color: var(--accent, #4a5ae9);
+}
+
+.gt-form .btn {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+}
+
+/* ── FAQ accordion ── */
+.faq {
+  max-width: 720px;
+  margin: 4rem auto 0;
+}
+
+.faq-head {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.faq-head h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+}
+
+.faq-head p {
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-mark {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-mark::before,
+.faq-mark::after {
+  content: '';
+  position: absolute;
+  background: var(--ink);
+}
+
+.faq-mark::before {
+  left: 0;
+  top: 7px;
+  width: 16px;
+  height: 2px;
+}
+
+.faq-mark::after {
+  left: 7px;
+  top: 0;
+  width: 2px;
+  height: 16px;
+}
+
+.faq-item[open] .faq-mark::after {
+  display: none;
+}
+
+.faq-item > p {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
 .contact {
   background: var(--ink);
   color: var(--white);
@@ -1711,8 +1923,13 @@ body.case-open {
   .case-gallery,
   .case-slides,
   .case-web,
+  .gt-card,
   .compare-pair {
     grid-template-columns: 1fr;
+  }
+
+  .gt-card {
+    padding: 1.8rem;
   }
 
   .case-sec-wide {

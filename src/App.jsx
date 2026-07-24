@@ -300,9 +300,111 @@ function Capabilities() {
   )
 }
 
-function Contact() {
+// Contact form that opens the visitor's mail client prefilled. The site is
+// static, so there is no backend to post to; mailto keeps it honest.
+function ContactForm() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const onSubmit = (e) => {
+    e.preventDefault()
+    const subject = `Project inquiry from ${name || 'someone'}`
+    const body = `${message}\n\nFrom ${name}${email ? ` (${email})` : ''}`
+    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`
+  }
   return (
-    <section id="contact" className="contact">
+    <form className="gt-form" onSubmit={onSubmit}>
+      <label className="gt-field">
+        <span>Name</span>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="What is your name?"
+          required
+        />
+      </label>
+      <label className="gt-field">
+        <span>Email</span>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Your email address"
+          required
+        />
+      </label>
+      <label className="gt-field">
+        <span>Message</span>
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Tell me about your idea"
+          rows={3}
+          required
+        />
+      </label>
+      <button type="submit" className="btn">
+        Send a Message
+      </button>
+    </form>
+  )
+}
+
+function Contact() {
+  const gt = contact.getInTouch
+  return (
+    <>
+      <section id="contact" className="getintouch">
+        <div className="gt-card">
+          <div className="gt-info">
+            <h2>{gt.heading}</h2>
+            <p className="gt-info-sub">{gt.sub}</p>
+            <ul className="gt-details">
+              {gt.details.map((d) => (
+                <li key={d.label}>
+                  <strong>{d.label}</strong>
+                  {d.href ? (
+                    <a
+                      href={d.href}
+                      target={d.href.startsWith('http') ? '_blank' : undefined}
+                      rel={d.href.startsWith('http') ? 'noreferrer' : undefined}
+                    >
+                      {d.value}
+                    </a>
+                  ) : (
+                    <span>{d.value}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+            {gt.seal && <span className="gt-seal">{gt.seal}</span>}
+          </div>
+          <ContactForm />
+        </div>
+
+        <div className="faq">
+          <div className="faq-head">
+            <h2>{contact.faqHeading}</h2>
+            <p>{contact.faqSub}</p>
+          </div>
+          <div className="faq-list">
+            {contact.faqs.map((f, i) => (
+              <details className="faq-item" key={i} open={i === 0}>
+                <summary>
+                  <span>{f.q}</span>
+                  <span className="faq-mark" aria-hidden="true" />
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+    <section className="contact">
       <div className="contact-inner">
         <span className="chat-bubble" aria-hidden="true">
           💬
@@ -344,6 +446,7 @@ function Contact() {
         </footer>
       </div>
     </section>
+    </>
   )
 }
 

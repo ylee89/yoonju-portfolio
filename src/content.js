@@ -1072,6 +1072,41 @@ export const capabilities = [
 
 // Contact section
 export const contact = {
+  // "Let's get in touch" card: contact details plus a mailto-backed form.
+  getInTouch: {
+    heading: "Let's get in touch",
+    sub: 'Feel free to reach out for collaborations, project inquiries, or just to say hello.',
+    seal: 'Available for freelance',
+    details: [
+      { label: 'Location', value: 'Vancouver, BC, Canada' },
+      { label: 'Email', value: 'lovingjoo@gmail.com', href: 'mailto:lovingjoo@gmail.com' },
+      { label: 'LinkedIn', value: 'in/yoon-ju-lee', href: 'https://www.linkedin.com/in/yoon-ju-lee/' },
+    ],
+  },
+  faqHeading: 'Need more details?',
+  faqSub: 'A few answers to what people usually ask before starting a project.',
+  faqs: [
+    {
+      q: 'What kind of work do you take on?',
+      a: 'Mostly UX/UI design for web and mobile products, from research and wireframes through to polished, accessible interfaces. I also take on brand and editorial work when a project calls for it.',
+    },
+    {
+      q: 'How do you usually start a project?',
+      a: 'I start with the problem, not the screens. That means understanding the people involved, auditing what already exists, and agreeing on what success looks like before any pixels get pushed.',
+    },
+    {
+      q: 'Can you help if I only have a rough idea?',
+      a: 'Absolutely. A lot of the value is turning a vague idea into a clear, testable direction, so we can define the scope together and start small.',
+    },
+    {
+      q: 'Do you work with developers and founders directly?',
+      a: 'Yes. Most of my projects involved shaping scope with founders and defending design decisions with engineering, so I design with real constraints and hand-off in mind.',
+    },
+    {
+      q: 'How do we communicate during a project?',
+      a: 'Whatever keeps us aligned, usually a shared design file plus regular check-ins. I keep the work visible so there are never any surprises.',
+    },
+  ],
   title: "Let's build something\nmeaningful together.",
   sub: 'Something caught your eye? I’d love to connect. We can turn that idea into a real product.',
   cta: 'Get in Touch',
