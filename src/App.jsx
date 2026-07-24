@@ -288,9 +288,6 @@ function About() {
                 {fact.src && (
                   <div className="fun-fact-photo">
                     <img src={fact.src} alt={fact.title} loading="lazy" />
-                    <span className="fun-fact-emoji" aria-hidden="true">
-                      {fact.emoji}
-                    </span>
                   </div>
                 )}
                 <div className="fun-fact-body">

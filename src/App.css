@@ -790,21 +790,50 @@ main {
 .fun-facts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 1.1rem;
+  gap: 1.4rem;
+  padding: 1rem 0 1.6rem;
 }
 
 .fun-fact {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 18px;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(29, 29, 29, 0.06);
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  will-change: transform;
+}
+
+/* Scatter the cards on a slight tilt, alternating a small vertical offset. */
+.fun-fact:nth-child(1) {
+  transform: rotate(-2.5deg);
+}
+.fun-fact:nth-child(2) {
+  transform: rotate(1.8deg) translateY(16px);
+}
+.fun-fact:nth-child(3) {
+  transform: rotate(-1.4deg);
+}
+.fun-fact:nth-child(4) {
+  transform: rotate(2.2deg) translateY(16px);
+}
+.fun-fact:nth-child(5) {
+  transform: rotate(-2deg);
+}
+
+.fun-fact:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 44px rgba(29, 29, 29, 0.2);
+  z-index: 3;
 }
 
 .fun-fact-photo {
   position: relative;
   aspect-ratio: 3 / 2;
+  overflow: hidden;
 }
 
 .fun-fact-photo img {
@@ -812,21 +841,11 @@ main {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.45s ease;
 }
 
-.fun-fact-emoji {
-  position: absolute;
-  left: 0.6rem;
-  bottom: -0.9rem;
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.05rem;
-  line-height: 1;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 50%;
+.fun-fact:hover .fun-fact-photo img {
+  transform: scale(1.07);
 }
 
 .fun-fact-body {
@@ -847,6 +866,16 @@ main {
   font-weight: 600;
   line-height: 1.5;
   color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fun-fact,
+  .fun-fact:nth-child(n),
+  .fun-fact:hover,
+  .fun-fact-photo img {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ───────────── Capabilities ───────────── */
