@@ -126,7 +126,7 @@ export const works = [
     slug: 'visit',
     num: '05',
     name: 'The Visit Magazine',
-    tags: 'Editorial · Print · InDesign · 32 pages',
+    tags: 'Editorial · Digital · InDesign · 9 pages',
     tint: 'mint',
     image: '/images/work-visit.jpg',
     imageFit: 'contain',
