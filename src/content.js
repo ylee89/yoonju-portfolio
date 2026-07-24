@@ -1062,8 +1062,11 @@ export const capabilities = [
   'User Research',
   'Wireframing & Prototyping',
   'Design Systems',
+  'Information Architecture',
+  'Accessibility (WCAG)',
   'Editorial & Print',
   'Motion & Interaction',
+  'Cognitive Psychology',
 ]
 
 // Contact section
