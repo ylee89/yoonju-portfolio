@@ -918,12 +918,12 @@ export const caseStudies = {
   },
 
   visit: {
-    eyebrow: 'The Visit Magazine · 2023',
+    eyebrow: 'The Visit Magazine · 2024',
     tint: 'mint',
-    title: 'A 32-page editorial that designed for *tempo,* not for excitement.',
+    title: 'A 9-page editorial that designed for *tempo,* not for excitement.',
     sub: "Most travel magazines try to *excite* you about a place. Tofino doesn't excite. It slows you down. The design had to do the same.",
     meta: [
-      { label: 'Format', value: 'Print · 32 pages' },
+      { label: 'Format', value: 'Digital edition · 9 pages' },
       { label: 'Role', value: 'Editorial design · Layout · Typography' },
       { label: 'Subject', value: 'Tofino, BC · Coastal identity · Slow travel' },
       { label: 'Tools', value: 'InDesign · Photoshop · Illustrator' },
@@ -983,11 +983,22 @@ export const caseStudies = {
         ],
       },
     ],
-    gallery: [
-      { label: 'Spread 01 · Cover & opener', hint: 'Issue cover and table of contents' },
-      { label: 'Spread 02 · Where the rain reads slowly', hint: 'Opening essay with full-bleed photograph' },
-      { label: 'Spread 03 · Coastal field guide', hint: 'Typography-led spread, italic reflection' },
-      { label: 'Spread 04 · Closing image', hint: 'Final spread, returns to silence' },
+    // The finished magazine, page by page (digital edition, 9 pages).
+    slideGroups: [
+      {
+        title: 'The magazine, page by page',
+        shots: [
+          { src: '/images/visit-page-1.jpg', label: 'Cover', hint: 'The Visit Magazine, framed by Middle Joffre Lake.' },
+          { src: '/images/visit-page-2.jpg', label: 'Long Beach', hint: 'The opening essay on Tofino\'s endless coastline.' },
+          { src: '/images/visit-page-3.jpg', label: 'Tofino, Long Beach', hint: 'A script title page paired with quiet beach photography.' },
+          { src: '/images/visit-page-4.jpg', label: 'Tofino Adventure', hint: 'Surfing at Mackenzie Beach, told through a torn-wave layout.' },
+          { src: '/images/visit-page-5.jpg', label: 'Camping', hint: 'Booking ahead, campfires, and stargazing under Tofino skies.' },
+          { src: '/images/visit-page-6.jpg', label: 'Joffre Lakes', hint: 'A full-bleed panorama at Middle Joffre Lake.' },
+          { src: '/images/visit-page-7.jpg', label: 'On the water', hint: 'Garibaldi Lake and swimming the turquoise upper lakes.' },
+          { src: '/images/visit-page-8.jpg', label: 'Colophon', hint: 'Credits, the typefaces used, and the tools behind the issue.' },
+          { src: '/images/visit-page-9.jpg', label: 'Back cover', hint: 'A closing image, a canoe at rest on still water.' },
+        ],
+      },
     ],
   },
 }
