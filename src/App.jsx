@@ -384,24 +384,6 @@ function Contact() {
           </div>
           <ContactForm />
         </div>
-
-        <div className="faq">
-          <div className="faq-head">
-            <h2>{contact.faqHeading}</h2>
-            <p>{contact.faqSub}</p>
-          </div>
-          <div className="faq-list">
-            {contact.faqs.map((f, i) => (
-              <details className="faq-item" key={i} open={i === 0}>
-                <summary>
-                  <span>{f.q}</span>
-                  <span className="faq-mark" aria-hidden="true" />
-                </summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
       </section>
 
     <section className="contact">
