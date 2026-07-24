@@ -275,6 +275,26 @@ function About() {
           ))}
         </div>
       </div>
+
+      {about.funFacts && (
+        <div className="about-skills fun-facts">
+          <div className="about-skills-head">
+            <h3>Fun facts</h3>
+            <span className="about-skills-rule" aria-hidden="true" />
+          </div>
+          <div className="fun-facts-grid">
+            {about.funFacts.map((fact) => (
+              <div className="fun-fact" key={fact.title}>
+                <span className="fun-fact-emoji" aria-hidden="true">
+                  {fact.emoji}
+                </span>
+                <strong>{fact.title}</strong>
+                <p>{fact.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

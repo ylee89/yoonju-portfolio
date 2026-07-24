@@ -1053,6 +1053,29 @@ export const about = {
     { name: 'After Effects Basics', icon: 'aftereffects' },
     { name: 'Premiere Pro', icon: 'premiere' },
   ],
+  // Fun facts to round out the bio, from Yoonju's own About page.
+  funFacts: [
+    {
+      emoji: '🎨',
+      title: 'A moment of wonder',
+      body: "I could stand in front of Dale Chihuly's glass sculptures in Seattle for hours, endlessly inspired by the unexpected.",
+    },
+    {
+      emoji: '🌅',
+      title: 'My favorite time of day',
+      body: 'Sunset at Long Beach in Pacific Rim National Park Reserve, where the light does all the work.',
+    },
+    {
+      emoji: '🏕️',
+      title: 'Nature is my escape',
+      body: 'Camping is how I reset, and Garibaldi Lake is one of the places I keep going back to.',
+    },
+    {
+      emoji: '📷',
+      title: 'Things I love',
+      body: 'Traveling and photography, a habit I picked up while living on Jeju Island.',
+    },
+  ],
 }
 
 // My capabilities — pill tags

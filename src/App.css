@@ -786,6 +786,41 @@ main {
   flex-shrink: 0;
 }
 
+/* ───────────── Fun facts ───────────── */
+.fun-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.fun-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.fun-fact-emoji {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.fun-fact strong {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.fun-fact p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 /* ───────────── Capabilities ───────────── */
 .cap-tags {
   display: flex;
@@ -1953,6 +1988,10 @@ body.case-open {
 
   .skill-pills {
     grid-template-columns: 1fr;
+  }
+
+  .fun-facts-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .contact-cta {
