@@ -1435,8 +1435,10 @@ body.case-open {
 /* Device bezel for bare screen exports (no baked-in phone frame).
    Styled after a real handset: metallic rim, dark inner bezel, and side
    buttons drawn with pseudo-elements so they rotate with the phone. */
+/* No `position` here: the .showcase-phone wrapper is already absolutely
+   positioned, and overriding it would knock the phone out of the stage. */
 .device {
-  position: relative;
+  display: block;
   padding: 7px;
   background: #101014;
   border-radius: 34px;
