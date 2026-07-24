@@ -1058,6 +1058,7 @@ export const about = {
 // My capabilities — pill tags
 export const capabilities = [
   'Mobile Design',
+  'Web Design',
   'UX & Product Design',
   'User Research',
   'Wireframing & Prototyping',
