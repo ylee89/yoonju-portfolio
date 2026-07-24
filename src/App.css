@@ -143,16 +143,10 @@ main {
 }
 
 .hero-face {
-  display: inline-grid;
-  place-items: center;
-  width: 0.95em;
-  height: 0.95em;
-  margin: 0 0.15em;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--white);
-  font-size: 0.55em;
-  vertical-align: -0.12em;
+  display: inline-block;
+  margin: 0 0.12em;
+  font-size: 0.82em;
+  vertical-align: -0.06em;
 }
 
 .hero-sub {
