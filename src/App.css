@@ -812,11 +812,11 @@ main {
   content: '';
   position: absolute;
   z-index: 4;
-  top: -21px;
+  top: -24px;
   left: 50%;
-  width: 18px;
-  height: 36px;
-  margin-left: -9px;
+  width: 22px;
+  height: 42px;
+  margin-left: -11px;
   background: url(/peg.svg) no-repeat center / contain;
 }
 
