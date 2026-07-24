@@ -1,6 +1,6 @@
 :root {
-  /* Colors: lavender canvas, ink outlines, pastel accents */
-  --bg: #e3e3ff;
+  /* Colors: airy near-white canvas with a soft top glow, black ink outlines */
+  --bg: #f7f5fb;
   --ink: #1d1d1d;
   --white: #ffffff;
   --muted: #55555c;
@@ -38,7 +38,19 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(
+      1200px 520px at 50% -120px,
+      rgba(202, 182, 244, 0.42),
+      transparent 70%
+    ),
+    radial-gradient(
+      900px 420px at 84% -60px,
+      rgba(255, 196, 224, 0.32),
+      transparent 70%
+    ),
+    var(--bg);
+  background-repeat: no-repeat;
 }
 
 a {
