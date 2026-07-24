@@ -658,15 +658,10 @@ main {
     rgba(255, 255, 255, 0.72);
 }
 
-.photo-2::before {
-  transform: translateX(-50%) rotate(4deg);
-  background: rgba(150, 225, 190, 0.62);
-}
-
+/* Bottom two photos stay tape-free so the collage doesn't feel cluttered. */
+.photo-2::before,
 .photo-3::before {
-  left: 60%;
-  transform: rotate(-8deg);
-  background: rgba(240, 200, 90, 0.6);
+  display: none;
 }
 
 /* Keep the tape from covering the lifted photo on hover. */
