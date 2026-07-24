@@ -742,6 +742,30 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           </div>
         )}
 
+        {study.magazine && (
+          <div className="case-sec case-sec-wide">
+            <h3 className="case-sec-h">{study.magazine.title}</h3>
+            <div className="case-spreads">
+              {study.magazine.cover && (
+                <figure className="spread-shot is-cover">
+                  <img
+                    src={study.magazine.cover.src}
+                    alt={study.magazine.cover.label}
+                    loading="lazy"
+                  />
+                  <figcaption>{study.magazine.cover.label}</figcaption>
+                </figure>
+              )}
+              {study.magazine.spreads.map((sp, i) => (
+                <figure className="spread-shot" key={i}>
+                  <img src={sp.src} alt={sp.label} loading="lazy" />
+                  <figcaption>{sp.label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
+
         {study.mobileShowcase && (
           <div className="case-sec">
             <h3 className="case-sec-h">{study.mobileShowcase.title}</h3>

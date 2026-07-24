@@ -997,23 +997,17 @@ export const caseStudies = {
         ],
       },
     ],
-    // The finished magazine, page by page (digital edition, 9 pages).
-    slideGroups: [
-      {
-        title: 'The magazine, page by page',
-        shots: [
-          { src: '/images/visit-page-1.jpg', label: 'Cover', hint: 'The Visit Magazine, framed by Middle Joffre Lake.' },
-          { src: '/images/visit-page-2.jpg', label: 'Long Beach', hint: 'The opening essay on Tofino\'s endless coastline.' },
-          { src: '/images/visit-page-3.jpg', label: 'Tofino, Long Beach', hint: 'A script title page paired with quiet beach photography.' },
-          { src: '/images/visit-page-4.jpg', label: 'Tofino Adventure', hint: 'Surfing at Mackenzie Beach, told through a torn-wave layout.' },
-          { src: '/images/visit-page-5.jpg', label: 'Camping', hint: 'Booking ahead, campfires, and stargazing under Tofino skies.' },
-          { src: '/images/visit-page-6.jpg', label: 'Joffre Lakes', hint: 'A full-bleed panorama at Middle Joffre Lake.' },
-          { src: '/images/visit-page-7.jpg', label: 'On the water', hint: 'Garibaldi Lake and swimming the turquoise upper lakes.' },
-          { src: '/images/visit-page-8.jpg', label: 'Colophon', hint: 'Credits, the typefaces used, and the tools behind the issue.' },
-          { src: '/images/visit-page-9.jpg', label: 'Back cover', hint: 'A closing image, a canoe at rest on still water.' },
-        ],
-      },
-    ],
+    // The finished magazine, read as spreads the way the issue is laid out.
+    magazine: {
+      title: 'The magazine, spread by spread',
+      cover: { src: '/images/visit-page-1.jpg', label: 'Cover · The Visit Magazine No. 1' },
+      spreads: [
+        { src: '/images/visit-spread-2-3.jpg', label: 'Long Beach, where the coastline runs off the page' },
+        { src: '/images/visit-spread-4-5.jpg', label: 'Tofino Adventure and Camping' },
+        { src: '/images/visit-spread-6-7.jpg', label: 'Joffre Lakes, from the panorama to the water' },
+        { src: '/images/visit-spread-8-9.jpg', label: 'Colophon and back cover' },
+      ],
+    },
   },
 }
 

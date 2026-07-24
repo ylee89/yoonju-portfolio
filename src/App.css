@@ -1576,6 +1576,40 @@ body.case-open {
   color: #e0574f;
 }
 
+/* Magazine read as spreads: a portrait cover, then wide facing-page spreads. */
+.case-spreads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 2rem;
+}
+
+.spread-shot {
+  margin: 0;
+  width: 100%;
+}
+
+.spread-shot.is-cover {
+  width: min(440px, 72%);
+}
+
+.spread-shot img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(29, 29, 29, 0.14);
+}
+
+.spread-shot figcaption {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
