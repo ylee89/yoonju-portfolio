@@ -788,10 +788,24 @@ main {
 
 /* ───────────── Fun facts ───────────── */
 .fun-facts-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 1.4rem;
-  padding: 1rem 0 1.6rem;
+  padding: 2.8rem 0 1.6rem;
+}
+
+/* Twine the photos hang from. */
+.fun-facts-grid::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 1%;
+  right: 1%;
+  height: 2px;
+  border-radius: 2px;
+  background: #c9ad81;
+  box-shadow: 0 1px 1px rgba(29, 29, 29, 0.12);
 }
 
 .fun-fact {
@@ -801,31 +815,35 @@ main {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(29, 29, 29, 0.06);
+  box-shadow: 0 8px 20px rgba(29, 29, 29, 0.08);
   transition: transform 0.32s ease, box-shadow 0.32s ease;
   will-change: transform;
 }
 
-/* Scatter the cards on a slight tilt, alternating a small vertical offset. */
-.fun-fact:nth-child(1) {
-  transform: rotate(-2.5deg);
+/* A wooden clothespin clipping each photo to the twine. */
+.fun-fact::before {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  top: -22px;
+  left: 50%;
+  width: 16px;
+  height: 34px;
+  margin-left: -8px;
+  background: url(/peg.svg) no-repeat center / contain;
+  filter: drop-shadow(0 2px 2px rgba(29, 29, 29, 0.18));
 }
-.fun-fact:nth-child(2) {
-  transform: rotate(1.8deg) translateY(16px);
+
+/* Slight hand-hung tilt, alternating direction. */
+.fun-fact:nth-child(odd) {
+  transform: rotate(-2.2deg);
 }
-.fun-fact:nth-child(3) {
-  transform: rotate(-1.4deg);
-}
-.fun-fact:nth-child(4) {
-  transform: rotate(2.2deg) translateY(16px);
-}
-.fun-fact:nth-child(5) {
-  transform: rotate(-2deg);
+.fun-fact:nth-child(even) {
+  transform: rotate(2deg);
 }
 
 .fun-fact:hover {
-  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  transform: rotate(0deg) scale(1.04);
   box-shadow: 0 20px 44px rgba(29, 29, 29, 0.2);
   z-index: 3;
 }
@@ -834,6 +852,7 @@ main {
   position: relative;
   aspect-ratio: 3 / 2;
   overflow: hidden;
+  border-radius: 18px 18px 0 0;
 }
 
 .fun-fact-photo img {
