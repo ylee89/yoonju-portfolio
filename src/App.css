@@ -792,20 +792,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 1.4rem;
-  padding: 2.8rem 0 1.6rem;
-}
-
-/* Twine the photos hang from. */
-.fun-facts-grid::before {
-  content: '';
-  position: absolute;
-  top: 14px;
-  left: 1%;
-  right: 1%;
-  height: 2px;
-  border-radius: 2px;
-  background: #c9ad81;
-  box-shadow: 0 1px 1px rgba(29, 29, 29, 0.12);
+  padding: 2.2rem 0 1.6rem;
 }
 
 .fun-fact {
@@ -820,18 +807,34 @@ main {
   will-change: transform;
 }
 
-/* A wooden clothespin clipping each photo to the twine. */
+/* A hand-drawn clothespin doodle clipping the top of each photo. */
 .fun-fact::before {
   content: '';
   position: absolute;
   z-index: 4;
-  top: -22px;
+  top: -21px;
   left: 50%;
-  width: 16px;
-  height: 34px;
-  margin-left: -8px;
+  width: 18px;
+  height: 36px;
+  margin-left: -9px;
   background: url(/peg.svg) no-repeat center / contain;
-  filter: drop-shadow(0 2px 2px rgba(29, 29, 29, 0.18));
+}
+
+/* Each doodle pinches at its own angle, like it was drawn in by hand. */
+.fun-fact:nth-child(1)::before {
+  transform: rotate(-7deg);
+}
+.fun-fact:nth-child(2)::before {
+  transform: rotate(5deg);
+}
+.fun-fact:nth-child(3)::before {
+  transform: rotate(-3deg);
+}
+.fun-fact:nth-child(4)::before {
+  transform: rotate(8deg);
+}
+.fun-fact:nth-child(5)::before {
+  transform: rotate(-5deg);
 }
 
 /* Slight hand-hung tilt, alternating direction. */
