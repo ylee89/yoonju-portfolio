@@ -137,7 +137,7 @@ function Works({ onOpen }) {
       <div className="section-head">
         <h2>My selected works</h2>
         <p>
-          A few projects I’ve shaped, each built around one question — how I
+          A few projects I’ve shaped, each built around one question: how I
           framed the problem and designed the experience.
         </p>
       </div>
@@ -285,7 +285,7 @@ function Capabilities() {
       <div className="section-head">
         <h2>My capabilities</h2>
         <p>
-          The skills I bring to a team — shaped by product work, print work,
+          The skills I bring to a team, shaped by product work, print work,
           and five years of listening for a living.
         </p>
       </div>
@@ -508,7 +508,7 @@ function ScreenPane({ variant, src, url, label, viewportRef }) {
       <div className="mockup-viewport" ref={viewportRef}>
         <img
           src={src}
-          alt={`${label} — ${variant === 'after' ? 'redesign' : 'original site'}`}
+          alt={`${label}, ${variant === 'after' ? 'redesign' : 'original site'}`}
           loading="lazy"
         />
       </div>
@@ -736,7 +736,7 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           <div className="case-sec case-sec-wide">
             <h3 className="case-sec-h">Before &amp; after</h3>
             <p className="case-sec-note">
-              Original site on the left, redesign on the right — scroll either
+              Original site on the left, redesign on the right. Scroll either
               screen and both move together to keep the same section aligned.
             </p>
             <div className="case-compare">
@@ -896,7 +896,7 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           </>
         ) : (
           <>
-            <div className="case-next-eyebrow">That's the work — for now.</div>
+            <div className="case-next-eyebrow">That's the work, for now.</div>
             <h2 className="case-next-title">Want to talk? I'd love that.</h2>
             <button className="btn btn-light" onClick={onClose} type="button">
               ← Back to All Work
