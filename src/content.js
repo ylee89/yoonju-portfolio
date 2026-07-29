@@ -69,19 +69,8 @@ export const deck = [
 // Selected works — each links to a full case study below.
 export const works = [
   {
-    slug: 'galaxy',
-    num: '01',
-    name: 'Galaxy Auto Detailing',
-    tags: 'Web Redesign · UX Audit · Small Business',
-    tint: 'yellow',
-    image: '/images/work-galaxy.jpg',
-    imageFit: 'cover',
-    headline:
-      'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
-  },
-  {
     slug: 'feelfriends',
-    num: '02',
+    num: '01',
     name: 'Feel Friends',
     tags: 'Mobile PWA · Kids · SEL · Live product',
     tint: 'rose',
@@ -89,6 +78,17 @@ export const works = [
     imageFit: 'cover',
     headline:
       'A feelings app for ages 3 to 6 that is *actually shipped,* installable, and working.',
+  },
+  {
+    slug: 'galaxy',
+    num: '02',
+    name: 'Galaxy Auto Detailing',
+    tags: 'Web Redesign · UX Audit · Small Business',
+    tint: 'yellow',
+    image: '/images/work-galaxy.jpg',
+    imageFit: 'cover',
+    headline:
+      'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
   {
     slug: 'pawhaus',
