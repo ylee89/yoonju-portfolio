@@ -175,6 +175,7 @@ main {
 .hero-doodle {
   position: absolute;
   pointer-events: none;
+  filter: drop-shadow(3px 6px 8px rgba(29, 29, 29, 0.22));
   animation: doodle-bob 9s ease-in-out infinite;
 }
 
