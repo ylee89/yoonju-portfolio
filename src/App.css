@@ -1695,6 +1695,10 @@ body.case-open {
   color: var(--muted);
 }
 
+.case-link {
+  margin: -2.5rem 0 4rem;
+}
+
 /* ── Floating-phone showcase (motion-led case study stage) ── */
 .showcase-stage {
   position: relative;

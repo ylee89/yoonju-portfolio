@@ -754,6 +754,19 @@ function CaseStudyOverlay({ slug, onClose, onNavigate }) {
           ))}
         </div>
 
+        {study.link && (
+          <p className="case-link">
+            <a
+              className="btn"
+              href={study.link.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {study.link.label} ↗
+            </a>
+          </p>
+        )}
+
         <CaseSections study={study} slugPrefix={`${slug}-`} />
 
         {study.screens && (

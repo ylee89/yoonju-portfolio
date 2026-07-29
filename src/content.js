@@ -48,7 +48,7 @@ export const hero = {
 export const deck = [
   {
     title: 'My Portfolio',
-    body: 'Six case studies and the question at the center of each.',
+    body: 'Seven case studies and the question at the center of each.',
     href: '#works',
     tint: 'mint',
   },
@@ -80,8 +80,19 @@ export const works = [
       'A galaxy-themed detailing site, rebuilt to sell *the work,* not the theme.',
   },
   {
-    slug: 'pawhaus',
+    slug: 'feelfriends',
     num: '02',
+    name: 'Feel Friends',
+    tags: 'Mobile PWA · Kids · SEL · Live product',
+    tint: 'rose',
+    image: '/images/work-feelfriends.jpg',
+    imageFit: 'cover',
+    headline:
+      'A feelings app for ages 3 to 6 that is *actually shipped,* installable, and working.',
+  },
+  {
+    slug: 'pawhaus',
+    num: '03',
     name: 'Pawhaus',
     tags: 'Brand & Web · Pet Care · E-commerce',
     tint: 'yellow',
@@ -91,7 +102,7 @@ export const works = [
   },
   {
     slug: 'loopin',
-    num: '02',
+    num: '04',
     name: 'Loopin',
     tags: 'Mobile · Mental wellness · 0 to 1 · 13 weeks',
     tint: 'pink',
@@ -102,7 +113,7 @@ export const works = [
   },
   {
     slug: 'receiptly',
-    num: '03',
+    num: '05',
     name: 'Receiptly',
     tags: 'B2B SaaS · AI · Web & Mobile · 13 weeks',
     tint: 'blue',
@@ -113,7 +124,7 @@ export const works = [
   },
   {
     slug: 'upzy',
-    num: '04',
+    num: '06',
     name: 'Upzy',
     tags: 'Marketplace · Sustainability · Consumer · 13 weeks',
     tint: 'lavender',
@@ -124,7 +135,7 @@ export const works = [
   },
   {
     slug: 'visit',
-    num: '05',
+    num: '07',
     name: 'The Visit Magazine',
     tags: 'Editorial · Digital · InDesign · 9 pages',
     tint: 'mint',
@@ -514,6 +525,140 @@ export const caseStudies = {
             src: '/images/loopin-moment-3.jpg',
             label: 'Build your own routine',
             hint: 'A parent adds each step with a timer and a video, audio, or photo cue.',
+          },
+        ],
+      },
+    ],
+  },
+
+  feelfriends: {
+    eyebrow: 'Feel Friends · Live Product',
+    tint: 'rose',
+    title: 'A feelings app for little kids that I *designed and shipped.*',
+    sub: 'Feel Friends is a social-emotional learning app for children ages 3 to 6. It helps them recognize emotions, find their brave voice, and calm big feelings through play, not pressure. It is not a mockup: the app is live, installable, and works offline.',
+    link: {
+      label: 'Open the live app',
+      href: 'https://ylee89.github.io/childcare/',
+    },
+    meta: [
+      { label: 'Project', value: 'Mobile PWA · Shipped · Solo' },
+      { label: 'Role', value: 'Product Design · AI-assisted Build' },
+      { label: 'Industry', value: 'Kids · Education · Wellbeing' },
+      { label: 'Tools', value: 'Claude Code · HTML/CSS/JS · Web Speech API' },
+    ],
+    sections: [
+      {
+        eyebrow: '01 · Why this matters',
+        heading: 'Big feelings arrive *years before the words* for them.',
+        body: [
+          'Children between 3 and 6 feel everything at full volume, but they are still learning the names for what they feel and what to do when it gets overwhelming. Social-emotional learning at this age is not a subject. It is a survival skill for the whole family.',
+          'Feel Friends starts from one promise: **"Big feelings are okay. Let\'s learn about them together."** Every screen is built for small hands and early readers, with narration that reads aloud, one clear action at a time, and no way to fail.',
+          'And because this age group deserves extra care, the design is deliberately quiet: **no scores, no streaks, no timers, no ads.** Rewards are stickers and cards, never pressure.',
+        ],
+      },
+      {
+        eyebrow: '02 · What a child can do',
+        heading: 'Play that teaches, *a corner that calms.*',
+        body: [
+          'The app is organized as a friendly town of activities, each one teaching a different emotional skill:',
+        ],
+        cards: [
+          {
+            title: 'Learn the feelings',
+            meta: 'Emotion Explorer',
+            body: 'A daily mood check-in that validates whatever shows up, plus Face Match and a collectible ten-card feeling deck that flips to teach each emotion.',
+          },
+          {
+            title: 'Practice the hard moments',
+            meta: 'Stories · Brave Voice',
+            body: 'Branching story adventures with real consequences flow into Brave Voice, where the child hears a phrase modelled and then records it in their own voice.',
+          },
+          {
+            title: 'Come back to calm',
+            meta: 'Calm Corner',
+            body: 'Balloon breathing, a glitter jar, and 5-4-3-2-1 grounding, reachable from every single screen because big feelings do not wait for the right menu.',
+          },
+        ],
+      },
+      {
+        eyebrow: '03 · What a parent can see',
+        heading: 'A dashboard for grown-ups, *privacy for kids.*',
+        body: [
+          'Behind a parent gate (a hold gesture plus a small arithmetic check) lives a dashboard with live emotion trends, progress, and a personalized support insight drawn from actual play.',
+          'Privacy is a design decision, not a policy page: **everything stays on the device.** The child\'s recordings, moods, and progress never leave the phone, and a parent can export or delete all data at any time.',
+        ],
+        callout: 'No scores, no streaks, no timers. *Calm by design.*',
+      },
+      {
+        eyebrow: '04 · Shipped and verified',
+        heading: 'Not a prototype. *A working, tested product.*',
+        body: [
+          'Feel Friends is a Progressive Web App: it installs to the home screen like a native app, keeps working with no connection, and speaks through the Web Speech API. I designed the product end to end, from the information architecture and design system through every screen, and built it through AI-assisted development with Claude Code.',
+          'It is verified, not just claimed. An end-to-end suite drives the real app in a browser through the whole journey, onboarding to parent dashboard, and checks that data survives a reload and that the app loads offline. The latest run passes **40 of 40** assertions, alongside 129 design-system checks.',
+          'The full design package ships in the repo too: information architecture, user flows, wireframes, the design system, a gamification strategy, MVP scope, and a safety, privacy, and accessibility review.',
+        ],
+      },
+      {
+        eyebrow: "05 · Results, learnings, what's next",
+        heading: 'What this project proves.',
+        impact: [
+          {
+            num: 'Result 01',
+            stat: 'Live',
+            label: 'The app is deployed and installable today, working offline as a PWA, so anyone can open it and play rather than squint at a mockup.',
+          },
+          {
+            num: 'Result 02',
+            stat: '40 / 40',
+            label: 'The end-to-end test suite passes across the full journey, from onboarding through games, recording, calm, and the parent dashboard.',
+          },
+          {
+            num: 'Result 03',
+            stat: 'On-device',
+            label: 'Every recording, mood, and progress record stays local to the phone, with parent-controlled export and delete, so privacy is built in.',
+          },
+        ],
+        body: [
+          '**Learning.** Designing for a three-year-old is the purest accessibility exercise there is: one action per screen, narration for pre-readers, nothing that punishes. It sharpened instincts I now bring to every product. And shipping it myself, with AI-assisted development, taught me how far a designer can carry an idea alone.',
+          '**Next.** Field-test with real families, grow the story library, and localize the narration, starting with Korean.',
+        ],
+      },
+    ],
+    // Floating phone showcase plus grouped composite screens from the real app.
+    mobileShowcase: {
+      title: 'Mobile · Feel Friends in small hands',
+      note: 'Three screens from the running app: the Friendly Town home, a branching story, and the Calm Corner.',
+      word: 'Feel Friends',
+      bezel: true,
+      phones: [
+        { src: '/images/ff-mobile-1.jpg', alt: 'Friendly Town home with the six activity doors' },
+        { src: '/images/ff-mobile-2.jpg', alt: 'A branching story adventure moment' },
+        { src: '/images/ff-mobile-3.jpg', alt: 'Calm Corner balloon breathing' },
+      ],
+    },
+    slideGroups: [
+      {
+        title: 'The app, screen by screen',
+        shots: [
+          {
+            src: '/images/ff-world.jpg',
+            label: 'A world made of feelings',
+            hint: 'The home town, the daily mood check-in, and the collectible feeling cards.',
+          },
+          {
+            src: '/images/ff-play.jpg',
+            label: 'Play that teaches',
+            hint: 'Face Match and story adventures where choices have gentle, real consequences.',
+          },
+          {
+            src: '/images/ff-calm.jpg',
+            label: 'Calm and courage',
+            hint: 'Balloon breathing in the Calm Corner, Brave Voice recording, and the Empathy Lab.',
+          },
+          {
+            src: '/images/ff-parents.jpg',
+            label: 'For the grown-ups',
+            hint: 'The parent dashboard with live trends, Good Choice rounds, and the sticker book.',
           },
         ],
       },
