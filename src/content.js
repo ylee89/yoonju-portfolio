@@ -75,7 +75,7 @@ export const works = [
     tags: 'Mobile PWA · Kids · SEL · Live product',
     tint: 'rose',
     image: '/images/work-feelfriends.jpg',
-    imageFit: 'cover',
+    imageFit: 'contain',
     headline:
       'A feelings app for ages 3 to 6 that is *actually shipped,* installable, and working.',
   },
