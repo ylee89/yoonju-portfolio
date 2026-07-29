@@ -593,7 +593,10 @@ export const caseStudies = {
         eyebrow: '04 · Shipped and verified',
         heading: 'Not a prototype. *A working, tested product.*',
         body: [
-          'Feel Friends is a Progressive Web App: it installs to the home screen like a native app, keeps working with no connection, and speaks through the Web Speech API. I designed the product end to end, from the information architecture and design system through every screen, and built it through AI-assisted development with Claude Code.',
+          'Feel Friends ships as a **Progressive Web App**, which means it opens from a link, installs to the home screen like a native app, and runs full screen with no browser chrome around it.',
+          "That choice came from the architecture rule I set early: **a child should never need a connection.** Big feelings show up in the car, on a plane, and in the waiting room, which are exactly the places where wifi is not. So the whole child experience, including every game, the narration, and the Calm Corner, is cached on the device and works in airplane mode. Connectivity is only ever optional, and only on the parent's side.",
+          'Skipping the app stores matters for the same reason. A parent can hand a child the app in seconds from a link, with no store account, no download wait, and no approval queue between a fix and the family who needs it.',
+          'I designed the product end to end, from the information architecture and design system through every screen, and built it through AI-assisted development with Claude Code.',
           'It is verified, not just claimed. An end-to-end suite drives the real app in a browser through the whole journey, onboarding to parent dashboard, and checks that data survives a reload and that the app loads offline. The latest run passes **40 of 40** assertions, alongside 129 design-system checks.',
           'The full design package ships in the repo too: information architecture, user flows, wireframes, the design system, a gamification strategy, MVP scope, and a safety, privacy, and accessibility review.',
         ],
