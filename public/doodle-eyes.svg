@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 110">
+  <defs>
+    <pattern id="ht2" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <circle cx="3.5" cy="3.5" r="1.7" fill="rgba(0,0,0,0.20)" />
+    </pattern>
+  </defs>
+  <path d="M14 52 C10 24 34 8 52 14 C60 4 84 4 92 14 C114 10 132 30 126 56 C132 84 108 102 88 96 C78 106 56 106 48 96 C26 102 8 82 14 52 Z" fill="#ffd21f" />
+  <path d="M14 52 C10 24 34 8 52 14 C60 4 84 4 92 14 C114 10 132 30 126 56 C132 84 108 102 88 96 C78 106 56 106 48 96 C26 102 8 82 14 52 Z" fill="url(#ht2)" />
+  <ellipse cx="50" cy="55" rx="19" ry="24" fill="#fffdf5" />
+  <ellipse cx="90" cy="55" rx="19" ry="24" fill="#fffdf5" />
+  <circle cx="55" cy="62" r="8.5" fill="#141414" />
+  <circle cx="84" cy="62" r="8.5" fill="#141414" />
+</svg>

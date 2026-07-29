@@ -98,6 +98,24 @@ function Hero() {
           {sticker.label}
         </span>
       ))}
+      <img
+        className="hero-doodle doodle-star"
+        src="/doodle-star.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="hero-doodle doodle-eyes"
+        src="/doodle-eyes.svg"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        className="hero-doodle doodle-flower"
+        src="/doodle-flower.svg"
+        alt=""
+        aria-hidden="true"
+      />
       <h1 className="hero-title">
         {hero.titleTop}
         <span className="hero-face" aria-hidden="true">

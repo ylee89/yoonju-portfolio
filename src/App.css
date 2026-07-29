@@ -171,6 +171,52 @@ main {
   white-space: nowrap;
 }
 
+/* Halftone sticker doodles scattered around the hero. */
+.hero-doodle {
+  position: absolute;
+  pointer-events: none;
+  animation: doodle-bob 9s ease-in-out infinite;
+}
+
+.doodle-star {
+  width: 84px;
+  right: 12%;
+  top: 8%;
+  transform: rotate(14deg);
+}
+
+.doodle-eyes {
+  width: 96px;
+  left: 9%;
+  top: 58%;
+  transform: rotate(-9deg);
+  animation-delay: -3s;
+}
+
+.doodle-flower {
+  width: 76px;
+  right: 6%;
+  top: 74%;
+  transform: rotate(10deg);
+  animation-delay: -6s;
+}
+
+@keyframes doodle-bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-doodle {
+    animation: none;
+  }
+}
+
 .sticker-left {
   left: 4%;
   top: 17%;
@@ -2016,6 +2062,16 @@ body.case-open {
 
   .hero-sticker {
     display: none;
+  }
+
+  .hero-doodle {
+    width: 52px;
+  }
+
+  .doodle-eyes {
+    width: 60px;
+    top: 66%;
+    left: 4%;
   }
 
   .deck {
