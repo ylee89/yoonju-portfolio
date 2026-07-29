@@ -1800,29 +1800,29 @@ body.case-open {
   border-radius: 27px;
 }
 
-/* Volume buttons on the left edge. */
+/* Volume buttons on the left edge, with a metallic sheen. */
 .device::before {
   content: '';
   position: absolute;
-  left: -5.5px;
+  left: -6px;
   top: 21%;
-  width: 3px;
-  height: 30px;
-  border-radius: 2px;
-  background: #cfcfd8;
-  box-shadow: 0 42px 0 #cfcfd8;
+  width: 4.5px;
+  height: 32px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(90deg, #f0f0f5, #b5b5c0 50%, #dcdce4);
+  box-shadow: 0 44px 0 #c9c9d3;
 }
 
 /* Power button on the right edge. */
 .device::after {
   content: '';
   position: absolute;
-  right: -5.5px;
+  right: -6px;
   top: 26%;
-  width: 3px;
-  height: 52px;
-  border-radius: 2px;
-  background: #cfcfd8;
+  width: 4.5px;
+  height: 56px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(270deg, #f0f0f5, #b5b5c0 50%, #dcdce4);
 }
 
 @media (prefers-reduced-motion: reduce) {
