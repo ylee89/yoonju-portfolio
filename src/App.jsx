@@ -89,26 +89,15 @@ function AvailableBadge() {
 function Hero() {
   return (
     <section id="home" className="hero">
-      {hero.polaroids.map((shot, i) => (
-        <figure
-          className={`hero-obj obj-photo obj-photo-${i}`}
+      {hero.stickers.map((sticker) => (
+        <span
+          key={sticker.label}
+          className={`hero-sticker sticker-${sticker.side} tint-${sticker.tint}`}
           aria-hidden="true"
-          key={i}
         >
-          <img src={shot.src} alt="" />
-          <figcaption>{shot.caption}</figcaption>
-        </figure>
+          {sticker.label}
+        </span>
       ))}
-      {hero.notes.map((text, i) => (
-        <div
-          className={`hero-obj obj-note obj-note-${i}`}
-          aria-hidden="true"
-          key={i}
-        >
-          {text}
-        </div>
-      ))}
-
       <img
         className="hero-doodle doodle-star"
         src="/doodle-star.svg"

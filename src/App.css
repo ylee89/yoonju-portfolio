@@ -161,122 +161,14 @@ main {
   font-weight: 800;
 }
 
-/* Desk-collage objects scattered around the greeting. */
-.hero-obj {
+.hero-sticker {
   position: absolute;
-  z-index: 2;
-  transition: transform 0.3s ease;
-}
-
-.hero-obj:hover {
-  transform: rotate(0deg) scale(1.05) !important;
-}
-
-/* Polaroid snapshots taped up like the About collage. */
-.obj-photo {
-  margin: 0;
-  width: 152px;
-  background: var(--white);
+  padding: 0.55rem 1.2rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.5rem 0.5rem 0.35rem;
-  box-shadow: 0 14px 30px rgba(29, 29, 29, 0.16);
-}
-
-.obj-photo img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-  border-radius: 6px;
-}
-
-.obj-photo figcaption {
-  text-align: center;
-  font-family: 'Caveat', cursive;
-  font-size: 1.2rem;
-  padding-top: 0.2rem;
-}
-
-/* Washi tape holding each polaroid, same language as the About photos. */
-.obj-photo::before {
-  content: '';
-  position: absolute;
-  z-index: 3;
-  width: 58%;
-  height: 22px;
-  top: -11px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-4deg);
-  border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(29, 29, 29, 0.08);
-}
-
-.obj-photo-0 {
-  left: max(1.5%, calc(50% - 690px));
-  top: 3%;
-  transform: rotate(-7deg);
-}
-
-.obj-photo-0::before {
-  background: rgba(150, 170, 255, 0.55);
-}
-
-.obj-photo-1 {
-  right: max(1.5%, calc(50% - 690px));
-  top: 5%;
-  transform: rotate(6deg);
-}
-
-.obj-photo-1::before {
-  transform: translateX(-50%) rotate(5deg);
-  background: repeating-linear-gradient(
-      45deg,
-      rgba(29, 29, 29, 0.5) 0 3px,
-      transparent 3px 8px
-    ),
-    rgba(255, 255, 255, 0.75);
-}
-
-/* Handwritten notes, one taped card and one sticky. */
-.obj-note {
-  width: 168px;
-  padding: 0.85rem 1rem 1rem;
-  border: 1px solid var(--border);
-  font-family: 'Caveat', cursive;
-  font-size: 1.35rem;
-  line-height: 1.2;
-  text-align: center;
-  box-shadow: 0 12px 26px rgba(29, 29, 29, 0.14);
-}
-
-.obj-note-0 {
-  left: max(2%, calc(50% - 670px));
-  top: 64%;
-  transform: rotate(-5deg);
-  background: var(--white);
-  border-radius: 12px;
-}
-
-.obj-note-0::before {
-  content: '';
-  position: absolute;
-  width: 54%;
-  height: 20px;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%) rotate(3deg);
-  border-radius: 2px;
-  background: rgba(150, 225, 190, 0.6);
-  box-shadow: 0 2px 4px rgba(29, 29, 29, 0.08);
-}
-
-.obj-note-1 {
-  right: max(2%, calc(50% - 670px));
-  top: 66%;
-  transform: rotate(4deg);
-  background: var(--tint-yellow);
-  border-radius: 4px 4px 14px 4px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 /* Halftone sticker doodles scattered around the hero. */
@@ -287,24 +179,24 @@ main {
 }
 
 .doodle-star {
-  width: 52px;
-  right: 25%;
-  top: 5%;
+  width: 84px;
+  right: 12%;
+  top: 8%;
   transform: rotate(14deg);
 }
 
 .doodle-eyes {
-  width: 56px;
-  left: 12%;
-  top: 86%;
+  width: 96px;
+  left: 9%;
+  top: 58%;
   transform: rotate(-9deg);
   animation-delay: -3s;
 }
 
 .doodle-flower {
-  width: 48px;
-  left: 24%;
-  top: 7%;
+  width: 76px;
+  right: 6%;
+  top: 74%;
   transform: rotate(10deg);
   animation-delay: -6s;
 }
@@ -323,6 +215,18 @@ main {
   .hero-doodle {
     animation: none;
   }
+}
+
+.sticker-left {
+  left: 4%;
+  top: 17%;
+  transform: rotate(-8deg);
+}
+
+.sticker-right {
+  right: 5%;
+  top: 52%;
+  transform: rotate(6deg);
 }
 
 /* ───────────── Deck ───────────── */
@@ -2151,26 +2055,23 @@ body.case-open {
 }
 
 /* ───────────── Responsive ───────────── */
-/* The collage needs side room; below this the objects would crowd the text. */
-@media (max-width: 1180px) {
-  .hero-obj {
-    display: none;
-  }
-}
-
 @media (max-width: 820px) {
   .nav-links {
     display: none;
   }
 
+  .hero-sticker {
+    display: none;
+  }
+
   .hero-doodle {
-    width: 44px;
+    width: 52px;
   }
 
   .doodle-eyes {
-    width: 48px;
-    top: 90%;
-    left: 5%;
+    width: 60px;
+    top: 66%;
+    left: 4%;
   }
 
   .deck {

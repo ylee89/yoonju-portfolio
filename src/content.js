@@ -33,24 +33,14 @@ export const socials = [
   },
 ]
 
-// Hero — big greeting headline + a desk-collage of real objects around it.
+// Hero — big greeting headline + floating sticker pills
 export const hero = {
   titleTop: "Hello! I'm Yoonju,",
   titleBottom: 'a UX/UI designer.',
   sub: 'I craft **thoughtful digital experiences** rooted in **empathy** and **clarity**. I design for people who are carrying a lot, in the moments that matter most.',
-  polaroids: [
-    {
-      src: '/images/about-1.jpg',
-      caption: "hello, it's me",
-    },
-    {
-      src: '/images/funfact-jeju.jpg',
-      caption: 'from Jeju to Vancouver',
-    },
-  ],
-  notes: [
-    'empathy-led, inclusive, a little playful',
-    'connection, not perfection ♡',
+  stickers: [
+    { label: 'Empathy-led Design', tint: 'blue', side: 'left' },
+    { label: 'Inclusive Products', tint: 'pink', side: 'right' },
   ],
 }
 
