@@ -161,14 +161,156 @@ main {
   font-weight: 800;
 }
 
-.hero-sticker {
+/* Desk-collage objects scattered around the greeting. */
+.hero-obj {
   position: absolute;
-  padding: 0.55rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.hero-obj:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+}
+
+/* ID badge on a lanyard */
+.obj-badge {
+  left: 2.5%;
+  top: 1%;
+  transform: rotate(-7deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge-strap {
+  width: 16px;
+  height: 44px;
+  background: var(--ink);
+  border-radius: 0 0 4px 4px;
+}
+
+.idcard {
+  width: 150px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 1rem 0.9rem 0.9rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 14px 30px rgba(29, 29, 29, 0.22);
+}
+
+.idcard img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.idcard strong {
   font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.idcard span {
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.35;
+}
+
+/* Polaroid snapshot */
+.obj-polaroid {
+  right: 4.5%;
+  top: 4%;
+  transform: rotate(6deg);
+  margin: 0;
+  width: 158px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem 0.4rem;
+  box-shadow: 0 14px 30px rgba(29, 29, 29, 0.16);
+}
+
+.obj-polaroid img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.obj-polaroid figcaption {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  padding-top: 0.2rem;
+}
+
+/* Ticket stub */
+.obj-ticket {
+  left: 2.5%;
+  top: 68%;
+  transform: rotate(-5deg);
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(29, 29, 29, 0.14);
+}
+
+.ticket-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.65rem 0.75rem;
+  border-right: 2px dashed var(--border);
+}
+
+.ticket-main strong {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.ticket-main span {
+  font-size: 0.55rem;
   font-weight: 700;
-  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.ticket-barcode {
+  width: 20px;
+  margin: 0.5rem;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--ink) 0 2px,
+    transparent 2px 5px
+  );
+  border-radius: 2px;
+}
+
+/* Handwritten sticky note */
+.obj-note {
+  right: 5.5%;
+  top: 66%;
+  transform: rotate(4deg);
+  width: 150px;
+  padding: 0.9rem 1rem 1.1rem;
+  background: var(--tint-yellow);
+  border: 1px solid var(--border);
+  border-radius: 4px 4px 14px 4px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  text-align: center;
+  box-shadow: 0 12px 26px rgba(29, 29, 29, 0.14);
 }
 
 /* Halftone sticker doodles scattered around the hero. */
@@ -179,24 +321,24 @@ main {
 }
 
 .doodle-star {
-  width: 84px;
-  right: 12%;
-  top: 8%;
+  width: 52px;
+  right: 25%;
+  top: 5%;
   transform: rotate(14deg);
 }
 
 .doodle-eyes {
-  width: 96px;
-  left: 9%;
-  top: 58%;
+  width: 56px;
+  left: 12%;
+  top: 86%;
   transform: rotate(-9deg);
   animation-delay: -3s;
 }
 
 .doodle-flower {
-  width: 76px;
-  right: 6%;
-  top: 74%;
+  width: 48px;
+  left: 24%;
+  top: 7%;
   transform: rotate(10deg);
   animation-delay: -6s;
 }
@@ -215,18 +357,6 @@ main {
   .hero-doodle {
     animation: none;
   }
-}
-
-.sticker-left {
-  left: 4%;
-  top: 17%;
-  transform: rotate(-8deg);
-}
-
-.sticker-right {
-  right: 5%;
-  top: 52%;
-  transform: rotate(6deg);
 }
 
 /* ───────────── Deck ───────────── */
@@ -2060,7 +2190,7 @@ body.case-open {
     display: none;
   }
 
-  .hero-sticker {
+  .hero-obj {
     display: none;
   }
 
