@@ -89,30 +89,25 @@ function AvailableBadge() {
 function Hero() {
   return (
     <section id="home" className="hero">
-      <div className="hero-obj obj-badge" aria-hidden="true">
-        <span className="badge-strap" />
-        <div className="idcard">
-          <img src={hero.badge.photo} alt="" />
-          <strong>{hero.badge.name}</strong>
-          <span>{hero.badge.tagline}</span>
+      {hero.polaroids.map((shot, i) => (
+        <figure
+          className={`hero-obj obj-photo obj-photo-${i}`}
+          aria-hidden="true"
+          key={i}
+        >
+          <img src={shot.src} alt="" />
+          <figcaption>{shot.caption}</figcaption>
+        </figure>
+      ))}
+      {hero.notes.map((text, i) => (
+        <div
+          className={`hero-obj obj-note obj-note-${i}`}
+          aria-hidden="true"
+          key={i}
+        >
+          {text}
         </div>
-      </div>
-
-      <figure className="hero-obj obj-polaroid" aria-hidden="true">
-        <img src={hero.polaroid.src} alt="" />
-        <figcaption>{hero.polaroid.caption}</figcaption>
-      </figure>
-
-      <div className="hero-obj obj-ticket" aria-hidden="true">
-        <div className="ticket-main">
-          <strong>{hero.ticket.title}</strong>
-          <span>{hero.ticket.row1}</span>
-          <span>{hero.ticket.row2}</span>
-        </div>
-        <span className="ticket-barcode" />
-      </div>
-
-      <div className="hero-obj obj-note" aria-hidden="true">{hero.note}</div>
+      ))}
 
       <img
         className="hero-doodle doodle-star"

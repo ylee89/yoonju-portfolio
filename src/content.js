@@ -38,21 +38,20 @@ export const hero = {
   titleTop: "Hello! I'm Yoonju,",
   titleBottom: 'a UX/UI designer.',
   sub: 'I craft **thoughtful digital experiences** rooted in **empathy** and **clarity**. I design for people who are carrying a lot, in the moments that matter most.',
-  badge: {
-    photo: '/images/about-1.jpg',
-    name: 'Yoonju Lee',
-    tagline: 'Empathy-led design, inclusive products',
-  },
-  polaroid: {
-    src: '/images/funfact-jeju.jpg',
-    caption: 'from Jeju to Vancouver',
-  },
-  ticket: {
-    title: 'DESIGN × EMPATHY',
-    row1: 'Admit one · Vancouver, BC',
-    row2: 'EST. 2024 → PRESENT',
-  },
-  note: 'connection, not perfection ♡',
+  polaroids: [
+    {
+      src: '/images/about-1.jpg',
+      caption: "hello, it's me",
+    },
+    {
+      src: '/images/funfact-jeju.jpg',
+      caption: 'from Jeju to Vancouver',
+    },
+  ],
+  notes: [
+    'empathy-led, inclusive, a little playful',
+    'connection, not perfection ♡',
+  ],
 }
 
 // Stacked card deck under the hero — quick links to main sections
