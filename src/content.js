@@ -171,7 +171,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '02 · Auditing the old site',
+        eyebrow: '02 · How I defined the real problem',
         heading: 'Section by section, the same three failures *kept repeating.*',
         body: [
           'I walked through every page, from home and services to the gallery, blog, and contact, and logged the issues. They clustered into three patterns:',
@@ -395,7 +395,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '02 · Defining the real problem',
+        eyebrow: '02 · How I defined the real problem',
         heading: 'Two people, *two kinds of overwhelm,* one frayed connection.',
         body: [
           'Research surfaced two truths that lived side by side. The **child** felt misunderstood, overwhelmed, and like they were constantly struggling. The **parent** felt overwhelmed too, but also disconnected and unsupported in the everyday.',
@@ -548,7 +548,7 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 · Why this matters',
+        eyebrow: '01 · Why I built this',
         heading: 'Big feelings arrive *years before the words* for them.',
         body: [
           'Children between 3 and 6 feel everything at full volume, but they are still learning the names for what they feel and what to do when it gets overwhelming. Social-emotional learning at this age is not a subject. It is a survival skill for the whole family.',
@@ -681,7 +681,7 @@ export const caseStudies = {
     ],
     sections: [
       {
-        eyebrow: '01 · Why this matters',
+        eyebrow: '01 · Why this problem matters',
         heading: 'Automation only helps if people can *see it working.*',
         body: [
           'Receiptly promises to take the busywork out of expenses for startups and small businesses. You upload a receipt, the AI categorizes it, and the numbers roll up into investor-ready reports. The engine was in place. What we did not know yet was whether the experience around it actually felt clear.',
@@ -690,7 +690,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '02 · Who I tested with',
+        eyebrow: '02 · How I ran the study',
         heading: 'Six people, *two everyday tasks.*',
         body: [
           'I ran moderated sessions with **six participants**, one UI designer and instructor plus five students, and gave each of them the two tasks the product is built around: **upload a receipt** and **review a financial report.** Then I watched for where they hesitated.',
