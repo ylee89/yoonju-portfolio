@@ -672,10 +672,10 @@ export const caseStudies = {
     eyebrow: 'Receiptly · 2024',
     tint: 'blue',
     title: 'An expense app that *catches the receipt* before it becomes paperwork.',
-    sub: 'Receiptly turns a photographed receipt into categorized, reportable data using OCR. I positioned it against four competitors, designed the flow and the three core surfaces, built the design system, then ran a six-person usability study on the two tasks the product depends on.',
+    sub: 'Receiptly turns a photographed receipt into categorized, reportable data using OCR. It was a team project: the onboarding and login flow is the part I owned, and the six-person usability study at the end is the one I ran.',
     meta: [
       { label: 'Duration', value: '13 weeks' },
-      { label: 'Role', value: 'UX/UI Design · Competitive Analysis · Usability Research' },
+      { label: 'Role', value: 'UX/UI Design · Onboarding flow owner · Usability Research' },
       { label: 'Industries', value: 'Fintech · AI products · B2B SaaS' },
       { label: 'Tools', value: 'Figma · Illustrator · Jira · Slack' },
     ],
@@ -690,10 +690,10 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '02 · How I defined the real problem',
+        eyebrow: '02 · How we defined the real problem',
         heading: 'Four competitors could *sort* an expense. None could *catch* one.',
         body: [
-          'Before designing a screen, I scored Receiptly against the four tools this audience already pays for, **Zoho, Expensify, FreshBooks, and Easy Expense**, on the four capabilities the product would live or die on.',
+          'Before designing a screen, we scored Receiptly against the four tools this audience already pays for, **Zoho, Expensify, FreshBooks, and Easy Expense**, on the four capabilities the product would live or die on.',
           'Two of those four were covered by everybody. **All four competitors handled smart expense categorization and customizable reporting.** Those are solved problems, and building there would mean being slightly better at something people already have.',
           '**Not one of them offered quick receipt capture or real-time expense insight.** Every tool still assumed the owner would sit down later and process a batch.',
           'That changed what the product was for. The opening was not a smarter classifier, it was **the two moments nobody had covered: the second a receipt appears, and the second an owner wants to know where the money went.** Every decision after this points at one of those two.',
@@ -701,10 +701,10 @@ export const caseStudies = {
         callout: 'Categorization was table stakes. *Capture and immediacy were the opening.*',
       },
       {
-        eyebrow: '03 · The flow I designed',
+        eyebrow: '03 · The flows we designed',
         heading: 'Three flows, named after *the three gaps.*',
         body: [
-          'I mapped three user flows and named them after the capabilities the competitor scan had just isolated: **Receipt Capture, Insights, and Categorization.**',
+          'We mapped three user flows and named them after the capabilities the competitor scan had just isolated: **Receipt Capture, Insights, and Categorization.**',
           '**Receipt Capture** forks three ways off the dashboard, because a receipt arrives in a different form every time: drag and drop a file, photograph it with the device camera, or forward it by email. All three land on the same OCR step, which pulls the **amount, vendor, date, and tax** so there is no manual entry left to do.',
           'Then comes the gate the whole flow turns on. It asks whether every detail was extracted accurately. If it was, the receipt moves straight to auto-categorization with nothing for the user to do. If it was not, the app **prompts for the missing or inaccurate fields only**, instead of making someone re-check a form that was already right.',
           '**Categorization** follows the same rule in reverse. The AI proposes a category, and the user either confirms it or sets one manually before saving, with **custom tags** alongside for the expenses a fixed taxonomy cannot hold. The AI is allowed to be wrong, as long as overriding it costs one step.',
@@ -729,7 +729,17 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '04 · The design system',
+        eyebrow: '04 · My contribution',
+        heading: 'I owned the onboarding, and it *lets you in before it asks who you are.*',
+        body: [
+          'Receiptly was a team project. The piece I designed end to end was the **onboarding and login flow**, which every one of those three feature flows opens onto.',
+          'The decision I care about sits at the first fork. Someone without an account is offered **"Create Account or Explore App"** instead of a signup wall. They can look around, and the app only asks them to register at the moment they try to do something. Expense tools normally want a business name and a password before they show you anything, and I did not want the product to spend its first impression on a form.',
+          'For people who do sign up, **Set Preferences** collects business type, business size, currency, spending categories, and a budget, along with which features matter most to them. That is what turns the dashboard from an empty state into something already shaped around their business the first time they open it.',
+          'The tutorial is **optional**, and skipping it goes straight to the dashboard. Onboarding earns its place by getting out of the way, which is also the one part of the product that testing later found nobody struggled with.',
+        ],
+      },
+      {
+        eyebrow: '05 · The design system',
         heading: 'One accent colour, and *an upload flow that reports on itself.*',
         body: [
           'The interface runs on three colours. **Deep teal** carries text and dark surfaces, **pale mint** sets a calm ground, and **lime** is reserved for action. Lime never decorates: if it is lime, it is the thing to press.',
@@ -744,7 +754,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '05 · How I tested it',
+        eyebrow: '06 · How I tested it',
         heading: 'Six people, *two everyday tasks.*',
         body: [
           'With the product designed, I ran moderated sessions with **six participants**, one UI designer and instructor plus five students, and gave each of them the two tasks the product is built around: **upload a receipt** and **review a financial report.** Then I watched for where they hesitated.',
@@ -752,7 +762,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '06 · What the upload task exposed',
+        eyebrow: '07 · What the upload task exposed',
         heading: 'The upload flow *hid its own feedback.*',
         body: [
           'The first task was the one people would do every day. Three findings came out of it, and two of them were high impact:',
@@ -776,7 +786,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '07 · What the reports task exposed',
+        eyebrow: '08 · What the reports task exposed',
         heading: 'The reports were valued, but *hard to bend.*',
         body: [
           'The second task was reviewing a financial report. People liked what was there, and still hit three clear walls:',
@@ -800,7 +810,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '08 · What already worked',
+        eyebrow: '09 · What already worked',
         heading: 'Three things testing told me *not to touch.*',
         body: [
           'Testing is not only about what breaks. Three things landed well, and they are worth protecting as the rest gets fixed:',
@@ -808,8 +818,8 @@ export const caseStudies = {
         cards: [
           {
             title: 'Onboarding',
-            meta: 'Strength',
-            body: 'Onboarding and signup were easy to navigate, so people started using the product without friction.',
+            meta: 'Strength · The flow I owned',
+            body: 'Onboarding and signup were easy to navigate, so people started using the product without friction. Nobody hit the first fork and stalled, which is what the explore-before-you-register decision was for.',
           },
           {
             title: 'Investor-ready reports',
@@ -824,12 +834,13 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '09 · What it pointed to next',
+        eyebrow: '10 · What it pointed to next',
         heading: 'Every finding was a *legibility* problem.',
         body: [
           '**The pattern.** Almost every pain point was a legibility problem, not a logic problem. The AI was doing its job. The interface just was not saying so clearly, whether that was an easy-to-miss upload zone, a success message tucked in a corner, a vague "Needs attention" label, or a button named "Add more."',
           '**The priorities.** The high-impact fixes cluster around making the automation readable: a more visible upload area, a success message you cannot miss, plain-language status labels with tooltips, and a report section you can filter, export, and share.',
-          '**What I would do next.** This was a first-round discovery study, not a validation of a fix. The honest next step is to take these recommendations into a redesign and run a second round of testing to confirm the changes actually remove the hesitation.',
+          '**What changed.** The export finding was acted on. Reports had left the product as a PDF and nothing else, with no way to hand one to anybody; they now export as **PDF or Excel with filters applied**, and go out by **email or a shareable link.** The complaint that six people raised in a session is a feature in the product today.',
+          '**What I would do next.** This was a first-round discovery study, not a validation of the fixes. The honest next step is to put the redesigned upload feedback and report filters in front of a second round of participants and confirm the hesitation is actually gone.',
         ],
       },
     ],
