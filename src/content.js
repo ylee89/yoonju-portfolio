@@ -671,35 +671,88 @@ export const caseStudies = {
   receiptly: {
     eyebrow: 'Receiptly · 2024',
     tint: 'blue',
-    title: 'An AI expense tool that worked. I tested whether people could *actually read it.*',
-    sub: 'Receiptly automates expense tracking for startups and small businesses, from AI receipt categorization to investor-ready reports. I ran a six-person usability study to find where the experience helped and where it quietly lost people.',
+    title: 'An expense app that *catches the receipt* before it becomes paperwork.',
+    sub: 'Receiptly turns a photographed receipt into categorized, reportable data using OCR. I positioned it against four competitors, designed the flow and the three core surfaces, built the design system, then ran a six-person usability study on the two tasks the product depends on.',
     meta: [
       { label: 'Duration', value: '13 weeks' },
-      { label: 'Role', value: 'UX/UI Design · Usability Research' },
+      { label: 'Role', value: 'UX/UI Design · Competitive Analysis · Usability Research' },
       { label: 'Industries', value: 'Fintech · AI products · B2B SaaS' },
       { label: 'Tools', value: 'Figma · Illustrator · Jira · Slack' },
     ],
     sections: [
       {
         eyebrow: '01 · Why this problem matters',
-        heading: 'Automation only helps if people can *see it working.*',
+        heading: 'A receipt is proof of purchase for a minute, and *clutter for the rest of the year.*',
         body: [
-          'Receiptly promises to take the busywork out of expenses for startups and small businesses. You upload a receipt, the AI categorizes it, and the numbers roll up into investor-ready reports. The engine was in place. What we did not know yet was whether the experience around it actually felt clear.',
-          'So the goal of this study was simple and honest: put the product in front of real people, watch them upload receipts and review reports, and surface the usability issues, pain points, and moments of doubt before they reached customers.',
-          'In a financial product, that clarity is not a nice to have. If someone cannot tell whether the AI did its job, they stop trusting the numbers, and the automation loses its whole point.',
+          'Receiptly is built for startups and small businesses, the companies where nobody is a full-time bookkeeper. They generate transactions all day, and almost none of that data survives the sale. **Paper receipts end up in a drawer, and emailed ones sink into an inbox nobody searches.**',
+          'The cost is not the paper. It is the work that comes after: typing each line into a spreadsheet, deciding which category an expense belongs to, and rebuilding a year of spending at tax time out of whatever was kept.',
+          'Receiptly closes that gap with **OCR**. Photograph a receipt and the app reads the merchant, the line items, the tax, and the total, then proposes a category. The receipt becomes structured data the moment it appears instead of weeks later.',
         ],
       },
       {
-        eyebrow: '02 · How I ran the study',
+        eyebrow: '02 · How I defined the real problem',
+        heading: 'Four competitors could *sort* an expense. None could *catch* one.',
+        body: [
+          'Before designing a screen, I scored Receiptly against the four tools this audience already pays for, **Zoho, Expensify, FreshBooks, and Easy Expense**, on the four capabilities the product would live or die on.',
+          'Two of those four were covered by everybody. **All four competitors handled smart expense categorization and customizable reporting.** Those are solved problems, and building there would mean being slightly better at something people already have.',
+          '**Not one of them offered quick receipt capture or real-time expense insight.** Every tool still assumed the owner would sit down later and process a batch.',
+          'That changed what the product was for. The opening was not a smarter classifier, it was **the two moments nobody had covered: the second a receipt appears, and the second an owner wants to know where the money went.** Every decision after this points at one of those two.',
+        ],
+        callout: 'Categorization was table stakes. *Capture and immediacy were the opening.*',
+      },
+      {
+        eyebrow: '03 · The flow I designed',
+        heading: 'Three flows, named after *the three gaps.*',
+        body: [
+          'I mapped three user flows and named them after the capabilities the competitor scan had just isolated: **Receipt Capture, Insights, and Categorization.**',
+          '**Receipt Capture** forks three ways off the dashboard, because a receipt arrives in a different form every time: drag and drop a file, photograph it with the device camera, or forward it by email. All three land on the same OCR step, which pulls the **amount, merchant, and date.**',
+          'Then comes the gate the whole flow turns on. It asks whether every detail was extracted accurately. If it was, the receipt moves straight to auto-categorization with nothing for the user to do. If it was not, the app **prompts for the missing or inaccurate fields only**, instead of making someone re-check a form that was already right.',
+          '**Categorization** follows the same rule in reverse. The AI proposes a category, and the user either confirms it or sets one manually before saving. The AI is allowed to be wrong, as long as overriding it costs one step.',
+          'Those flows resolve onto three screens, each wireframed in low fidelity to settle its structure before any styling, then built out in high fidelity:',
+        ],
+        cards: [
+          {
+            title: 'Dashboard',
+            meta: 'Surface 01 · The daily view',
+            body: 'Real-time charts and key metrics, so "where is the money going" is answered on open rather than by running a report.',
+          },
+          {
+            title: 'Receipt Management',
+            meta: 'Surface 02 · The archive',
+            body: 'Every captured receipt in one place with its AI-assigned category, searchable and correctable, because a wrong category only costs you if it is hard to find.',
+          },
+          {
+            title: 'Reports & Insights',
+            meta: 'Surface 03 · The handoff',
+            body: 'Where an owner assembles the metrics an investor or an accountant asked for, then generates and downloads the summary.',
+          },
+        ],
+      },
+      {
+        eyebrow: '04 · The design system',
+        heading: 'One accent colour, and *an upload flow that reports on itself.*',
+        body: [
+          'The interface runs on three colours. **Deep teal** carries text and dark surfaces, **pale mint** sets a calm ground, and **lime** is reserved for action. Lime never decorates: if it is lime, it is the thing to press.',
+          '**Metro Sans** sets both headlines and body copy, which keeps dense reporting screens from turning noisy.',
+          'The kit covers what a financial product has to be able to say. Primary and secondary buttons in **default, hover, and disabled**, dropdowns, checkboxes and radios, modals, alerts and notifications, charts, navigation, and a dedicated **upload sequence** with a state for every stage.',
+          'That upload sequence carries the most weight, because it is where the interface proves the OCR actually ran. Testing later showed it was also where the design still had work to do.',
+        ],
+        palette: [
+          { hex: '#D7FC6E', name: 'Lime' },
+          { hex: '#EBFFF6', name: 'Mint' },
+          { hex: '#193133', name: 'Deep teal' },
+        ],
+      },
+      {
+        eyebrow: '05 · How I tested it',
         heading: 'Six people, *two everyday tasks.*',
         body: [
-          'I ran moderated sessions with **six participants**, one UI designer and instructor plus five students, and gave each of them the two tasks the product is built around: **upload a receipt** and **review a financial report.** Then I watched for where they hesitated.',
-          'The pain points clustered quickly. Confusing UI and unclear success messages. An **"Add more"** button nobody could read. Trouble tracking spending trends. A wish for better filters and search. Different people, the same handful of snags.',
+          'With the product designed, I ran moderated sessions with **six participants**, one UI designer and instructor plus five students, and gave each of them the two tasks the product is built around: **upload a receipt** and **review a financial report.** Then I watched for where they hesitated.',
+          'Different people hit the same snags, and the snags split cleanly by task. **Six findings came out of the sessions, five of them high impact.**',
         ],
-        callout: 'The engine worked. The experience around it was where people got lost.',
       },
       {
-        eyebrow: '03 · Area 1 · Uploading a receipt',
+        eyebrow: '06 · What the upload task exposed',
         heading: 'The upload flow *hid its own feedback.*',
         body: [
           'The first task was the one people would do every day. Three findings came out of it, and two of them were high impact:',
@@ -723,7 +776,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '04 · Area 2 · Reports and insights',
+        eyebrow: '07 · What the reports task exposed',
         heading: 'The reports were valued, but *hard to bend.*',
         body: [
           'The second task was reviewing a financial report. People liked what was there, and still hit three clear walls:',
@@ -747,8 +800,8 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '05 · What worked',
-        heading: 'What already *earned its keep.*',
+        eyebrow: '08 · What already worked',
+        heading: 'Three things testing told me *not to touch.*',
         body: [
           'Testing is not only about what breaks. Three things landed well, and they are worth protecting as the rest gets fixed:',
         ],
@@ -771,8 +824,8 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '06 · What it pointed to next',
-        heading: 'One through line, and *an honest next step.*',
+        eyebrow: '09 · What it pointed to next',
+        heading: 'Every finding was a *legibility* problem.',
         body: [
           '**The pattern.** Almost every pain point was a legibility problem, not a logic problem. The AI was doing its job. The interface just was not saying so clearly, whether that was an easy-to-miss upload zone, a success message tucked in a corner, a vague "Needs attention" label, or a button named "Add more."',
           '**The priorities.** The high-impact fixes cluster around making the automation readable: a more visible upload area, a success message you cannot miss, plain-language status labels with tooltips, and a report section you can filter, export, and share.',
@@ -847,7 +900,7 @@ export const caseStudies = {
     // motion-led case study pages. Phones bob gently via CSS.
     mobileShowcase: {
       title: 'Mobile · Receiptly in your pocket',
-      note: 'The same trust-first design, sized for the moment a founder actually holds a receipt.',
+      note: 'The capture-first flow on mobile, which is where a receipt gets photographed in the first place.',
       word: 'Receiptly',
       phones: [
         { src: '/images/receiptly-mobile-1.webp', alt: 'Mobile dashboard with expense stats at a glance' },
