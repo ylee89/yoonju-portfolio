@@ -686,7 +686,7 @@ export const caseStudies = {
         body: [
           'Receiptly is built for startups and small businesses, the companies where nobody is a full-time bookkeeper. They generate transactions all day, and almost none of that data survives the sale. **Paper receipts end up in a drawer, and emailed ones sink into an inbox nobody searches.**',
           'The cost is not the paper. It is the work that comes after: typing each line into a spreadsheet, deciding which category an expense belongs to, and rebuilding a year of spending at tax time out of whatever was kept.',
-          'Receiptly closes that gap with **OCR**. Photograph a receipt and the app reads the merchant, the line items, the tax, and the total, then proposes a category. The receipt becomes structured data the moment it appears instead of weeks later.',
+          'Receiptly closes that gap with **OCR**. Photograph a receipt, scan it with the camera, or email it in, and the app reads the **amount, vendor, date, and tax**, then proposes a category. The receipt becomes structured data the moment it appears instead of weeks later.',
         ],
       },
       {
@@ -705,9 +705,9 @@ export const caseStudies = {
         heading: 'Three flows, named after *the three gaps.*',
         body: [
           'I mapped three user flows and named them after the capabilities the competitor scan had just isolated: **Receipt Capture, Insights, and Categorization.**',
-          '**Receipt Capture** forks three ways off the dashboard, because a receipt arrives in a different form every time: drag and drop a file, photograph it with the device camera, or forward it by email. All three land on the same OCR step, which pulls the **amount, merchant, and date.**',
+          '**Receipt Capture** forks three ways off the dashboard, because a receipt arrives in a different form every time: drag and drop a file, photograph it with the device camera, or forward it by email. All three land on the same OCR step, which pulls the **amount, vendor, date, and tax** so there is no manual entry left to do.',
           'Then comes the gate the whole flow turns on. It asks whether every detail was extracted accurately. If it was, the receipt moves straight to auto-categorization with nothing for the user to do. If it was not, the app **prompts for the missing or inaccurate fields only**, instead of making someone re-check a form that was already right.',
-          '**Categorization** follows the same rule in reverse. The AI proposes a category, and the user either confirms it or sets one manually before saving. The AI is allowed to be wrong, as long as overriding it costs one step.',
+          '**Categorization** follows the same rule in reverse. The AI proposes a category, and the user either confirms it or sets one manually before saving, with **custom tags** alongside for the expenses a fixed taxonomy cannot hold. The AI is allowed to be wrong, as long as overriding it costs one step.',
           'Those flows resolve onto three screens, each wireframed in low fidelity to settle its structure before any styling, then built out in high fidelity:',
         ],
         cards: [
