@@ -739,22 +739,7 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '05 · The design system',
-        heading: 'One accent colour, and *an upload flow that reports on itself.*',
-        body: [
-          'The interface runs on three colours. **Deep teal** carries text and dark surfaces, **pale mint** sets a calm ground, and **lime** is reserved for action. Lime never decorates: if it is lime, it is the thing to press.',
-          '**Metro Sans** sets both headlines and body copy, which keeps dense reporting screens from turning noisy.',
-          'The kit covers what a financial product has to be able to say. Primary and secondary buttons in **default, hover, and disabled**, dropdowns, checkboxes and radios, modals, alerts and notifications, charts, navigation, and a dedicated **upload sequence** with a state for every stage.',
-          'That upload sequence carries the most weight, because it is where the interface proves the OCR actually ran. Testing later showed it was also where the design still had work to do.',
-        ],
-        palette: [
-          { hex: '#D7FC6E', name: 'Lime' },
-          { hex: '#EBFFF6', name: 'Mint' },
-          { hex: '#193133', name: 'Deep teal' },
-        ],
-      },
-      {
-        eyebrow: '06 · How I tested it',
+        eyebrow: '05 · How I tested it',
         heading: 'Six people, *two everyday tasks.*',
         body: [
           'With the product designed, I ran moderated sessions with **six participants**, one UI designer and instructor plus five students, and gave each of them the two tasks the product is built around: **upload a receipt** and **review a financial report.** Then I watched for where they hesitated.',
@@ -762,55 +747,46 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '07 · What the upload task exposed',
-        heading: 'The upload flow *hid its own feedback.*',
+        eyebrow: '06 · What the sessions exposed',
+        heading: 'The upload flow hid its own feedback, and the reports *would not bend.*',
         body: [
-          'The first task was the one people would do every day. Three findings came out of it, and two of them were high impact:',
+          'Six findings, three per task. The upload half was about a product that did its work silently, and the reports half was about a product people liked and could not shape.',
         ],
         cards: [
           {
             title: 'Upload area is easy to miss',
-            meta: 'Finding 01 · Impact High',
+            meta: 'Upload · Finding 01 · Impact High',
             body: 'On the dashboard, the upload receipt area did not stand out, so people were unsure where to begin. **Recommendation:** give the upload zone a clearer, more visible treatment in the UI.',
           },
           {
             title: '"Needs attention" is unclear',
-            meta: 'Finding 02 · Impact Medium',
+            meta: 'Upload · Finding 02 · Impact Medium',
             body: 'The **"Needs attention"** status did not explain itself. Was it the AI\'s doing, a missing field, or the user\'s mistake? **Recommendation:** add a tooltip that explains why a receipt needs manual review.',
           },
           {
             title: 'The success message sits too far away',
-            meta: 'Finding 03 · Impact High',
+            meta: 'Upload · Finding 03 · Impact High',
             body: 'After a receipt was categorized, the success notification appeared up in a corner, far from where people were looking. **Recommendation:** move the confirmation closer to the action and make it more visible.',
           },
-        ],
-      },
-      {
-        eyebrow: '08 · What the reports task exposed',
-        heading: 'The reports were valued, but *hard to bend.*',
-        body: [
-          'The second task was reviewing a financial report. People liked what was there, and still hit three clear walls:',
-        ],
-        cards: [
           {
             title: '"Add more" does not say what it does',
-            meta: 'Finding 01 · Impact High',
+            meta: 'Reports · Finding 04 · Impact High',
             body: 'On Reports and Insights, the **"Add more"** button was the most misread control in the study. **Recommendation:** rename it to something like **"Edit Metrics"** or **"Modify Report"** so the label matches the action.',
           },
           {
             title: 'Reports are hard to filter',
-            meta: 'Finding 02 · Impact High',
+            meta: 'Reports · Finding 05 · Impact High',
             body: 'People wanted to slice the financial reports and could not. **Recommendation:** add preset range filters such as weekly and monthly, along with revenue, expenses, and market insights.',
           },
           {
             title: 'Exporting and sharing is limited',
-            meta: 'Finding 03 · Impact High',
+            meta: 'Reports · Finding 06 · Impact High',
             body: 'A report could only leave the product as a PDF, with no easy way to share it. **Recommendation:** add exports like Excel and Google Sheets, and let people copy a shareable link.',
           },
         ],
       },
       {
-        eyebrow: '09 · What already worked',
+        eyebrow: '07 · What already worked',
         heading: 'Three things testing told me *not to touch.*',
         body: [
           'Testing is not only about what breaks. Three things landed well, and they are worth protecting as the rest gets fixed:',
@@ -834,13 +810,28 @@ export const caseStudies = {
         ],
       },
       {
-        eyebrow: '10 · What it pointed to next',
+        eyebrow: '08 · What it pointed to next',
         heading: 'Every finding was a *legibility* problem.',
         body: [
           '**The pattern.** Almost every pain point was a legibility problem, not a logic problem. The AI was doing its job. The interface just was not saying so clearly, whether that was an easy-to-miss upload zone, a success message tucked in a corner, a vague "Needs attention" label, or a button named "Add more."',
           '**The priorities.** The high-impact fixes cluster around making the automation readable: a more visible upload area, a success message you cannot miss, plain-language status labels with tooltips, and a report section you can filter, export, and share.',
           '**What changed.** The export finding was acted on. Reports had left the product as a PDF and nothing else, with no way to hand one to anybody; they now export as **PDF or Excel with filters applied**, and go out by **email or a shareable link.** The complaint that six people raised in a session is a feature in the product today.',
           '**What I would do next.** This was a first-round discovery study, not a validation of the fixes. The honest next step is to put the redesigned upload feedback and report filters in front of a second round of participants and confirm the hesitation is actually gone.',
+        ],
+      },
+      {
+        eyebrow: '09 · The design system',
+        heading: 'One accent colour, and *an upload flow that reports on itself.*',
+        body: [
+          'The interface runs on three colours. **Deep teal** carries text and dark surfaces, **pale mint** sets a calm ground, and **lime** is reserved for action. Lime never decorates: if it is lime, it is the thing to press.',
+          '**Metro Sans** sets both headlines and body copy, which keeps dense reporting screens from turning noisy.',
+          'The kit covers what a financial product has to be able to say. Primary and secondary buttons in **default, hover, and disabled**, dropdowns, checkboxes and radios, modals, alerts and notifications, charts, navigation, and a dedicated **upload sequence** with a state for every stage.',
+          'That upload sequence carries the most weight, because it is where the interface proves the OCR actually ran. It is also, as the sessions above found, the part of the system that still had work left in it.',
+        ],
+        palette: [
+          { hex: '#D7FC6E', name: 'Lime' },
+          { hex: '#EBFFF6', name: 'Mint' },
+          { hex: '#193133', name: 'Deep teal' },
         ],
       },
     ],
