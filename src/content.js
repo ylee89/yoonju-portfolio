@@ -1218,7 +1218,7 @@ export const caseStudies = {
 export const about = {
   heading: 'Hey! That’s me.',
   body: [
-    "I'm **Yoonju Lee**, a UI/UX designer based in **Vancouver, BC**, with a diploma in Web and Mobile App Design and Development from Langara College. I work at the intersection of **empathy** and **clarity**.",
+    "I'm **Yoonju Lee**, a UI/UX designer based in **Vancouver, BC**, with a post-degree diploma in Web and Mobile App Design and Development from Langara College. I work at the intersection of **empathy** and **clarity**.",
     'Before design, I studied psychology and social welfare and spent five years as a professional negotiator. That background shapes how I create **intuitive, people-first experiences**. I treat every product problem as a human problem first, and a system problem second.',
     "Outside of work, I'm happiest on a trail. **Hiking, camping, and traveling**, from alpine lakes to mountain summits, keep giving me new perspectives, and they're where most of my design inspiration actually comes from.",
   ],
