@@ -821,17 +821,47 @@ export const caseStudies = {
       },
       {
         eyebrow: '09 · The design system',
-        heading: 'One accent colour, and *an upload flow that reports on itself.*',
+        heading: 'Blue means action, and *the upload flow reports on itself.*',
         body: [
-          'The interface runs on three colours. **Deep teal** carries text and dark surfaces, **pale mint** sets a calm ground, and **lime** is reserved for action. Lime never decorates: if it is lime, it is the thing to press.',
-          '**Metro Sans** sets both headlines and body copy, which keeps dense reporting screens from turning noisy.',
-          'The kit covers what a financial product has to be able to say. Primary and secondary buttons in **default, hover, and disabled**, dropdowns, checkboxes and radios, modals, alerts and notifications, charts, navigation, and a dedicated **upload sequence** with a state for every stage.',
-          'That upload sequence carries the most weight, because it is where the interface proves the OCR actually ran. It is also, as the sessions above found, the part of the system that still had work left in it.',
+          'The palette is four colours. **Blue** is the action colour, and it is the only one that means "press this": primary buttons, links, selected checkboxes and radios, and the upload progress bar all carry it. **Deep teal** takes text and dark surfaces, **mint** sets a pale ground, and **lime** is the highlight accent.',
+          '**Metro Sans** sets both headlines and body copy, which keeps dense reporting screens from turning noisy. The logo pairs a wordmark with a mark shaped from a curling receipt.',
+          'The kit covers what a financial product has to be able to say. Primary and secondary buttons in **default, hover, and disabled**, twenty-three icons, dropdowns open and closed, checkboxes and radios, error, success and warning modals, four alert types, charts, and navigation.',
+          'The **upload sequence** is the piece that carries the most weight, because it is where the interface proves the OCR actually ran. It has a state for each outcome: **in progress with a percentage, complete with a check, and failed with a retry.** As the sessions above found, having those states in the kit was not the same as putting them where people were looking.',
         ],
         palette: [
-          { hex: '#D7FC6E', name: 'Lime' },
-          { hex: '#EBFFF6', name: 'Mint' },
+          { hex: '#2E39E6', name: 'Blue' },
           { hex: '#193133', name: 'Deep teal' },
+          { hex: '#EBFFF6', name: 'Mint' },
+          { hex: '#D7FC6E', name: 'Lime' },
+        ],
+      },
+    ],
+    // Branding and UI kit, cropped straight out of the project deck so the
+    // system is shown as it was actually specified rather than described.
+    slideGroups: [
+      {
+        title: 'Branding and UI kit',
+        shots: [
+          {
+            src: '/images/receiptly-brand.jpg',
+            label: 'Logo, mark, and Metro Sans',
+            hint: 'The wordmark, the standalone mark cut from a curling receipt, and the one typeface that sets both headlines and body copy.',
+          },
+          {
+            src: '/images/receiptly-kit1.jpg',
+            label: 'Palette, icons, modals, buttons',
+            hint: 'The four colours, the icon set, error, success and warning modals, and primary and secondary buttons across default, hover, and disabled.',
+          },
+          {
+            src: '/images/receiptly-kit2.jpg',
+            label: 'Inputs, upload states, alerts',
+            hint: 'Dropdowns open and closed, the upload sequence from progress through success to a failure with a retry, four alert types, and checkbox and radio states.',
+          },
+          {
+            src: '/images/receiptly-kit3.jpg',
+            label: 'Charts and navigation',
+            hint: 'The chart styles the dashboard reports with, and the navigation shared across all three surfaces.',
+          },
         ],
       },
     ],
